@@ -1,5 +1,20 @@
 /* site.js — shared nav, footer, modal, and utilities */
 
+const DEITY_META = {
+  'Muruga':        { image: 'assets/images/thumbs/Muruga.jpg',     ta: 'முருகன்' },
+  'Ganesha':       { image: 'assets/images/thumbs/Ganesha.jpg',    ta: 'கணேசன்' },
+  'Shiva':         { image: 'assets/images/thumbs/Shiva.jpg',      ta: 'சிவன்' },
+  'Vishnu':        { image: 'assets/images/thumbs/Vishnu.jpg',     ta: 'விஷ்ணு' },
+  'Lakshmi':       { image: 'assets/images/thumbs/Lakshmi.jpg',    ta: 'லக்ஷ்மி' },
+  'Saraswathi':    { image: 'assets/images/thumbs/Saraswathi.jpg', ta: 'சரஸ்வதி' },
+  'Parvathi':      { image: 'assets/images/thumbs/Parvathi.jpg',   ta: 'பார்வதி' },
+  'Aiyappan':      { image: 'assets/images/thumbs/Aiyappan.jpg',   ta: 'ஐயப்பன்' },
+  'Anchaneya':     { image: 'assets/images/thumbs/Anchaneya.jpg',  ta: 'ஆஞ்சநேயர்' },
+  'Nature':        { image: 'assets/images/thumbs/Nature.jpg',     ta: 'இயற்கை' },
+  'Navarasa':      { image: null,                                   ta: 'நவரசம்' },
+  'Miscellaneous': { image: null,                                   ta: 'பலவகை' },
+};
+
 const NAV_ITEMS = [
   { key: 'lyrics',           label: 'Lyrics',           href: 'lyrics.html' },
   { key: 'books',            label: 'Books',             href: 'books.html' },
@@ -125,6 +140,15 @@ function injectModal() {
           <path d="M18 6L6 18M6 6l12 12"/>
         </svg>
       </button>
+      <div class="modal-deity-banner" id="modal-deity-banner" hidden>
+        <img class="modal-deity-banner-img" id="modal-deity-banner-img" src="" alt="">
+        <div class="modal-deity-overlay"></div>
+        <div class="modal-deity-text">
+          <span class="modal-deity-eyebrow">Deity</span>
+          <p class="modal-deity-name" id="modal-deity-name"></p>
+          <p class="modal-deity-ta-text" id="modal-deity-ta"></p>
+        </div>
+      </div>
       <div class="modal-header">
         <div class="modal-meta" id="modal-meta"></div>
         <h2 class="modal-title" id="modal-title"></h2>
@@ -223,7 +247,25 @@ function closeModal(modalOverlay) {
   document.body.classList.remove('modal-open');
 }
 
-window.SiteShared = { renderLyrics, buildAudioBar, closeModal };
+function updateModalDeityBanner(deity) {
+  const banner = document.getElementById('modal-deity-banner');
+  const img    = document.getElementById('modal-deity-banner-img');
+  const nameEl = document.getElementById('modal-deity-name');
+  const taEl   = document.getElementById('modal-deity-ta');
+  if (!banner) return;
+  const meta = DEITY_META[deity];
+  if (meta && meta.image) {
+    img.src = meta.image + '?v=20260719k';
+    img.alt = deity;
+    nameEl.textContent = deity;
+    taEl.textContent   = meta.ta;
+    banner.hidden = false;
+  } else {
+    banner.hidden = true;
+  }
+}
+
+window.SiteShared = { renderLyrics, buildAudioBar, closeModal, updateModalDeityBanner, DEITY_META };
 
 /* Inject modal synchronously so lyrics.js/audio.js can query it immediately */
 injectModal();

@@ -8,12 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Noto+Serif+Tamil:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=20260718y">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260719t">
 </head>
 <body data-page="lyrics">
   <header id="site-header"></header>
 
   <main>
+    <div id="theme-carousel-wrap"></div>
+
     <div class="page-head">
       <p class="breadcrumb"><a href="index.html">Home</a> / Lyrics</p>
       <h1 class="page-title">Find a song</h1>
@@ -30,17 +32,17 @@
       </div>
 
       <div class="filter-row" role="group" aria-label="Filter songs">
-        <div class="filter-dd" id="dd-deity">
-          <button class="filter-dd-btn" aria-haspopup="listbox" aria-expanded="false">
-            Deity <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <ul class="filter-dd-menu" role="listbox" aria-label="Filter by deity" id="menu-deity"></ul>
-        </div>
         <div class="filter-dd" id="dd-theme">
           <button class="filter-dd-btn" aria-haspopup="listbox" aria-expanded="false">
             Theme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <ul class="filter-dd-menu" role="listbox" aria-label="Filter by theme" id="menu-theme"></ul>
+        </div>
+        <div class="filter-dd" id="dd-deity">
+          <button class="filter-dd-btn" aria-haspopup="listbox" aria-expanded="false">
+            Deity <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="filter-dd-menu" role="listbox" aria-label="Filter by deity" id="menu-deity"></ul>
         </div>
         <div class="filter-dd" id="dd-volume">
           <button class="filter-dd-btn" aria-haspopup="listbox" aria-expanded="false">
@@ -86,7 +88,7 @@
 
   <footer id="site-footer"></footer>
 
-  <script src="assets/js/site.js?v=20260718y"></script>
-  <script src="assets/js/lyrics.js?v=20260718y"></script>
+  <script src="assets/js/site.js?v=20260719t"></script>
+  <script src="assets/js/lyrics.js?v=20260719t"></script>
 </body>
 </html>

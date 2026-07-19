@@ -64,9 +64,9 @@
   resetTimer();
 
   sliderEl.addEventListener('mouseenter', () => clearInterval(timer));
-  sliderEl.addEventListener('mouseleave', resetTimer);
+  sliderEl.addEventListener('mouseleave', () => resetTimer());
   sliderEl.addEventListener('focusin',   () => clearInterval(timer));
-  sliderEl.addEventListener('focusout',  resetTimer);
+  sliderEl.addEventListener('focusout',  () => resetTimer());
   sliderEl.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft')  goTo(current - 1);
     if (e.key === 'ArrowRight') goTo(current + 1);

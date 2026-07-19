@@ -38,6 +38,7 @@
     const en     = card.querySelector('.song-title-en')?.textContent || '';
     const deity  = card.dataset.deity  || card.querySelector('.mini-tag')?.textContent || '';
 
+    SiteShared.updateModalDeityBanner(deity);
     modalTitle.textContent   = tamil;
     modalEnTitle.textContent = en;
     modalMeta.innerHTML = `

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Noto+Serif+Tamil:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=20260718y">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260719t">
 </head>
 <body data-page="home">
   <header id="site-header"></header>
@@ -25,42 +25,13 @@
     <section class="slider" aria-label="Featured slides" tabindex="0">
 
       <!-- Slide 0: Intro -->
-      <div class="slide active" aria-label="Introduction">
-        <svg viewBox="0 0 1200 680" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <radialGradient id="sg0a" cx="30%" cy="40%">
-              <stop offset="0%" stop-color="#A6220F" stop-opacity=".45"/>
-              <stop offset="100%" stop-color="#0D0805" stop-opacity=".95"/>
-            </radialGradient>
-            <radialGradient id="sg0b" cx="85%" cy="20%">
-              <stop offset="0%" stop-color="#E8A317" stop-opacity=".18"/>
-              <stop offset="100%" stop-color="#0D0805" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <rect width="1200" height="680" fill="#1A0F0A"/>
-          <rect width="1200" height="680" fill="url(#sg0a)"/>
-          <rect width="1200" height="680" fill="url(#sg0b)"/>
-          <!-- Kolam pattern top right -->
-          <g stroke="#E8A317" stroke-width="0.7" opacity=".15" fill="none" transform="translate(950,120)">
-            <circle r="80"/><circle r="60"/><circle r="40"/><circle r="20"/>
-            <line x1="-80" y1="0" x2="80" y2="0"/>
-            <line x1="0" y1="-80" x2="0" y2="80"/>
-            <line x1="-57" y1="-57" x2="57" y2="57"/>
-            <line x1="57" y1="-57" x2="-57" y2="57"/>
-          </g>
-          <!-- Lotus bottom right -->
-          <g transform="translate(1100,580)" stroke="#E0381F" stroke-width="0.6" fill="none" opacity=".12">
-            <ellipse rx="70" ry="22"/><ellipse rx="70" ry="22" transform="rotate(30)"/>
-            <ellipse rx="70" ry="22" transform="rotate(60)"/><ellipse rx="70" ry="22" transform="rotate(90)"/>
-            <ellipse rx="70" ry="22" transform="rotate(120)"/><ellipse rx="70" ry="22" transform="rotate(150)"/>
-            <circle r="14"/>
-          </g>
-        </svg>
+      <div class="slide slide-photo active" aria-label="Introduction">
+        <img class="slide-photo-img" src="assets/images/intro-collage.jpg?v=20260719t" alt="Temple, book, Saraswathi and Dr. Radhakrishnan writing">
         <div class="slide-overlay"></div>
         <div class="slide-content">
           <p class="intro-name">Dr. R. Radhakrishnan</p>
           <p class="intro-name-tamil">டாக்டர் ஆர். ராதாகிருஷ்ணன்</p>
-          <p class="intro-bio">A retired pharmaceutical researcher who spent thirty years writing devotional Tamil songs in the evenings — 800 of them, gathered here for the first time.</p>
+          <p class="intro-bio">A Tamil scholar, researcher, and listener who spent decades inside the tradition — and thirty years putting it into verse. 800 songs, gathered here for the first time.</p>
           <div class="intro-actions">
             <a href="about.html" class="btn btn-ghost">Read his story →</a>
             <a href="lyrics.html" class="btn">Browse the songs</a>
@@ -68,127 +39,42 @@
         </div>
       </div>
 
-      <!-- Slide 1: Temple concerts -->
-      <div class="slide" aria-label="Slide 2: Early influences">
-        <svg viewBox="0 0 1200 680" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <radialGradient id="sg1a" cx="25%" cy="60%">
-              <stop offset="0%" stop-color="#E0381F" stop-opacity=".3"/>
-              <stop offset="100%" stop-color="#0D0805" stop-opacity=".92"/>
-            </radialGradient>
-          </defs>
-          <rect width="1200" height="680" fill="#1A0F0A"/>
-          <rect width="1200" height="680" fill="url(#sg1a)"/>
-          <!-- Temple gopuram silhouette -->
-          <g fill="#241409" opacity=".35">
-            <rect x="920" y="200" width="200" height="480"/>
-            <polygon points="920,200 1020,100 1120,200"/>
-            <polygon points="940,190 1020,130 1100,190"/>
-            <rect x="950" y="260" width="30" height="60"/><rect x="1040" y="260" width="30" height="60"/>
-            <rect x="990" y="240" width="40" height="80"/>
-          </g>
-          <!-- Diya flame -->
-          <g transform="translate(820,500)" opacity=".25">
-            <ellipse cx="0" cy="0" rx="22" ry="8" fill="#E8A317"/>
-            <path d="M0,-8 Q6,-32 0,-56 Q-6,-32 0,-8Z" fill="#E0381F"/>
-            <path d="M0,-12 Q3,-28 0,-44 Q-3,-28 0,-12Z" fill="#E8A317"/>
-          </g>
-        </svg>
+      <!-- Slide 1: Mylapore -->
+      <div class="slide slide-photo" aria-label="Slide 2: Mylapore">
+        <img class="slide-photo-img" src="assets/images/koil-concerts.jpg?v=20260719t" alt="Musicians performing outside a South Indian temple">
         <div class="slide-overlay"></div>
         <div class="slide-content">
-          <p class="slide-year">1960s</p>
-          <p class="slide-caption">Childhood evenings at temple concerts, and a teacher who explained what the great Carnatic krithis meant.</p>
+          <p class="slide-year">Mylapore</p>
+          <p class="slide-caption">Teen years listening at Kapaleeswarar temple concerts and house kutcheris — a boy absorbing the great Carnatic krithis and what they meant.</p>
         </div>
       </div>
 
-      <!-- Slide 2: Panchami concerts -->
-      <div class="slide" aria-label="Slide 3: Panchami concerts">
-        <svg viewBox="0 0 1200 680" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <radialGradient id="sg2a" cx="70%" cy="40%">
-              <stop offset="0%" stop-color="#0B7A68" stop-opacity=".35"/>
-              <stop offset="100%" stop-color="#0D0805" stop-opacity=".9"/>
-            </radialGradient>
-          </defs>
-          <rect width="1200" height="680" fill="#1A0F0A"/>
-          <rect width="1200" height="680" fill="url(#sg2a)"/>
-          <!-- Veena strings motif -->
-          <g stroke="#0B7A68" stroke-width="0.8" fill="none" opacity=".2">
-            <path d="M800,100 Q900,200 850,400 Q820,500 900,600"/>
-            <path d="M850,80 Q950,180 900,380 Q870,480 950,580"/>
-            <ellipse cx="875" cy="340" rx="55" ry="20" transform="rotate(-15,875,340)" fill="none" stroke="#E8A317" stroke-width="0.6" opacity=".4"/>
-          </g>
-          <!-- Kolam bottom left -->
-          <g stroke="#E8A317" stroke-width="0.6" opacity=".12" fill="none" transform="translate(120,560)">
-            <circle r="60"/><circle r="40"/><circle r="20"/>
-            <line x1="-60" y1="0" x2="60" y2="0"/><line x1="0" y1="-60" x2="0" y2="60"/>
-            <line x1="-42" y1="-42" x2="42" y2="42"/><line x1="42" y1="-42" x2="-42" y2="42"/>
-          </g>
-        </svg>
+      <!-- Slide 2: A life inside the tradition -->
+      <div class="slide slide-photo" aria-label="Slide 3: A life inside the tradition">
+        <img class="slide-photo-img" src="assets/images/slide-tradition.jpg?v=20260719t" alt="Parvathi, Saraswathi and Anchaneya — dance, music, devotion">
         <div class="slide-overlay"></div>
         <div class="slide-content">
-          <p class="slide-year">1960s</p>
-          <p class="slide-caption">Panchami concerts at a family home built on verse: a great-grandfather's composition, still sung today.</p>
+          <p class="slide-year">A life inside the tradition</p>
+          <p class="slide-caption">Sthalapuranas, epics, puranas, the teachings of saints. Decades alongside musicians and dancers - and daughters learning to perform.</p>
         </div>
       </div>
 
-      <!-- Slide 3: Bay Area — first performance -->
-      <div class="slide" aria-label="Slide 4: Bay Area years">
-        <svg viewBox="0 0 1200 680" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <radialGradient id="sg3a" cx="50%" cy="35%">
-              <stop offset="0%" stop-color="#E8A317" stop-opacity=".25"/>
-              <stop offset="70%" stop-color="#A6220F" stop-opacity=".2"/>
-              <stop offset="100%" stop-color="#0D0805" stop-opacity=".9"/>
-            </radialGradient>
-          </defs>
-          <rect width="1200" height="680" fill="#1A0F0A"/>
-          <rect width="1200" height="680" fill="url(#sg3a)"/>
-          <!-- Sound waves -->
-          <g stroke="#0B7A68" stroke-width="0.9" fill="none" opacity=".22">
-            <path d="M700,340 Q780,260 860,340 Q940,420 1020,340 Q1100,260 1150,320"/>
-            <path d="M700,340 Q780,300 860,340 Q940,380 1020,340 Q1100,300 1150,330" stroke="#E8A317" opacity=".4"/>
-            <path d="M720,340 Q780,290 860,340 Q940,390 1020,340 Q1100,290 1140,325" opacity=".15"/>
-          </g>
-          <!-- Star/sparkle -->
-          <g stroke="#E8A317" stroke-width="0.7" opacity=".18" fill="none" transform="translate(200,120)">
-            <line x1="-40" y1="0" x2="40" y2="0"/>
-            <line x1="0" y1="-40" x2="0" y2="40"/>
-            <line x1="-28" y1="-28" x2="28" y2="28"/>
-            <line x1="28" y1="-28" x2="-28" y2="28"/>
-            <circle r="10"/>
-          </g>
-        </svg>
+      <!-- Slide 3: 1998 — the spark -->
+      <div class="slide slide-photo" aria-label="Slide 4: 1998">
+        <img class="slide-photo-img" src="assets/images/slide-spark.jpg?v=20260719t" alt="Saraswathi with veena — the first song">
         <div class="slide-overlay"></div>
         <div class="slide-content">
-          <p class="slide-year">Bay Area years</p>
-          <p class="slide-caption">A singer brings his Ganesha composition to life at a Bay Area temple — the first sign his writing was worth sharing.</p>
+          <p class="slide-year">1998 — the spark</p>
+          <p class="slide-caption">Smt. Asha Ramesh tunes his first composition and renders it in concert.</p>
         </div>
       </div>
 
       <!-- Slide 4: The book -->
-      <div class="slide" aria-label="Slide 5: The book">
-        <svg viewBox="0 0 1200 680" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <radialGradient id="sg4a" cx="60%" cy="50%">
-              <stop offset="0%" stop-color="#A6220F" stop-opacity=".4"/>
-              <stop offset="100%" stop-color="#0D0805" stop-opacity=".9"/>
-            </radialGradient>
-          </defs>
-          <rect width="1200" height="680" fill="#1A0F0A"/>
-          <rect width="1200" height="680" fill="url(#sg4a)"/>
-          <!-- Book silhouette -->
-          <g fill="none" stroke="#E8A317" stroke-width="0.8" opacity=".2">
-            <rect x="850" y="140" width="220" height="300" rx="4"/>
-            <rect x="860" y="150" width="200" height="280" rx="3"/>
-            <line x1="870" y1="190" x2="1050" y2="190"/>
-            <line x1="870" y1="210" x2="1050" y2="210"/>
-            <line x1="870" y1="230" x2="1000" y2="230"/>
-          </g>
-        </svg>
+      <div class="slide slide-book" aria-label="Slide 5: The book">
+        <img class="slide-book-img" src="assets/images/book-collage.jpg?v=20260719t" alt="isaiyil iRaiyum iyaRkaiyum — Volume 1">
         <div class="slide-overlay"></div>
         <div class="slide-content">
-          <p class="slide-year">Coming soon</p>
+          <p class="slide-year">Volume One — now available</p>
           <p class="book-title-slide">இசையில் இறையும் இயற்கையும்</p>
           <p class="book-tagline">Songs to the divine and to nature, gathered for the first time.</p>
           <a href="books.html" class="btn btn-ghost">Learn more about the book →</a>
@@ -239,7 +125,7 @@
 
   <footer id="site-footer"></footer>
 
-  <script src="assets/js/site.js?v=20260718y"></script>
-  <script src="assets/js/home.js?v=20260718y"></script>
+  <script src="assets/js/site.js?v=20260719t"></script>
+  <script src="assets/js/home.js?v=20260719t"></script>
 </body>
 </html>
