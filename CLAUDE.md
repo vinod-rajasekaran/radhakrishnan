@@ -21,7 +21,7 @@ Cache Busting — Asset Versioning
 
 Every <link>, <script>, and <img> in every HTML file must carry a ?v=YYYYMMDD[letter] query string (e.g. ?v=20260718a). This forces browsers to re-fetch assets after a deploy instead of serving stale cached files.
 
-Current version: 20260718t
+Current version: 20260718u
 
 When to bump: any time a static file changes — CSS, JS, JSON under data/, or images.
 
