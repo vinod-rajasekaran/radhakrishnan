@@ -1,0 +1,26 @@
+{
+  "id": "002",
+  "tamil": "மகாலக்ஷ்மி",
+  "en": "Mahalakshmi",
+  "deity": "Lakshmi",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "Mother of abundance, seated on the lotus…",
+  "volume": 1,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "மகாலக்ஷ்மி வாராய் அருள்தாராய்\nதாமரை மலர் மேல் அமர்ந்தவளே",
+      "translit": "mahAlakshmi vArAy aruLthArAy\nthAmarai malar mEl amarndhavaLE",
+      "en": "Mahalakshmi, come and grant your grace;\nyou who are seated upon the lotus flower."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "செல்வம் நல்கும் தாயே போற்றி\nசெழிப்பு தரும் தேவியே வணக்கம்",
+      "translit": "selvam nalgum thAyE pOtRi\nsezhippu tharum dhEviyE vaNakkam",
+      "en": "Hail to the mother who grants wealth;\nsalutations to the goddess who gives abundance."
+    }
+  ],
+  "notes": "Lakshmi is the goddess of wealth, prosperity, and fortune, commonly depicted on a lotus flower."
+}

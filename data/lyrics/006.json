@@ -1,0 +1,27 @@
+{
+  "id": "006",
+  "tamil": "சபரிமலை ஐயப்பா",
+  "en": "Sabarimalai Aiyappa",
+  "deity": "Aiyappan",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "Eighteen steps, and the hill falls quiet…",
+  "volume": 1,
+  "singer": "Asha Ramesh",
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "சபரிமலை ஐயப்பா சரணம்\nபதினெட்டு படிகள் தாண்டி வந்தோம்",
+      "translit": "sabarimalai aiyappA saraNam\npadhinettu padigaL thANdi vandhOm",
+      "en": "Refuge in you, Aiyappa of Sabarimalai;\nwe have crossed the eighteen sacred steps."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "மணிகண்டா மோகினி புத்திரா\nபக்தர் துணையாய் வாழும் தெய்வமே",
+      "translit": "maNikaNtA mOhini puthrA\nbhaktar thuNaiyAy vAzhum dheivamE",
+      "en": "Manikanta, son born of Mohini,\nO deity who lives as companion to devotees."
+    }
+  ],
+  "notes": "Aiyappan is worshipped at Sabarimalai, Kerala. Pilgrims climb eighteen sacred steps (pathinettu padikkal) to reach the shrine."
+}

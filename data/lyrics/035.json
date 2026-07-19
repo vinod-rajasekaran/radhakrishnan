@@ -1,0 +1,33 @@
+{
+  "id": "035",
+  "en": "sarva vyApanE",
+  "tamil": "சர்வ வியாபனே",
+  "deity": "Shiva",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "சர்வ வியாபனே சதாசிவ சம்போ",
+  "volume": 1,
+  "audio": null,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "சர்வ வியாபனே சதாசிவ சம்போ\nபர்வதமுறை பரமா பதம் பணிந்தேன்",
+      "translit": "sarva vyApanE sadhAsiva sambO\nparvadhamuRai paramA padham paNindhEn",
+      "en": "Oh, Omnipresent Lord Sadhasiva, self-originated deity, and one who dwells in Mount Kailash, I worship your lotus feet."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "உலர்ந்த சருகும் நீ அன்றலர்ந்த மலரும் நீ\nஒலியின் வடிவும் நீ எதிரொலியின் இசையும் நீ",
+      "translit": "ularndha sarugum nI andRalarndha malarum nI\noliyin vadivum nI edhiroliyin isaiyum nI",
+      "en": "Thou art the dried leaf; thou art the blossomed flower. Thou art the shape of sound; thou art the music of an echo."
+    },
+    {
+      "label": "Charanam",
+      "ta": "ஓடை நீரும் நீ பாலைவனத்தே கானல் நீ\nகோடை வெயில் நீ குளிர் மர நிழலும் நீ\nபயிரில் பசுமை நீ உயிரில் ஆத்மன் நீ\nதோடு அணியும் சிவமே தோடி ராகப்ரியனே",
+      "translit": "Odai nIrum nI pAlaivanatthE kAnal nI\nkOdai veyil nI kuLir mara nizhalum nI\npayiril pasumai nI uyiril Athman nI\nthOdu aNiyum sivamE thOdi ragapriyanE",
+      "en": "Thou art the clear water of a brook; Thou art the mirage in a desert. Thou art the warmth of summer; Thou art the cool shade of a tree. Thou art the greenness of vegetation; Thou art the soul of living things. You are the Supreme, adorning an ear stud and fascinated by the melody of Thodi ragam."
+    }
+  ],
+  "notes": "The anupallavi and charanam of this song are based on Siva's traits of all pervading aspects of the Lord laid in the Namakam."
+}

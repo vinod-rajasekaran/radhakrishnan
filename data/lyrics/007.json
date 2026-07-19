@@ -1,0 +1,26 @@
+{
+  "id": "007",
+  "tamil": "சரஸ்வதி வந்தனம்",
+  "en": "Saraswathi Vandanam",
+  "deity": "Saraswathi",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "Grant me the word, and the string that carries it…",
+  "volume": 2,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "சரஸ்வதி வந்தனம் செய்வோம்\nசொல்லின் தேவியை பணிவோம்",
+      "translit": "saraswathi vandhanam seivOm\nsollin dhEviyai paNivOm",
+      "en": "Let us offer salutations to Saraswathi;\nlet us bow to the goddess of speech."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "வீணை ஏந்திய கை காட்டு\nஅறிவின் ஒளியை நீ ஏற்று",
+      "translit": "veeNai Endhiya kai kAttu\naRivin oLiyai nee EtRu",
+      "en": "Show us the hand that holds the veena;\nkindle in us the light of knowledge."
+    }
+  ],
+  "notes": "Saraswathi, goddess of learning and the arts, is depicted holding a veena (lute), a book, and a garland. She is worshipped especially during Navaratri."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "008",
+  "tamil": "பார்வதி கல்யாணம்",
+  "en": "Parvathi Kalyanam",
+  "deity": "Parvathi",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "The mountain's daughter, and the wedding of the world…",
+  "volume": 2,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "மலைமகள் கல்யாணம் காண\nஉலகமே கூடி நின்றதே",
+      "translit": "malaimagaL kalyANam kANa\nulagamE kUdi nindradhE",
+      "en": "To witness the wedding of the mountain's daughter,\nthe whole world gathered together."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "சிவனுடன் இணைந்த சக்தியே\nகுடும்பத்தின் காவல் தெய்வமே",
+      "translit": "sivanudan iNaindha sakthiyE\nkudumbathin kAval dheivamE",
+      "en": "O power united with Shiva,\nguardian deity of the family."
+    }
+  ],
+  "notes": "Parvathi (literally 'daughter of the mountain') is the divine consort of Shiva. Her wedding is celebrated in many temple traditions."
+}

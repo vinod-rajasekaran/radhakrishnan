@@ -1,0 +1,26 @@
+{
+  "id": "004",
+  "tamil": "வக்ரதுண்ட",
+  "en": "Vakratunda",
+  "deity": "Ganesha",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "Curved of trunk, remover of every obstacle…",
+  "volume": 1,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "வக்ரதுண்ட மகாகாயா\nவினைகள் தீர்க்கும் விநாயகா",
+      "translit": "vakratuNda mahAkAyA\nvinaigaL theerkkum vinAyakA",
+      "en": "O curved-trunked one of great form,\nGanesha who removes every obstacle."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "மோதக பிரியா முதல்வா\nமங்கல காரியம் தொடங்குமுன் வணங்குவோம்",
+      "translit": "mOdhaka priyA mudhalvA\nmangala kAriyam thodangumun vaNanguvOm",
+      "en": "First Lord, fond of the modak sweet;\nwe bow to you before any auspicious task begins."
+    }
+  ],
+  "notes": "Ganesha, the elephant-headed son of Shiva, is worshipped at the start of every endeavour. The modak is his favourite sweet."
+}

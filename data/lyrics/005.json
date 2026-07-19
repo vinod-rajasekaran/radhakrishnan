@@ -1,0 +1,27 @@
+{
+  "id": "005",
+  "tamil": "ஓம் நமச்சிவாய",
+  "en": "Om Nama Sivaya",
+  "deity": "Shiva",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "When one utters this name, does not the heart become pure?…",
+  "volume": 1,
+  "singer": "Bavatharini",
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "ஓம் நமச்சிவாய என்று சொல்ல\nஉள்ளம் தூய்மை அடையும் அன்றோ",
+      "translit": "Om namachivAya endru solla\nuLLam thUymai adaiyum andrO",
+      "en": "When one utters Om Nama Sivaya,\ndoes not the heart become pure?"
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "நீலகண்டா நடராஜா\nஅபயம் தந்திடு ஆதியோனே",
+      "translit": "neelakaNtA nadarAjA\nabhayam thandhidu Adhiyonai",
+      "en": "Blue-throated one, Lord of the dance,\ngrant me refuge, O primordial one."
+    }
+  ],
+  "notes": "Om Nama Sivaya is a Panchakshara mantra, the five-syllable sacred formula of Shaivism. Nataraja is Shiva in his cosmic dance form."
+}

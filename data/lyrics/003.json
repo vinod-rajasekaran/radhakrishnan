@@ -1,0 +1,27 @@
+{
+  "id": "003",
+  "tamil": "தென்றல்",
+  "en": "Thendral",
+  "deity": "Nature",
+  "themes": [
+    "Nature"
+  ],
+  "excerpt": "The southern breeze carries the temple bell…",
+  "volume": 1,
+  "singer": "Bavatharini",
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "தென்றல் வந்து தீண்டும் நேரம்\nமனது குளிரும் இன்பம் தரும்",
+      "translit": "thendral vandhu theeNdum nEram\nmanadhu kuLirum inbam tharum",
+      "en": "When the southern breeze comes and touches,\nthe mind cools, and joy arrives."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "கோவில் மணியின் ஓசை கேட்டு\nஇயற்கை எல்லாம் இறைவன் ரூபம்",
+      "translit": "kOvil maNiyin Osai kEttu\niyaRkai ellAm iRaivan rUpam",
+      "en": "Hearing the sound of the temple bell,\nall of nature is the form of the divine."
+    }
+  ],
+  "notes": "The 'thendral' (southern breeze) is a beloved motif in Tamil poetry, associated with longing and grace."
+}

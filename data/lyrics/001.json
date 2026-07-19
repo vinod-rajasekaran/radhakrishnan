@@ -1,0 +1,27 @@
+{
+  "id": "001",
+  "tamil": "வேல் முருகா",
+  "en": "Vel Muruga",
+  "deity": "Muruga",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "Lord of the spear, guardian of the six hills…",
+  "volume": 1,
+  "singer": "Asha Ramesh",
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "வேலா யுதா முருகா வாராய்\nஅருள்தாராய் ஆறுமுக நாதா",
+      "translit": "vElA yudhA murugA vArAy\naruLthArAy ARumukha nAthA",
+      "en": "Lord of the spear, Muruga, come to me;\ngrant your grace, six-faced Lord."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "பழநி மலை உறையும் பாலா\nபக்தர் துயர் தீர்க்கும் குமாரா",
+      "translit": "pazhani malai uRaiyum bAlA\nbhaktar thuyar theerkkum kumArA",
+      "en": "Child who dwells on the Pazhani hill;\nyoung Lord who ends the sorrow of devotees."
+    }
+  ],
+  "notes": "Muruga, the son of Shiva and Parvathi, is worshipped at the Pazhani temple among others. The 'vel' (spear) is his divine weapon, symbolising wisdom that pierces ignorance."
+}

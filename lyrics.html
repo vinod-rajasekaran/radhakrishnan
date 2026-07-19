@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lyrics — Dr. R. Radhakrishnan</title>
+  <meta name="description" content="Browse 800+ Tamil devotional songs with transliteration and English translation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Noto+Serif+Tamil:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260718p">
+</head>
+<body data-page="lyrics">
+  <header id="site-header"></header>
+
+  <main>
+    <div class="page-head">
+      <p class="breadcrumb"><a href="index.html">Home</a> / Lyrics</p>
+      <h1 class="page-title">Find a song</h1>
+      <p class="page-sub">All 800 songs, searchable by title, and narrowed by deity or theme. Click any song to read the lyrics and translation.</p>
+    </div>
+
+    <!-- Search and Filters -->
+    <div class="search-filter-bar">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input type="search" id="search-input" class="search-input" placeholder="Search songs…" aria-label="Search songs">
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Filter songs">
+        <div class="filter-dd" id="dd-deity">
+          <button class="filter-dd-btn" aria-haspopup="listbox" aria-expanded="false">
+            Deity <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="filter-dd-menu" role="listbox" aria-label="Filter by deity" id="menu-deity"></ul>
+        </div>
+        <div class="filter-dd" id="dd-theme">
+          <button class="filter-dd-btn" aria-haspopup="listbox" aria-expanded="false">
+            Theme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="filter-dd-menu" role="listbox" aria-label="Filter by theme" id="menu-theme"></ul>
+        </div>
+        <div class="filter-dd" id="dd-volume">
+          <button class="filter-dd-btn" aria-haspopup="listbox" aria-expanded="false">
+            Volume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="filter-dd-menu" role="listbox" aria-label="Filter by volume" id="menu-volume">
+            <li class="filter-option" role="option" data-value="" aria-selected="true">All volumes</li>
+            <li class="filter-option" role="option" data-value="1" aria-selected="false">Volume One</li>
+            <li class="filter-option" role="option" data-value="2" aria-selected="false">Volume Two</li>
+            <li class="filter-option" role="option" data-value="3" aria-selected="false">Volume Three</li>
+          </ul>
+        </div>
+        <div class="filter-dd" id="dd-singer">
+          <button class="filter-dd-btn" aria-haspopup="listbox" aria-expanded="false">
+            Singer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="filter-dd-menu" role="listbox" aria-label="Filter by singer" id="menu-singer"></ul>
+        </div>
+        <button class="filter-clear" id="filter-clear" aria-label="Clear all filters" hidden>Clear filters</button>
+      </div>
+
+      <!-- Active chips -->
+      <div class="filter-chips" id="filter-chips" aria-live="polite"></div>
+    </div>
+
+    <!-- Results count -->
+    <div class="results-bar">
+      <p class="results-count" id="results-count" aria-live="polite"></p>
+    </div>
+
+    <!-- Song grid -->
+    <div class="song-grid" id="song-grid" role="list" aria-label="Songs"></div>
+
+    <!-- Loading / empty states -->
+    <div class="loading-state" id="loading-state" aria-live="polite" hidden>
+      <span class="loading-spinner" aria-hidden="true"></span>
+      Loading songs…
+    </div>
+    <div class="empty-state" id="empty-state" hidden>
+      <p>No songs match your search. <button class="link-btn" id="clear-search">Clear and start over</button></p>
+    </div>
+  </main>
+
+  <!-- Song modal -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close song">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+      <div class="modal-header">
+        <div class="modal-meta" id="modal-meta"></div>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-en-title" id="modal-en-title"></p>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <div class="modal-loading" id="modal-loading" aria-live="polite">
+          <span class="loading-spinner" aria-hidden="true"></span> Loading…
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/site.js?v=20260718p"></script>
+  <script src="assets/js/lyrics.js?v=20260718p"></script>
+</body>
+</html>

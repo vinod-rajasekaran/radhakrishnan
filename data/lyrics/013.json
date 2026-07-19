@@ -1,0 +1,27 @@
+{
+  "id": "013",
+  "tamil": "முருக காவடி",
+  "en": "Muruga Kavadi",
+  "deity": "Muruga",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "Shoulders bent under flowers and milk…",
+  "volume": 3,
+  "singer": "Asha Ramesh",
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "தோளில் காவடி தூக்கி வந்தேன்\nபாலும் மலரும் சுமந்து வந்தேன்",
+      "translit": "thOLil kAvadi thUkki vandhEn\npAlum malarum sumandhu vandhEn",
+      "en": "I came bearing the kavadi on my shoulders,\ncarrying milk and flowers for you."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "வேலவா உன் அருள் ஒன்றே போதும்\nவிரதம் காத்த பக்தனை காப்பாய்",
+      "translit": "vElavA un aruL ondrE pOdhum\nviradham kAththa bhakthanai kAppAy",
+      "en": "Lord of the spear, your grace alone is enough;\nprotect this devotee who kept the vow."
+    }
+  ],
+  "notes": "Kavadi is a physical burden carried by devotees of Muruga, especially during Thaipusam. Milk pots and flowers adorn the kavadi as offerings."
+}

@@ -1,0 +1,1007 @@
+{
+  "meta": {
+    "deities": [
+      "Aiyappan",
+      "Anchaneya",
+      "Ganesha",
+      "Lakshmi",
+      "Miscellaneous",
+      "Muruga",
+      "Nature",
+      "Navarasa",
+      "Parvathi",
+      "Saraswathi",
+      "Shiva",
+      "Vishnu"
+    ],
+    "themes": [
+      "Devotion",
+      "Nature"
+    ],
+    "volumes": [
+      1,
+      2,
+      3
+    ],
+    "singers": [
+      "Asha Ramesh",
+      "Bavatharini"
+    ]
+  },
+  "songs": [
+    {
+      "id": "001",
+      "tamil": "வேல் முருகா",
+      "en": "Vel Muruga",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "Lord of the spear, guardian of the six hills…",
+      "volume": 1,
+      "singer": "Asha Ramesh"
+    },
+    {
+      "id": "002",
+      "tamil": "மகாலக்ஷ்மி",
+      "en": "Mahalakshmi",
+      "deity": "Lakshmi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "Mother of abundance, seated on the lotus…",
+      "volume": 1
+    },
+    {
+      "id": "003",
+      "tamil": "தென்றல்",
+      "en": "Thendral",
+      "deity": "Nature",
+      "themes": [
+        "Nature"
+      ],
+      "excerpt": "The southern breeze carries the temple bell…",
+      "volume": 1,
+      "singer": "Bavatharini"
+    },
+    {
+      "id": "004",
+      "tamil": "வக்ரதுண்ட",
+      "en": "Vakratunda",
+      "deity": "Ganesha",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "Curved of trunk, remover of every obstacle…",
+      "volume": 1
+    },
+    {
+      "id": "005",
+      "tamil": "ஓம் நமச்சிவாய",
+      "en": "Om Nama Sivaya",
+      "deity": "Shiva",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "When one utters this name, does not the heart become pure?…",
+      "volume": 1,
+      "singer": "Bavatharini"
+    },
+    {
+      "id": "006",
+      "tamil": "சபரிமலை ஐயப்பா",
+      "en": "Sabarimalai Aiyappa",
+      "deity": "Aiyappan",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "Eighteen steps, and the hill falls quiet…",
+      "volume": 1,
+      "singer": "Asha Ramesh"
+    },
+    {
+      "id": "007",
+      "tamil": "சரஸ்வதி வந்தனம்",
+      "en": "Saraswathi Vandanam",
+      "deity": "Saraswathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "Grant me the word, and the string that carries it…",
+      "volume": 2
+    },
+    {
+      "id": "008",
+      "tamil": "பார்வதி கல்யாணம்",
+      "en": "Parvathi Kalyanam",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "The mountain's daughter, and the wedding of the world…",
+      "volume": 2
+    },
+    {
+      "id": "009",
+      "tamil": "ஆஞ்சநேய ஸ்துதி",
+      "en": "Anchaneya Sthuthi",
+      "deity": "Anchaneya",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "Strength that carries a mountain in one hand…",
+      "volume": 2
+    },
+    {
+      "id": "010",
+      "tamil": "நாராயண ஜபம்",
+      "en": "Narayana Japam",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "A thousand names, and each one a doorway…",
+      "volume": 2
+    },
+    {
+      "id": "011",
+      "tamil": "நவரச பாடல்",
+      "en": "Navarasa Padal",
+      "deity": "Navarasa",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "Nine feelings, one voice to hold them all…",
+      "volume": 2
+    },
+    {
+      "id": "012",
+      "tamil": "மலைக் காற்று",
+      "en": "Malai Kaatru",
+      "deity": "Nature",
+      "themes": [
+        "Nature"
+      ],
+      "excerpt": "Wind off the hill, the way it was that year…",
+      "volume": 3
+    },
+    {
+      "id": "013",
+      "tamil": "முருக காவடி",
+      "en": "Muruga Kavadi",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "Shoulders bent under flowers and milk…",
+      "volume": 3,
+      "singer": "Asha Ramesh"
+    },
+    {
+      "id": "014",
+      "tamil": "தீபம் ஏற்றும்",
+      "en": "Deepam Yerum",
+      "deity": "Miscellaneous",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "Every lamp lit is a small, private prayer…",
+      "volume": 3,
+      "singer": "Bavatharini"
+    },
+    {
+      "id": "015",
+      "tamil": "கல்யாண கோல காருண்ய கணபதே",
+      "en": "kalyANa kOla kAruNya gaNapathE",
+      "deity": "Ganesha",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "கல்யாண கோல காருண்ய கணபதே",
+      "volume": 1
+    },
+    {
+      "id": "016",
+      "tamil": "அக்ஷய விநாயகனே",
+      "en": "akshaya vinAyaganE",
+      "deity": "Ganesha",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "அக்ஷய விநாயகனே ஆதரித்தாள்பவனே",
+      "volume": 1
+    },
+    {
+      "id": "017",
+      "tamil": "ஓங்கார இசைதனில்",
+      "en": "OngkAra isaithanil",
+      "deity": "Ganesha",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "ஓங்கார இசைதனில் ஹம்ஸத்வனியில் உறைந்திடும்",
+      "volume": 1
+    },
+    {
+      "id": "018",
+      "tamil": "அன்பர் அழைத்தவுடன்",
+      "en": "anbar azhaitthavudan",
+      "deity": "Ganesha",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "அன்பர் அழைத்தவுடன் ஆர்வமாய் ஓடி வந்து",
+      "volume": 1
+    },
+    {
+      "id": "019",
+      "tamil": "அபீஷ்ட வரத",
+      "en": "abhIshta varadha",
+      "deity": "Ganesha",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "அபீஷ்ட வரத மஹா கணபதே",
+      "volume": 1
+    },
+    {
+      "id": "020",
+      "tamil": "ஒய்யாரமாய் ஊஞ்சலாடும்",
+      "en": "oyyAramAy UnjalAdum",
+      "deity": "Ganesha",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "ஒய்யாரமாய் ஊஞ்சலாடும் ஓங்கார கணபதே",
+      "volume": 1
+    },
+    {
+      "id": "021",
+      "tamil": "கல்லும் உருகிடும் ஓர் நாள்",
+      "en": "kallum urugidum Or nAL",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "கல்லும் உருகிடும் ஓர் நாள் கந்த நாமம் பஜித்தே விதி",
+      "volume": 1
+    },
+    {
+      "id": "022",
+      "tamil": "குமுறி அழுதாலும்",
+      "en": "kumuRi azhudhAlum",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "குமுறி அழுதாலும் வாராயோ குமரா",
+      "volume": 1
+    },
+    {
+      "id": "023",
+      "tamil": "இக்கரைக்கு அக்கரை",
+      "en": "Ikkaraikku akkarai",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "இக்கரைக்கு அக்கரை பச்சையெனில் என்னை",
+      "volume": 1
+    },
+    {
+      "id": "024",
+      "tamil": "அள்ளி அருள் வழங்கும்",
+      "en": "aLLi aruL vazhangum",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "அள்ளி அருள் வழங்கும் வள்ளி மணாளா",
+      "volume": 1
+    },
+    {
+      "id": "025",
+      "tamil": "கந்தா என்றே கதறிடும்",
+      "en": "kandhA endRE kadhaRidum",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "கந்தா என்றே கதறிடும் போது ஓடி",
+      "volume": 1
+    },
+    {
+      "id": "026",
+      "tamil": "கல்லென்று உனையார் சொன்னார்",
+      "en": "kallendRu unaiyAr sonnAr",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "கல்லென்று உனையார் சொன்னார் கந்தா",
+      "volume": 1
+    },
+    {
+      "id": "027",
+      "tamil": "முத்தமிழ் பாவினால்",
+      "en": "mutthamizh pAvinAl",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "முத்தமிழ் பாவினால் இசை பாட முனைந்தேன்",
+      "volume": 1
+    },
+    {
+      "id": "028",
+      "tamil": "வேல் அவாவினால்",
+      "en": "vEl avAvinAl",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "வேல் அவாவினால் மனம் கசிந்து நாவார",
+      "volume": 1
+    },
+    {
+      "id": "029",
+      "tamil": "வந்தெனை ஆள்வது",
+      "en": "vandhenai ALvadhu",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "வந்தெனை ஆள்வது எப்போது என்றே கந்தா",
+      "volume": 1
+    },
+    {
+      "id": "030",
+      "tamil": "சித்தத்தில் இனித்திடும்",
+      "en": "sitthatthil initthidum",
+      "deity": "Muruga",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "சித்தத்தில் இனித்திடும் செந்தில் சிங்கார வேலா",
+      "volume": 1
+    },
+    {
+      "id": "031",
+      "tamil": "ஏன் பள்ளி கொண்டீரய்யா",
+      "en": "En paLLi kondIrayyA",
+      "deity": "Shiva",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "ஏன் பள்ளி கொண்டீரய்யா ஈஸ்வரரே",
+      "volume": 1
+    },
+    {
+      "id": "032",
+      "tamil": "திருவான்மியூர் திகழ்",
+      "en": "thiruvAnmiyUr thigazh",
+      "deity": "Shiva",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "திருவான்மியூர் திகழ் திரிபுர சுந்தரி மகிழ்",
+      "volume": 1
+    },
+    {
+      "id": "033",
+      "tamil": "சதாசிவ பதம்",
+      "en": "sadhAsiva padham",
+      "deity": "Shiva",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "சதாசிவ பதம் நினைக்கவே தானாய்",
+      "volume": 1
+    },
+    {
+      "id": "034",
+      "tamil": "சிவா என்றழைத்தாலே",
+      "en": "sivA endRazhaitthAlE",
+      "deity": "Shiva",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "சிவா என்றழைத்தாலே தேனூறும்",
+      "volume": 1
+    },
+    {
+      "id": "035",
+      "tamil": "சர்வ வியாபனே",
+      "en": "sarva vyApanE",
+      "deity": "Shiva",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "சர்வ வியாபனே சதாசிவ சம்போ",
+      "volume": 1
+    },
+    {
+      "id": "036",
+      "tamil": "காரணமேதோ கயிலை வாசா",
+      "en": "kAraNamEdhO kayilai vAsA",
+      "deity": "Shiva",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "காரணமேதோ கயிலை வாசா அவனியில்",
+      "volume": 1
+    },
+    {
+      "id": "037",
+      "tamil": "மன்றாடி நின்றே",
+      "en": "mandRAdi nindRE",
+      "deity": "Shiva",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "மன்றாடி நின்றே வழக்கமான உன்னிடம்",
+      "volume": 1
+    },
+    {
+      "id": "038",
+      "tamil": "நமசிவாய என்று",
+      "en": "namasivAya endRu",
+      "deity": "Shiva",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "நமசிவாய என்று நித்தமும் சொல்லு",
+      "volume": 1
+    },
+    {
+      "id": "039",
+      "tamil": "கண்ணால் நோக்கிடின்",
+      "en": "kaNNAl nOkkidin",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "கண்ணால் நோக்கிடின் எங்கேயுன் செங்கமல மேனியும்",
+      "volume": 1
+    },
+    {
+      "id": "040",
+      "tamil": "சங்கும் தரித்தாய்",
+      "en": "sangum dharitthAy",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "சங்கும் தரித்தாய் சாரங்கம் ஏந்தினாய்",
+      "volume": 1
+    },
+    {
+      "id": "041",
+      "tamil": "மறந்திடல் ஞாயமோ ஸ்ரீராமா",
+      "en": "maRandhidal nyAyamO srirAmA",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "மறந்திடல் ஞாயமோ  ஸ்ரீராமா உனையே நினைந்து",
+      "volume": 1
+    },
+    {
+      "id": "042",
+      "tamil": "ஊழ்வினை உனைக் கண்டு",
+      "en": "Uzhvinai unaik kaNdu",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "ஊழ்வினை உனைக் கண்டு ஓடுமென்றால்",
+      "volume": 1
+    },
+    {
+      "id": "043",
+      "tamil": "பூதவுடல் நீத்திடு முன்னமே",
+      "en": "bUdhavudal nItthidu munnamE",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "பூதவுடல் நீத்திடு முன்னமே பூதலத்தில்",
+      "volume": 1
+    },
+    {
+      "id": "044",
+      "tamil": "தியாகத்தின் திருவுருவே",
+      "en": "thyAgatthin thiruvuruvE",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "தியாகத்தின் திருவுருவே நிற்குண ராமா",
+      "volume": 1
+    },
+    {
+      "id": "045",
+      "tamil": "அன்பும் அளவோடெனல்",
+      "en": "anbum aLavOdenal",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "அன்பும் அளவோடெனல் அறியாயோ நாராயணா",
+      "volume": 1
+    },
+    {
+      "id": "046",
+      "tamil": "மடந்தைக்கு இடமீந்து",
+      "en": "madandhaikku idamIndhu",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "மடந்தைக்கு இடமீந்து மாந்தர் இடர் போக்கி",
+      "volume": 1
+    },
+    {
+      "id": "047",
+      "tamil": "ஆடினாய் அற்புத நடனம்",
+      "en": "AdinAy aRpudha natanam",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "ஆடினாய் அற்புத நடனம் ஆடினாய்",
+      "volume": 1
+    },
+    {
+      "id": "048",
+      "tamil": "ராமா தீனரக்ஷகா எனையாளும்",
+      "en": "rAmA dhInarakshakA enaiyALum",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "ராமா தீனரக்ஷகா எனையாளும்",
+      "volume": 1
+    },
+    {
+      "id": "049",
+      "tamil": "வெண்ணை கையிருக்க",
+      "en": "veNNai kaiyirukka",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "வெண்ணை கையிருக்க நெய் தேடுவார் போல்",
+      "volume": 1
+    },
+    {
+      "id": "050",
+      "tamil": "கரி அபிஷேகம் செய்திட",
+      "en": "kari abhishEkam seidhida",
+      "deity": "Lakshmi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "கரி அபிஷேகம் செய்திட தாரிணி தனை",
+      "volume": 1
+    },
+    {
+      "id": "051",
+      "tamil": "கொண்டை அணிகளோடு",
+      "en": "koNdai aNigaLOdu",
+      "deity": "Lakshmi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "கொண்டை அணிகளோடு கொஞ்சும் மழலையோடு",
+      "volume": 1
+    },
+    {
+      "id": "052",
+      "tamil": "அகிலந்தனை காக்க",
+      "en": "akilandhanai kAkka",
+      "deity": "Lakshmi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "அகிலந்தனை காக்க ஆழ்கடல் உதித்தாயே",
+      "volume": 1
+    },
+    {
+      "id": "053",
+      "tamil": "மலைமேல் தங்காமலே",
+      "en": "malaimEl thangAmalE",
+      "deity": "Lakshmi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "மலைமேல் தங்காமலே மேதினியில் மங்கா இசை கொண்ட",
+      "volume": 1
+    },
+    {
+      "id": "054",
+      "tamil": "வக்ஷஸ்தல ஸ்திதே",
+      "en": "vakshasthala sthithE",
+      "deity": "Lakshmi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "வக்ஷஸ்தல ஸ்திதே வாஞ்சிதார்த்த பலதாயகி(யே)",
+      "volume": 1
+    },
+    {
+      "id": "055",
+      "tamil": "துள்ளி வருவாள்",
+      "en": "thuLLi varuvAL",
+      "deity": "Lakshmi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "துள்ளி வருவாள் அள்ளி அணைக்கையிலே",
+      "volume": 1
+    },
+    {
+      "id": "056",
+      "tamil": "நித்யநிதியே",
+      "en": "nithyanidhiyE",
+      "deity": "Lakshmi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "நித்யநிதியே மதி சோதரியே",
+      "volume": 1
+    },
+    {
+      "id": "057",
+      "tamil": "வெண்பா உறைந்திடும்",
+      "en": "veNbA uRaindhidum",
+      "deity": "Saraswathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "வெண்பா உறைந்திடும் வாகீஸ்வரி என் பால்",
+      "volume": 1
+    },
+    {
+      "id": "058",
+      "tamil": "வேதங்கள் குழையாகி",
+      "en": "vEdhangaL kuzhaiyAgi",
+      "deity": "Saraswathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "வேதங்கள் குழையாகி குலுங்கிட நாவில்",
+      "volume": 1
+    },
+    {
+      "id": "059",
+      "tamil": "கலீர் கலீர் என",
+      "en": "kalIr kalIr ena",
+      "deity": "Saraswathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "கலீர் கலீர் என கால் சிலம்பொலிக்க",
+      "volume": 1
+    },
+    {
+      "id": "060",
+      "tamil": "வீணாவாதினி",
+      "en": "vINAvAdhini",
+      "deity": "Saraswathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "வீணாவாதினி சகலாகம ஸ்வரூபிணி",
+      "volume": 1
+    },
+    {
+      "id": "061",
+      "tamil": "சகலகலாவல்லி",
+      "en": "sakalakalAvalli",
+      "deity": "Saraswathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "சகலகலாவல்லி சராசர ஜனனீ",
+      "volume": 1
+    },
+    {
+      "id": "062",
+      "tamil": "கலையாத கல்வி",
+      "en": "kalaiyAdha kalvi",
+      "deity": "Saraswathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "கலையாத கல்வி தந்திடும் தாயே",
+      "volume": 1
+    },
+    {
+      "id": "063",
+      "tamil": "ஓதாத வேதமே",
+      "en": "OdhAdha vEdhamE",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "ஓதாத வேதமே நாதங்கள் யாவிற்கும் மூலமே உன்",
+      "volume": 1
+    },
+    {
+      "id": "064",
+      "tamil": "ஈடிலா இமையவரும்",
+      "en": "IdilA imaiyavarum",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "ஈடிலா இமையவரும் போற்றிடும் ஈஸ்வரியே",
+      "volume": 1
+    },
+    {
+      "id": "065",
+      "tamil": "தாமரை மலர் மேல்",
+      "en": "thAmarai malar mEl",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "தாமரை மலர் மேல் தத்தளிக்கும் நீர் போல்",
+      "volume": 1
+    },
+    {
+      "id": "066",
+      "tamil": "பர்வத நிலையே",
+      "en": "parvatha nilaiyE",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "பர்வத நிலையே பாச விமோசன தயிதே",
+      "volume": 1
+    },
+    {
+      "id": "067",
+      "tamil": "நற்கதி பெற நல்வழி",
+      "en": "naRgathi peRa nalvazhi",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "நற்கதி பெற நல்வழி திருமயிலையின் தலைவியே",
+      "volume": 1
+    },
+    {
+      "id": "068",
+      "tamil": "கரஹரப்ரியே",
+      "en": "karaharapriyE",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "கரஹரப்ரியே ஸ்ரீபுர நிலையே சிவே",
+      "volume": 1
+    },
+    {
+      "id": "069",
+      "tamil": "திருமயிலை நாயகியே",
+      "en": "thirumayilai nAyakiyE",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "திருமயிலை நாயகியே கருணை வடிவான கற்பகமே",
+      "volume": 1
+    },
+    {
+      "id": "070",
+      "tamil": "உன் பாதமே கதி",
+      "en": "un pAdhamE gathi",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "உன் பாதமே கதி தயாபரீ தமிழ்ப் பா",
+      "volume": 1
+    },
+    {
+      "id": "071",
+      "tamil": "திருவிளையாடல் புரிய தருணமிதே",
+      "en": "thiruviLaiyAdal",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "திருவிளையாடல் புரிய தருணமிதே",
+      "volume": 1
+    },
+    {
+      "id": "072",
+      "tamil": "யாரென்ன சொன்னாலும்",
+      "en": "yArenna sonnAlum",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "யாரென்ன சொன்னாலும் நீ யார் என்று அறிவேன்",
+      "volume": 1
+    },
+    {
+      "id": "073",
+      "tamil": "அணிகலன்கள் எதற்கு",
+      "en": "aNikalangaL edhaRku",
+      "deity": "Aiyappan",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "அணிகலன்கள் எதற்கு அபரிமிதமான வாழ்வெதற்கு",
+      "volume": 1
+    },
+    {
+      "id": "074",
+      "tamil": "பஞ்சமுக ஆஞ்சநேயா",
+      "en": "Panchamuga AnchanEyA",
+      "deity": "Anchaneya",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "பஞ்சமுக ஆஞ்சநேயா பாமர ஜனப்ரியா",
+      "volume": 1
+    },
+    {
+      "id": "075",
+      "tamil": "அஞ்சாதே மனமே",
+      "en": "anjAdhE manamE",
+      "deity": "Anchaneya",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "அஞ்சாதே மனமே அஞ்சனை மகன்",
+      "volume": 1
+    },
+    {
+      "id": "076",
+      "tamil": "சிவந்த சிந்தூரத்தை",
+      "en": "sivandha sindhUratthai",
+      "deity": "Anchaneya",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "சிவந்த சிந்தூரத்தை மேனி எல்லாம்",
+      "volume": 1
+    },
+    {
+      "id": "077",
+      "tamil": "பாயுமவன் பரந்தாமன்",
+      "en": "pAyumavan parandhAman",
+      "deity": "Anchaneya",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "பாயுமவன் பரந்தாமன் நேயன் எழில்மிகு",
+      "volume": 1
+    },
+    {
+      "id": "078",
+      "tamil": "வைகுண்டன் பதம் பிடித்தே",
+      "en": "vaikuNtan padham piditthE",
+      "deity": "Anchaneya",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "வைகுண்டன் பதம் பிடித்தே சிறிய திருவடியானாய்",
+      "volume": 1
+    },
+    {
+      "id": "079",
+      "tamil": "ஆலஹால விஷத்தையும்",
+      "en": "AlahAla vishatthaiyum",
+      "deity": "Navarasa",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "",
+      "volume": 1
+    },
+    {
+      "id": "080",
+      "tamil": "வியர்க்க அரும்பும்",
+      "en": "viyarkka arumbum",
+      "deity": "Nature",
+      "themes": [
+        "Nature"
+      ],
+      "excerpt": "வியர்க்க அரும்பும் வேர்வையைப் போன்றே",
+      "volume": 1
+    },
+    {
+      "id": "081",
+      "tamil": "காயவைத்த நெல்லினை",
+      "en": "kAyavaittha nellinai",
+      "deity": "Nature",
+      "themes": [
+        "Nature"
+      ],
+      "excerpt": "காயவைத்த நெல்லினை சிறுகச் சிறுக",
+      "volume": 1
+    },
+    {
+      "id": "082",
+      "tamil": "முகை ஒன்று மலரும் நேரம்",
+      "en": "mugai ondRu malarum nEram",
+      "deity": "Nature",
+      "themes": [
+        "Nature"
+      ],
+      "excerpt": "முகை ஒன்று மலரும் நேரம் பசும்புல்",
+      "volume": 1
+    },
+    {
+      "id": "083",
+      "tamil": "தார்வகையோவென வியந்திடும்",
+      "en": "thArvagaiyOvena viyandhidum",
+      "deity": "Nature",
+      "themes": [
+        "Nature"
+      ],
+      "excerpt": "தார்வகையோவென வியந்திடும் வண்ணம்",
+      "volume": 1
+    },
+    {
+      "id": "084",
+      "tamil": "எங்கிருந்தோ காற்றில்",
+      "en": "engirundhO kAtRil",
+      "deity": "Nature",
+      "themes": [
+        "Nature"
+      ],
+      "excerpt": "எங்கிருந்தோ காற்றில் பறந்த விதையும்",
+      "volume": 1
+    },
+    {
+      "id": "085",
+      "tamil": "நிலம் நடுங்க",
+      "en": "nilam nadunga",
+      "deity": "Nature",
+      "themes": [
+        "Nature"
+      ],
+      "excerpt": "நிலம் நடுங்க கடல் சீற பாய்ந்திடும் நீரில்",
+      "volume": 1
+    },
+    {
+      "id": "086",
+      "tamil": "சீரடி பாதையிலே",
+      "en": "sIradi pAdhaiyilE",
+      "deity": "Miscellaneous",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "சீரடி பாதையிலே சென்றிட வேண்டுமென்று",
+      "volume": 1
+    },
+    {
+      "id": "087",
+      "tamil": "குண்டு மல்லியும்",
+      "en": "gundu malliyum",
+      "deity": "Miscellaneous",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "குண்டு மல்லியும் குங்குமச் சிமிழும் கற்பூர மணமும்",
+      "volume": 1
+    },
+    {
+      "id": "088",
+      "tamil": "மதம் பலவென்று",
+      "en": "madham palavendRu",
+      "deity": "Miscellaneous",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "மதம் பலவென்று மடியும் நாளினிலே மனதில்",
+      "volume": 1
+    }
+  ]
+}

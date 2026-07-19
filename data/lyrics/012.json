@@ -1,0 +1,26 @@
+{
+  "id": "012",
+  "tamil": "மலைக் காற்று",
+  "en": "Malai Kaatru",
+  "deity": "Nature",
+  "themes": [
+    "Nature"
+  ],
+  "excerpt": "Wind off the hill, the way it was that year…",
+  "volume": 3,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "மலைக் காற்று வீசும் நேரம்\nமனது பழைய நினைவில் ஆழும்",
+      "translit": "malaik kAtru veesum nEram\nmanadhu pazhaiya ninaivil Azhum",
+      "en": "When the mountain wind begins to blow,\nthe mind sinks into old memory."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "அந்த ஆண்டின் மணம் இன்னும் மிச்சம்\nஇயற்கையின் நினைவுகள் மறையவில்லை",
+      "translit": "andha ANdin maNam innum micham\niyarkaiyin ninaivugaL maRaiyavillai",
+      "en": "The fragrance of that year still lingers;\nnature's memories have not faded."
+    }
+  ],
+  "notes": "A meditation on nature as memory — the mountain wind as an involuntary trigger for the past."
+}

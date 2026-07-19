@@ -1,0 +1,26 @@
+{
+  "id": "011",
+  "tamil": "நவரச பாடல்",
+  "en": "Navarasa Padal",
+  "deity": "Navarasa",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "Nine feelings, one voice to hold them all…",
+  "volume": 2,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "நவரசம் தன்னில் நான் இருந்தேன்\nஒரு குரல் தான் எல்லாம் சொன்னதே",
+      "translit": "navarasam thannil nAn irundhEn\noru kural thAn ellAm sonnadhE",
+      "en": "I lived within the nine emotions,\nand one voice alone spoke them all."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "சிரிப்பும் அழுகையும் ஒரே இசையில்\nகலைஞனின் மனது வெளிப்படுதே",
+      "translit": "sirippum azhugaiyum orE isaiyil\nkalaignanin mandhu veLippaduthE",
+      "en": "Laughter and weeping in a single melody —\nthis is how an artist's heart reveals itself."
+    }
+  ],
+  "notes": "Navarasa refers to the nine emotional essences (rasas) of classical Indian aesthetics: śṛṅgāra, hāsya, karuṇa, raudra, vīra, bhayānaka, bībhatsa, adbhuta, and śānta."
+}

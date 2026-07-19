@@ -1,0 +1,26 @@
+{
+  "id": "009",
+  "tamil": "ஆஞ்சநேய ஸ்துதி",
+  "en": "Anchaneya Sthuthi",
+  "deity": "Anchaneya",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "Strength that carries a mountain in one hand…",
+  "volume": 2,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "ஆஞ்சநேயா வலிமை தாராய்\nஇராமன் தூதா அஞ்சலி செய்வோம்",
+      "translit": "Anjaneya vAlimai thArAy\nrAman thUthA anjali seivOm",
+      "en": "Anjaneya, grant us strength;\nwe offer salutations to Rama's messenger."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "மலையே தூக்கிய தோள் வலிமை\nபக்தியில் நிலைத்த உள்ளம் தாராய்",
+      "translit": "malaiyE thUkkiya thOL valimai\nbakthiyil nilaitha uLLam thArAy",
+      "en": "Shoulders strong enough to lift a mountain;\ngrant us a heart steadfast in devotion."
+    }
+  ],
+  "notes": "Hanuman (Anchaneya) is the devoted servant of Rama, celebrated for his strength, loyalty, and selfless service."
+}

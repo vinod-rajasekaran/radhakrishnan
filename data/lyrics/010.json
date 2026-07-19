@@ -1,0 +1,26 @@
+{
+  "id": "010",
+  "tamil": "நாராயண ஜபம்",
+  "en": "Narayana Japam",
+  "deity": "Vishnu",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "A thousand names, and each one a doorway…",
+  "volume": 2,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "நாராயணா என்று சொல்லிடவே\nபாவங்கள் யாவும் நீங்கிடுமே",
+      "translit": "nArAyaNA endru sollidavE\npAvangaL yAvum neengidumE",
+      "en": "Merely by uttering \"Narayana,\"\nevery sin melts away."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "ஆயிரம் நாமம் உடையவனே\nஅடியவர் துயரம் தீர்ப்பவனே",
+      "translit": "Ayiram nAmam udaiyavanE\nadiyavar thuyaram theerppavanE",
+      "en": "O one with a thousand names,\nwho ends the sorrow of your devotees."
+    }
+  ],
+  "notes": "Vishnu Sahasranamam lists a thousand names of Vishnu. Japa (repetition of a divine name) is a central practice in Hindu devotion."
+}

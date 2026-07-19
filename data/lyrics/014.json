@@ -1,0 +1,27 @@
+{
+  "id": "014",
+  "tamil": "தீபம் ஏற்றும்",
+  "en": "Deepam Yerum",
+  "deity": "Miscellaneous",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "Every lamp lit is a small, private prayer…",
+  "volume": 3,
+  "singer": "Bavatharini",
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "தீபம் ஏற்றும் ஒவ்வொரு நேரமும்\nமனதில் ஒரு தூய பிரார்த்தனை",
+      "translit": "dheepam EtRum ovvoru nEramum\nmanadhil oru thUya pirArthanai",
+      "en": "Every time a lamp is lit,\nit is a small, pure prayer in the mind."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "இருளை போக்கும் ஒளியாய் நீ வா\nவீட்டின் நடுவே தெய்வம் நீ ஆவாய்",
+      "translit": "iruLai pOkkum oLiyAy nee vA\nveettin naduvE dheivam nee AvAy",
+      "en": "Come as the light that drives away darkness;\nbecome the deity at the heart of this home."
+    }
+  ],
+  "notes": "The daily lamp-lighting (deepam/vilakku) is a core domestic ritual in South Indian homes, an act of both worship and welcome."
+}
