@@ -48,10 +48,6 @@
 
     const existing = document.getElementById('modal-audio-bar');
     if (existing) existing.remove();
-    if (singer) {
-      const bar = SiteShared.buildAudioBar(singer, card.dataset.audio || null);
-      modalClose.insertAdjacentElement('afterend', bar);
-    }
 
     modalBody.innerHTML = '';
     modalBody.appendChild(modalLoading);
@@ -62,7 +58,13 @@
 
     fetch(`data/lyrics/${id}.json`)
       .then(r => r.json())
-      .then(song => SiteShared.renderLyrics(song, modalBody, modalLoading))
+      .then(song => {
+        if (singer) {
+          const bar = SiteShared.buildAudioBar(singer, song.audio || null);
+          modalClose.insertAdjacentElement('afterend', bar);
+        }
+        SiteShared.renderLyrics(song, modalBody, modalLoading);
+      })
       .catch(() => {
         modalLoading.hidden = true;
         modalBody.innerHTML += '<p class="error-msg">Could not load lyrics.</p>';
