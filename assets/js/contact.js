@@ -3,7 +3,7 @@
 (function () {
   const form     = document.getElementById('contact-form');
   const noteEl   = document.getElementById('form-note');
-  const TO_EMAIL = 'radhakrishnan.anthology@gmail.com';
+  const TO_EMAIL = 'radhalyrics@gmail.com';
 
   if (!form) return;
 
