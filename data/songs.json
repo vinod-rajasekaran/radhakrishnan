@@ -39,7 +39,8 @@
       ],
       "excerpt": "Lord of the spear, guardian of the six hills…",
       "volume": 1,
-      "singer": "Asha Ramesh"
+      "singer": "Asha Ramesh",
+      "audio": "assets/audio/vel-muruga.mp3"
     },
     {
       "id": "002",
@@ -198,7 +199,8 @@
         "Devotion"
       ],
       "excerpt": "கல்யாண கோல காருண்ய கணபதே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "016",
@@ -209,7 +211,8 @@
         "Devotion"
       ],
       "excerpt": "அக்ஷய விநாயகனே ஆதரித்தாள்பவனே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "017",
@@ -220,7 +223,8 @@
         "Devotion"
       ],
       "excerpt": "ஓங்கார இசைதனில் ஹம்ஸத்வனியில் உறைந்திடும்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "018",
@@ -231,7 +235,8 @@
         "Devotion"
       ],
       "excerpt": "அன்பர் அழைத்தவுடன் ஆர்வமாய் ஓடி வந்து",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "019",
@@ -242,7 +247,8 @@
         "Devotion"
       ],
       "excerpt": "அபீஷ்ட வரத மஹா கணபதே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "020",
@@ -253,7 +259,8 @@
         "Devotion"
       ],
       "excerpt": "ஒய்யாரமாய் ஊஞ்சலாடும் ஓங்கார கணபதே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "021",
@@ -264,7 +271,8 @@
         "Devotion"
       ],
       "excerpt": "கல்லும் உருகிடும் ஓர் நாள் கந்த நாமம் பஜித்தே விதி",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "022",
@@ -275,7 +283,8 @@
         "Devotion"
       ],
       "excerpt": "குமுறி அழுதாலும் வாராயோ குமரா",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "023",
@@ -286,7 +295,8 @@
         "Devotion"
       ],
       "excerpt": "இக்கரைக்கு அக்கரை பச்சையெனில் என்னை",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "024",
@@ -297,7 +307,8 @@
         "Devotion"
       ],
       "excerpt": "அள்ளி அருள் வழங்கும் வள்ளி மணாளா",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "025",
@@ -308,7 +319,8 @@
         "Devotion"
       ],
       "excerpt": "கந்தா என்றே கதறிடும் போது ஓடி",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "026",
@@ -319,7 +331,8 @@
         "Devotion"
       ],
       "excerpt": "கல்லென்று உனையார் சொன்னார் கந்தா",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "027",
@@ -330,7 +343,8 @@
         "Devotion"
       ],
       "excerpt": "முத்தமிழ் பாவினால் இசை பாட முனைந்தேன்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "028",
@@ -341,7 +355,8 @@
         "Devotion"
       ],
       "excerpt": "வேல் அவாவினால் மனம் கசிந்து நாவார",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "029",
@@ -352,7 +367,8 @@
         "Devotion"
       ],
       "excerpt": "வந்தெனை ஆள்வது எப்போது என்றே கந்தா",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "030",
@@ -363,7 +379,8 @@
         "Devotion"
       ],
       "excerpt": "சித்தத்தில் இனித்திடும் செந்தில் சிங்கார வேலா",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "031",
@@ -374,7 +391,8 @@
         "Devotion"
       ],
       "excerpt": "ஏன் பள்ளி கொண்டீரய்யா ஈஸ்வரரே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "032",
@@ -385,7 +403,8 @@
         "Devotion"
       ],
       "excerpt": "திருவான்மியூர் திகழ் திரிபுர சுந்தரி மகிழ்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "033",
@@ -396,7 +415,8 @@
         "Devotion"
       ],
       "excerpt": "சதாசிவ பதம் நினைக்கவே தானாய்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "034",
@@ -407,7 +427,8 @@
         "Devotion"
       ],
       "excerpt": "சிவா என்றழைத்தாலே தேனூறும்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "035",
@@ -418,7 +439,8 @@
         "Devotion"
       ],
       "excerpt": "சர்வ வியாபனே சதாசிவ சம்போ",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "036",
@@ -429,7 +451,8 @@
         "Devotion"
       ],
       "excerpt": "காரணமேதோ கயிலை வாசா அவனியில்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "037",
@@ -440,7 +463,8 @@
         "Devotion"
       ],
       "excerpt": "மன்றாடி நின்றே வழக்கமான உன்னிடம்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "038",
@@ -451,7 +475,8 @@
         "Devotion"
       ],
       "excerpt": "நமசிவாய என்று நித்தமும் சொல்லு",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "039",
@@ -462,7 +487,8 @@
         "Devotion"
       ],
       "excerpt": "கண்ணால் நோக்கிடின் எங்கேயுன் செங்கமல மேனியும்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "040",
@@ -473,7 +499,8 @@
         "Devotion"
       ],
       "excerpt": "சங்கும் தரித்தாய் சாரங்கம் ஏந்தினாய்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "041",
@@ -484,7 +511,8 @@
         "Devotion"
       ],
       "excerpt": "மறந்திடல் ஞாயமோ  ஸ்ரீராமா உனையே நினைந்து",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "042",
@@ -495,7 +523,8 @@
         "Devotion"
       ],
       "excerpt": "ஊழ்வினை உனைக் கண்டு ஓடுமென்றால்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "043",
@@ -506,7 +535,8 @@
         "Devotion"
       ],
       "excerpt": "பூதவுடல் நீத்திடு முன்னமே பூதலத்தில்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "044",
@@ -517,7 +547,8 @@
         "Devotion"
       ],
       "excerpt": "தியாகத்தின் திருவுருவே நிற்குண ராமா",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "045",
@@ -528,7 +559,8 @@
         "Devotion"
       ],
       "excerpt": "அன்பும் அளவோடெனல் அறியாயோ நாராயணா",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "046",
@@ -539,7 +571,8 @@
         "Devotion"
       ],
       "excerpt": "மடந்தைக்கு இடமீந்து மாந்தர் இடர் போக்கி",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "047",
@@ -550,7 +583,8 @@
         "Devotion"
       ],
       "excerpt": "ஆடினாய் அற்புத நடனம் ஆடினாய்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "048",
@@ -561,7 +595,8 @@
         "Devotion"
       ],
       "excerpt": "ராமா தீனரக்ஷகா எனையாளும்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "049",
@@ -572,7 +607,8 @@
         "Devotion"
       ],
       "excerpt": "வெண்ணை கையிருக்க நெய் தேடுவார் போல்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "050",
@@ -583,7 +619,8 @@
         "Devotion"
       ],
       "excerpt": "கரி அபிஷேகம் செய்திட தாரிணி தனை",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "051",
@@ -594,7 +631,8 @@
         "Devotion"
       ],
       "excerpt": "கொண்டை அணிகளோடு கொஞ்சும் மழலையோடு",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "052",
@@ -605,7 +643,8 @@
         "Devotion"
       ],
       "excerpt": "அகிலந்தனை காக்க ஆழ்கடல் உதித்தாயே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "053",
@@ -616,7 +655,8 @@
         "Devotion"
       ],
       "excerpt": "மலைமேல் தங்காமலே மேதினியில் மங்கா இசை கொண்ட",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "054",
@@ -627,7 +667,8 @@
         "Devotion"
       ],
       "excerpt": "வக்ஷஸ்தல ஸ்திதே வாஞ்சிதார்த்த பலதாயகி(யே)",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "055",
@@ -638,7 +679,8 @@
         "Devotion"
       ],
       "excerpt": "துள்ளி வருவாள் அள்ளி அணைக்கையிலே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "056",
@@ -649,7 +691,8 @@
         "Devotion"
       ],
       "excerpt": "நித்யநிதியே மதி சோதரியே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "057",
@@ -660,7 +703,8 @@
         "Devotion"
       ],
       "excerpt": "வெண்பா உறைந்திடும் வாகீஸ்வரி என் பால்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "058",
@@ -671,7 +715,8 @@
         "Devotion"
       ],
       "excerpt": "வேதங்கள் குழையாகி குலுங்கிட நாவில்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "059",
@@ -682,7 +727,8 @@
         "Devotion"
       ],
       "excerpt": "கலீர் கலீர் என கால் சிலம்பொலிக்க",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "060",
@@ -693,7 +739,8 @@
         "Devotion"
       ],
       "excerpt": "வீணாவாதினி சகலாகம ஸ்வரூபிணி",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "061",
@@ -704,7 +751,8 @@
         "Devotion"
       ],
       "excerpt": "சகலகலாவல்லி சராசர ஜனனீ",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "062",
@@ -715,7 +763,8 @@
         "Devotion"
       ],
       "excerpt": "கலையாத கல்வி தந்திடும் தாயே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "063",
@@ -726,7 +775,8 @@
         "Devotion"
       ],
       "excerpt": "ஓதாத வேதமே நாதங்கள் யாவிற்கும் மூலமே உன்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "064",
@@ -737,7 +787,8 @@
         "Devotion"
       ],
       "excerpt": "ஈடிலா இமையவரும் போற்றிடும் ஈஸ்வரியே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "065",
@@ -748,7 +799,8 @@
         "Devotion"
       ],
       "excerpt": "தாமரை மலர் மேல் தத்தளிக்கும் நீர் போல்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "066",
@@ -759,7 +811,8 @@
         "Devotion"
       ],
       "excerpt": "பர்வத நிலையே பாச விமோசன தயிதே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "067",
@@ -770,7 +823,8 @@
         "Devotion"
       ],
       "excerpt": "நற்கதி பெற நல்வழி திருமயிலையின் தலைவியே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "068",
@@ -781,7 +835,8 @@
         "Devotion"
       ],
       "excerpt": "கரஹரப்ரியே ஸ்ரீபுர நிலையே சிவே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "069",
@@ -792,7 +847,8 @@
         "Devotion"
       ],
       "excerpt": "திருமயிலை நாயகியே கருணை வடிவான கற்பகமே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "070",
@@ -803,7 +859,8 @@
         "Devotion"
       ],
       "excerpt": "உன் பாதமே கதி தயாபரீ தமிழ்ப் பா",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "071",
@@ -814,7 +871,8 @@
         "Devotion"
       ],
       "excerpt": "திருவிளையாடல் புரிய தருணமிதே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "072",
@@ -825,7 +883,8 @@
         "Devotion"
       ],
       "excerpt": "யாரென்ன சொன்னாலும் நீ யார் என்று அறிவேன்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "073",
@@ -836,7 +895,8 @@
         "Devotion"
       ],
       "excerpt": "அணிகலன்கள் எதற்கு அபரிமிதமான வாழ்வெதற்கு",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "074",
@@ -847,7 +907,8 @@
         "Devotion"
       ],
       "excerpt": "பஞ்சமுக ஆஞ்சநேயா பாமர ஜனப்ரியா",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "075",
@@ -858,7 +919,8 @@
         "Devotion"
       ],
       "excerpt": "அஞ்சாதே மனமே அஞ்சனை மகன்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "076",
@@ -869,7 +931,8 @@
         "Devotion"
       ],
       "excerpt": "சிவந்த சிந்தூரத்தை மேனி எல்லாம்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "077",
@@ -880,7 +943,8 @@
         "Devotion"
       ],
       "excerpt": "பாயுமவன் பரந்தாமன் நேயன் எழில்மிகு",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "078",
@@ -891,7 +955,8 @@
         "Devotion"
       ],
       "excerpt": "வைகுண்டன் பதம் பிடித்தே சிறிய திருவடியானாய்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "079",
@@ -902,7 +967,8 @@
         "Devotion"
       ],
       "excerpt": "",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "080",
@@ -913,7 +979,8 @@
         "Nature"
       ],
       "excerpt": "வியர்க்க அரும்பும் வேர்வையைப் போன்றே",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "081",
@@ -924,7 +991,8 @@
         "Nature"
       ],
       "excerpt": "காயவைத்த நெல்லினை சிறுகச் சிறுக",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "082",
@@ -935,7 +1003,8 @@
         "Nature"
       ],
       "excerpt": "முகை ஒன்று மலரும் நேரம் பசும்புல்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "083",
@@ -946,7 +1015,8 @@
         "Nature"
       ],
       "excerpt": "தார்வகையோவென வியந்திடும் வண்ணம்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "084",
@@ -957,7 +1027,8 @@
         "Nature"
       ],
       "excerpt": "எங்கிருந்தோ காற்றில் பறந்த விதையும்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "085",
@@ -968,7 +1039,8 @@
         "Nature"
       ],
       "excerpt": "நிலம் நடுங்க கடல் சீற பாய்ந்திடும் நீரில்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "086",
@@ -979,7 +1051,8 @@
         "Devotion"
       ],
       "excerpt": "சீரடி பாதையிலே சென்றிட வேண்டுமென்று",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "087",
@@ -990,7 +1063,8 @@
         "Devotion"
       ],
       "excerpt": "குண்டு மல்லியும் குங்குமச் சிமிழும் கற்பூர மணமும்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     },
     {
       "id": "088",
@@ -1001,7 +1075,8 @@
         "Devotion"
       ],
       "excerpt": "மதம் பலவென்று மடியும் நாளினிலே மனதில்",
-      "volume": 1
+      "volume": 1,
+      "audio": null
     }
   ]
 }

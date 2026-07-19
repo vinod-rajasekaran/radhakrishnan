@@ -73,40 +73,55 @@
   });
 
   /* ── Verse teaser ─────────────────────────────────────────────── */
-  const verseCard     = document.getElementById('verse-card');
-  const enTitleEl     = document.getElementById('verse-en-title');
-  const chipsEl       = document.getElementById('verse-chips');
-  const leftBlock     = document.getElementById('verse-left-block');
-  const rightBlock    = document.getElementById('verse-right-block');
-  const anotherBtn    = document.getElementById('verse-another');
+  const enTitleEl  = document.getElementById('verse-en-title');
+  const chipsEl    = document.getElementById('verse-chips');
+  const verseGrid  = document.getElementById('verse-grid');
+  const notesBlock = document.getElementById('verse-notes-block');
+  const anotherBtn = document.getElementById('verse-another');
 
   let songs = [];
 
   function showVerse() {
     if (!songs.length) return;
-    const song = songs[Math.floor(Math.random() * songs.length)];
-    const sec  = song.sections && song.sections[0];
-    if (!sec) return;
+    const meta = songs[Math.floor(Math.random() * songs.length)];
 
-    enTitleEl.textContent = song.en;
-    chipsEl.innerHTML = `<span class="verse-deity-chip">${song.deity}</span>`;
+    fetch(`data/lyrics/${meta.id}.json`)
+      .then(r => r.json())
+      .then(song => {
+        const sections = song.sections || [];
+        if (!sections.length) return;
 
-    leftBlock.innerHTML = `
-      <p class="verse-section-label">${sec.label || 'Pallavi'}</p>
-      <p class="verse-ta tamil">${sec.ta.replace(/\n/g, '<br>')}</p>
-      <p class="verse-translit">${sec.translit.replace(/\n/g, '<br>')}</p>
-    `;
-    rightBlock.innerHTML = `
-      <p class="verse-section-label">${sec.label || 'Pallavi'}</p>
-      <p class="verse-en">${sec.en.replace(/\n/g, '<br>')}</p>
-    `;
+        enTitleEl.textContent = song.en;
+        chipsEl.innerHTML = `<span class="verse-deity-chip">${song.deity}</span>`;
+
+        verseGrid.innerHTML = `
+          <p class="verse-col-label verse-left-cell">Tamil &amp; transliteration</p>
+          <p class="verse-col-label peacock-label verse-right-cell">Translation</p>
+          ${sections.map(sec => `
+            <div class="verse-left-cell">
+              <p class="verse-section-label">${sec.label}</p>
+              <p class="verse-ta tamil">${sec.ta.replace(/\n/g, '<br>')}</p>
+              <p class="verse-translit">${sec.translit.replace(/\n/g, '<br>')}</p>
+            </div>
+            <div class="verse-right-cell">
+              <p class="verse-section-label">${sec.label}</p>
+              <p class="verse-en">${sec.en.replace(/\n/g, '<br>')}</p>
+            </div>
+          `).join('')}
+        `;
+
+        notesBlock.innerHTML = song.notes
+          ? `<aside class="song-notes"><strong>Notes:</strong> ${song.notes}</aside>`
+          : '';
+      })
+      .catch(() => {});
   }
 
   if (enTitleEl) {
     fetch('data/songs.json')
       .then(r => r.json())
       .then(data => {
-        songs = data.songs;
+        songs = data.songs.filter(s => s.singer);
         showVerse();
       })
       .catch(() => {

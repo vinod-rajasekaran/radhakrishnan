@@ -9,7 +9,7 @@ const path = require('path');
 const LYRICS_DIR  = path.join(__dirname, '../data/lyrics');
 const OUTPUT_FILE = path.join(__dirname, '../data/songs.json');
 
-const METADATA_KEYS = ['id','tamil','en','deity','themes','excerpt','volume','singer'];
+const METADATA_KEYS = ['id','tamil','en','deity','themes','excerpt','volume','singer','audio'];
 
 const files = fs.readdirSync(LYRICS_DIR)
   .filter(f => f.endsWith('.json'))

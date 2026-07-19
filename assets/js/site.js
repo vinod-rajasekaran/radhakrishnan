@@ -145,28 +145,29 @@ function injectModal() {
 function renderLyrics(song, modalBody, modalLoading) {
   modalLoading.hidden = true;
   const sections = song.sections || [];
-  const taHtml = sections.map(sec => `
-    <div class="lyrics-section">
+
+  const sectionsHtml = sections.map(sec => `
+    <div class="lyrics-section modal-left-cell">
       <h3 class="lyrics-section-label">${sec.label}</h3>
       <p class="lyrics-ta tamil">${sec.ta.replace(/\n/g, '<br>')}</p>
       <p class="lyrics-translit">${sec.translit.replace(/\n/g, '<br>')}</p>
     </div>
-  `).join('');
-  const enHtml = sections.map(sec => `
-    <div class="lyrics-section-en">
+    <div class="lyrics-section-en modal-right-cell">
       <h3 class="lyrics-section-label">${sec.label}</h3>
       <p class="lyrics-en">${sec.en.replace(/\n/g, '<br>')}</p>
     </div>
   `).join('');
+
   const notes = song.notes
     ? `<aside class="song-notes"><strong>Notes:</strong> ${song.notes}</aside>`
     : '';
+
   modalBody.innerHTML = `
-    <p class="lyrics-block-label">Lyrics &amp; transliteration</p>
-    ${taHtml}
-    <hr class="modal-divider">
-    <p class="lyrics-block-label">Translation</p>
-    ${enHtml}
+    <div class="modal-lyrics-grid">
+      <p class="lyrics-block-label modal-left-cell">Tamil &amp; transliteration</p>
+      <p class="lyrics-block-label modal-right-cell">Translation</p>
+      ${sectionsHtml}
+    </div>
   ` + notes;
 }
 
