@@ -1,4 +1,4 @@
-/* site.js — shared nav, footer, and utilities */
+/* site.js — shared nav, footer, modal, and utilities */
 
 const NAV_ITEMS = [
   { key: 'lyrics',           label: 'Lyrics',           href: 'lyrics.html' },
@@ -21,40 +21,17 @@ const CC_SVG = `<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strok
   <text x="16" y="21" font-size="13" text-anchor="middle" fill="currentColor" stroke="none" font-family="IBM Plex Mono, monospace">cc</text>
 </svg>`;
 
-const SEARCH_SVG = `<svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-  <circle cx="7.5" cy="7.5" r="5.5"/><path d="M13 13l3 3"/>
-</svg>`;
-
 function buildNavLinks(currentPage) {
   return NAV_ITEMS.map(item => {
-    if (item.children) {
-      const childActive = item.children.some(c => c.key === currentPage);
-      const ddItems = item.children.map(c =>
-        `<a href="${c.href}"${c.key === currentPage ? ' class="active"' : ''}>${c.label}</a>`
-      ).join('');
-      return `<li class="nav-dd${childActive ? ' child-active' : ''}">
-        <button class="nav-dd-btn${childActive ? ' active' : ''}" aria-haspopup="true" aria-expanded="false">
-          ${item.label}
-          <svg class="nav-dd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-        </button>
-        <div class="nav-dd-menu" role="menu">${ddItems}</div>
-      </li>`;
-    }
     const active = item.key === currentPage;
     return `<li><a href="${item.href}"${active ? ' class="active" aria-current="page"' : ''}>${item.label}</a></li>`;
   }).join('');
 }
 
 function buildMobileMenu(currentPage) {
-  return NAV_ITEMS.map(item => {
-    if (item.children) {
-      const childItems = item.children.map(c =>
-        `<a href="${c.href}" class="indent${c.key === currentPage ? ' active' : ''}">${c.label}</a>`
-      ).join('');
-      return `<span class="nav-mobile-section">${item.label}</span>${childItems}`;
-    }
-    return `<a href="${item.href}"${item.key === currentPage ? ' class="active"' : ''}>${item.label}</a>`;
-  }).join('');
+  return NAV_ITEMS.map(item =>
+    `<a href="${item.href}"${item.key === currentPage ? ' class="active"' : ''}>${item.label}</a>`
+  ).join('');
 }
 
 function injectNav() {
@@ -82,7 +59,6 @@ function injectNav() {
 }
 
 function initNavBehavior() {
-  /* Desktop dropdown toggles — use .nav-dd class (not .filter-dd) */
   document.querySelectorAll('.nav-dd-btn').forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
@@ -100,17 +76,6 @@ function initNavBehavior() {
     if (e.key === 'Escape') closeAllNavDropdowns();
   });
 
-  /* Nav search button — focus the page's search input if present */
-  const searchBtn = document.getElementById('nav-search-btn');
-  if (searchBtn) {
-    searchBtn.addEventListener('click', () => {
-      const input = document.getElementById('search-input') || document.getElementById('glossary-search');
-      if (input) { input.focus(); input.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-      else { window.location.href = 'lyrics.html'; }
-    });
-  }
-
-  /* Mobile hamburger */
   const hamburger = document.getElementById('nav-hamburger');
   const mobileMenu = document.getElementById('nav-mobile');
   if (hamburger && mobileMenu) {
@@ -131,15 +96,10 @@ function closeAllNavDropdowns() {
 function injectFooter() {
   const el = document.getElementById('site-footer');
   if (!el) return;
+  const footerLinks = NAV_ITEMS.map(item => `<a href="${item.href}">${item.label}</a>`).join('\n    ');
   el.outerHTML = `<footer class="site-footer">
   <nav class="footer-links" aria-label="Footer navigation">
-    <a href="lyrics.html">Lyrics</a>
-    <a href="books.html">Books</a>
-    <a href="audio.html">Audio</a>
-    <a href="about.html">About</a>
-    <a href="acknowledgements.html">Acknowledgements</a>
-    <a href="glossary.html">Glossary</a>
-    <a href="contact.html">Contact</a>
+    ${footerLinks}
   </nav>
   <div class="footer-lower">
     <a href="https://creativecommons.org/licenses/by-nc/4.0/" class="cc-badge" target="_blank" rel="noopener noreferrer">
@@ -154,6 +114,118 @@ function injectFooter() {
   <div class="footer-copy">© 2026 Dr. R. Radhakrishnan</div>
 </footer>`;
 }
+
+function injectModal() {
+  if (document.getElementById('modal-overlay')) return;
+  const tpl = document.createElement('div');
+  tpl.innerHTML = `<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close song">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+      <div class="modal-header">
+        <div class="modal-meta" id="modal-meta"></div>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-en-title" id="modal-en-title"></p>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <div class="modal-loading" id="modal-loading" aria-live="polite">
+          <span class="loading-spinner" aria-hidden="true"></span> Loading…
+        </div>
+      </div>
+    </div>
+  </div>`;
+  document.body.appendChild(tpl.firstElementChild);
+}
+
+/* ── Shared modal utilities (used by lyrics.js and audio.js) ── */
+
+function renderLyrics(song, modalBody, modalLoading) {
+  modalLoading.hidden = true;
+  const sections = song.sections || [];
+  const taHtml = sections.map(sec => `
+    <div class="lyrics-section">
+      <h3 class="lyrics-section-label">${sec.label}</h3>
+      <p class="lyrics-ta tamil">${sec.ta.replace(/\n/g, '<br>')}</p>
+      <p class="lyrics-translit">${sec.translit.replace(/\n/g, '<br>')}</p>
+    </div>
+  `).join('');
+  const enHtml = sections.map(sec => `
+    <div class="lyrics-section-en">
+      <h3 class="lyrics-section-label">${sec.label}</h3>
+      <p class="lyrics-en">${sec.en.replace(/\n/g, '<br>')}</p>
+    </div>
+  `).join('');
+  const notes = song.notes
+    ? `<aside class="song-notes"><strong>Notes:</strong> ${song.notes}</aside>`
+    : '';
+  modalBody.innerHTML = `
+    <p class="lyrics-block-label">Lyrics &amp; transliteration</p>
+    ${taHtml}
+    <hr class="modal-divider">
+    <p class="lyrics-block-label">Translation</p>
+    ${enHtml}
+  ` + notes;
+}
+
+function buildAudioBar(singer, audioSrc) {
+  const bar = document.createElement('div');
+  bar.id = 'modal-audio-bar';
+  bar.className = 'modal-audio-bar';
+  const musicIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>`;
+  if (audioSrc) {
+    bar.innerHTML = `
+      <p class="modal-audio-label">${musicIcon} ${singer}</p>
+      <div class="audio-player">
+        <button class="play-btn" id="modal-play-btn" aria-label="Play">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+        </button>
+        <div class="progress-track"><div class="progress-fill" id="modal-progress-fill"></div></div>
+        <audio id="modal-audio-el" src="${audioSrc}" preload="none"></audio>
+      </div>`;
+    const audioEl = bar.querySelector('#modal-audio-el');
+    const fillEl  = bar.querySelector('#modal-progress-fill');
+    bar.querySelector('#modal-play-btn').addEventListener('click', () => {
+      const btn = bar.querySelector('#modal-play-btn');
+      if (audioEl.paused) {
+        audioEl.play();
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+      } else {
+        audioEl.pause();
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>';
+      }
+    });
+    audioEl.addEventListener('timeupdate', () => {
+      if (audioEl.duration) fillEl.style.width = (audioEl.currentTime / audioEl.duration * 100) + '%';
+    });
+    audioEl.addEventListener('ended', () => {
+      bar.querySelector('#modal-play-btn').innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>';
+      fillEl.style.width = '0%';
+    });
+  } else {
+    bar.innerHTML = `
+      <p class="modal-audio-label">${musicIcon} ${singer} — audio not yet available for streaming</p>
+      <div class="audio-player">
+        <button class="play-btn" disabled aria-label="Play (unavailable)">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+        </button>
+        <div class="progress-track"><div class="progress-fill"></div></div>
+      </div>`;
+  }
+  return bar;
+}
+
+function closeModal(modalOverlay) {
+  modalOverlay.classList.remove('open');
+  document.body.classList.remove('modal-open');
+}
+
+window.SiteShared = { renderLyrics, buildAudioBar, closeModal };
+
+/* Inject modal synchronously so lyrics.js/audio.js can query it immediately */
+injectModal();
 
 document.addEventListener('DOMContentLoaded', () => {
   injectNav();
