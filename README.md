@@ -39,8 +39,8 @@ radhakrishnan/
 │   ├── images/
 │   │   ├── intro-collage.jpg               # Home slide 0 — temple + book blend
 │   │   ├── koil-concerts.jpg               # Home slide 1 — Mylapore
-│   │   ├── slide-tradition.jpg             # Home slide 2 — kolam/dancer/veena motifs
-│   │   ├── slide-spark.jpg                 # Home slide 3 — music-note/veena motifs
+│   │   ├── puranas-dance.png               # Home slide 2 — Sthalapuranas, dance and the classical tradition
+│   │   ├── asha-concert-concord.png        # Home slide 3 — Concert at Concord
 │   │   ├── book-collage.jpg                # Home slide 4 / books page
 │   │   ├── *.jpg                           # Full-size deity source images
 │   │   └── thumbs/
@@ -70,8 +70,9 @@ Each file in `data/lyrics/` is the canonical record for one song:
   "themes": ["Devotion"],
   "excerpt": "...",
   "volume": 1,
-  "singer": "...",
-  "audio": null,
+  "singer": "Asha Ramesh",
+  "collection": "cd",
+  "audio": "assets/audio/example.mp3",
   "sections": [
     { "label": "Pallavi",    "ta": "...", "translit": "...", "en": "..." },
     { "label": "Anupallavi", "ta": "...", "translit": "...", "en": "..." },
@@ -107,13 +108,17 @@ The `themes` array carries secondary classification tags (`Devotion`, `Healing`,
 
 ## Adding audio
 
-Set the `audio` field in a lyric file to the path under `assets/`:
+Three fields control audio on a song:
 
-```json
-"audio": "assets/audio/vel-muruga.mp3"
-```
+| Field | Values | Effect |
+|---|---|---|
+| `audio` | `"assets/audio/file.mp3"` or `null` | Path to the MP3; `null` shows "not yet available" |
+| `collection` | `"cd"` or `"live"` | **Required** for the song to appear on the Audio page. `"cd"` = Thenum Thinaiyum CD; `"live"` = concert/session recordings |
+| `singer` | string or omit | Stored in metadata only — never displayed in the UI |
 
-The modal automatically switches from "not yet available" to a live play/pause control.
+When `audio` is set, the modal shows a Plyr player with play/pause, a seek bar, and current/total time. When `null`, it shows a placeholder message.
+
+Songs without a `collection` value never appear on the Audio page, regardless of the `audio` field.
 
 ---
 
@@ -131,11 +136,11 @@ To regenerate or resize thumbnails, edit and run `scripts/make_thumbs.py` (requi
 |---|---|---|
 | 0 | Introduction | `intro-collage.jpg` — temple + book blend |
 | 1 | Mylapore | `koil-concerts.jpg` |
-| 2 | A life inside the tradition | `slide-tradition.jpg` — kolam / dancer / veena motifs (PIL-generated) |
-| 3 | 1998 — the spark | `slide-spark.jpg` — music-note / veena motifs (PIL-generated) |
+| 2 | Sthalapuranas, dance and the classical tradition | `puranas-dance.png` |
+| 3 | Concert at Concord | `asha-concert-concord.png` |
 | 4 | The book | `book-collage.jpg` |
 
-Slides 2 and 3 use placeholder PIL-generated motif backgrounds. Replace with proper artwork by swapping the JPEG files — no code change needed.
+Replace any slide background by swapping the image file — no code change needed.
 
 ---
 
