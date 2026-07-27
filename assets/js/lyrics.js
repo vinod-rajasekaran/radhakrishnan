@@ -212,7 +212,10 @@
     const extendedThemes    = ['Devotion', ...NON_DEITY_CATS, ...(allMeta.themes || [])].filter((v, i, a) => a.indexOf(v) === i).sort();
     buildMenu('deity',  'menu-deity',  devotionalDeities, 'All deities');
     buildMenu('theme',  'menu-theme',  extendedThemes,    'All themes');
-
+    document.querySelectorAll('#menu-volume .filter-option').forEach(li => {
+      const val = li.dataset.value;
+      li.addEventListener('click', () => selectOption('volume', val, li.textContent.trim()));
+    });
   }
 
   function buildMenu(key, menuId, values, allLabel) {
@@ -438,6 +441,7 @@
     if (song.collection) {
       const bar = SiteShared.buildAudioBar(song.singer, song.audio || null);
       modalClose.insertAdjacentElement('afterend', bar);
+      SiteShared.initAudioBar(bar);
     }
 
     modalBody.innerHTML = '';

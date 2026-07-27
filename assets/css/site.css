@@ -1346,17 +1346,17 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
 }
 .lyrics-ta {
   font-family: 'Noto Serif Tamil', serif;
-  font-size: 18.5px;
+  font-size: 18px;
   line-height: 1.9;
   color: var(--ink);
-  margin: 0;
+  margin: 0 0 6px;
 }
 .lyrics-translit {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 16px;
   color: var(--ink-soft);
   line-height: 1.8;
-  margin: 5px 0 0;
+  margin: 24px 0 0;
 }
 .modal-divider { border: none; border-top: 1px dashed var(--line); margin: 8px 0 28px; }
 .lyrics-section-en { margin-bottom: 18px; }
@@ -1385,31 +1385,22 @@ body.modal-open { overflow: hidden; }
   font-weight: 700;
   margin: 0 0 12px;
 }
-.audio-player { display: flex; align-items: center; gap: 14px; }
-.play-btn {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: var(--vermilion-deep);
-  color: var(--cream);
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  flex: none;
+.modal-audio-bar .plyr {
+  --plyr-color-main: var(--turmeric);
+  --plyr-audio-controls-background: transparent;
+  --plyr-audio-control-color: var(--ink);
+  --plyr-audio-control-color-hover: var(--vermilion-deep);
+  --plyr-control-spacing: 10px;
+  --plyr-font-family: 'IBM Plex Mono', monospace;
+  --plyr-font-size-base: 13px;
+  --plyr-range-fill-background: var(--turmeric);
+  --plyr-range-track-height: 4px;
+  --plyr-range-thumb-height: 14px;
+  --plyr-range-thumb-width: 14px;
+  --plyr-range-thumb-background: var(--turmeric);
+  border-radius: 0;
+  padding: 0;
 }
-.play-btn:hover { background: var(--vermilion); }
-.play-btn svg { width: 18px; height: 18px; }
-.progress-track {
-  flex: 1;
-  height: 8px;
-  background: var(--line);
-  border-radius: 4px;
-  overflow: hidden;
-  cursor: pointer;
-}
-.progress-fill { height: 100%; background: var(--vermilion-deep); width: 0; }
 
 /* ============================================================
    BOOKS PAGE
@@ -1486,6 +1477,7 @@ body.modal-open { overflow: hidden; }
   padding: 48px 24px;
 }
 .audio-section + .audio-section { border-top: 1px solid var(--line); }
+.audio-section .song-grid { max-width: none; margin: 0; padding: 0; }
 .audio-section-head {
   display: flex;
   align-items: flex-end;

@@ -1,4 +1,4 @@
-/* audio.js — dynamic carousel + lyrics modal */
+/* audio.js — dynamic grid + lyrics modal */
 
 (function () {
   const NON_DEITY = ['Navarasa', 'Miscellaneous', 'Nature'];
@@ -53,11 +53,7 @@
   }
 
   /* ── Section builder ──────────────────────────────────────── */
-  const ARROW_PREV = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>`;
-  const ARROW_NEXT = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>`;
-
   function buildSection(col, songs) {
-    const trackId = `${col.key}-track`;
     const section = document.createElement('section');
     section.className = 'audio-section';
     section.setAttribute('aria-labelledby', `${col.key}-heading`);
@@ -70,14 +66,10 @@
         </div>
         <a href="lyrics.html?audio=1" class="${col.btnClass}">Browse these songs →</a>
       </div>
-      <div class="carousel-wrap">
-        <button class="carousel-btn carousel-prev" aria-label="Scroll left" data-carousel="${trackId}">${ARROW_PREV}</button>
-        <div class="carousel" id="${trackId}" role="list"></div>
-        <button class="carousel-btn carousel-next" aria-label="Scroll right" data-carousel="${trackId}">${ARROW_NEXT}</button>
-      </div>`;
+      <div class="song-grid" role="list"></div>`;
 
-    const track = section.querySelector(`#${trackId}`);
-    songs.forEach(s => track.appendChild(buildCard(s)));
+    const grid = section.querySelector('.song-grid');
+    songs.forEach(s => grid.appendChild(buildCard(s)));
     return section;
   }
 
@@ -124,6 +116,7 @@
         if (song.collection) {
           const bar = SiteShared.buildAudioBar(song.singer, song.audio || null);
           modalClose.insertAdjacentElement('afterend', bar);
+          SiteShared.initAudioBar(bar);
         }
         SiteShared.renderLyrics(song, modalBody, modalLoading);
       })
@@ -131,18 +124,6 @@
         modalLoading.hidden = true;
         modalBody.innerHTML += '<p class="error-msg">Could not load lyrics.</p>';
       });
-  }
-
-  /* ── Wire carousel buttons ────────────────────────────────── */
-  function wireCarousels(container) {
-    container.querySelectorAll('.carousel-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const track = document.getElementById(btn.dataset.carousel);
-        if (!track) return;
-        const cardWidth = track.querySelector('.song-card')?.offsetWidth || 280;
-        track.scrollBy({ left: btn.classList.contains('carousel-prev') ? -(cardWidth + 18) : (cardWidth + 18), behavior: 'smooth' });
-      });
-    });
   }
 
   /* ── Wire card clicks ─────────────────────────────────────── */
@@ -171,7 +152,6 @@
         const section = buildSection(col, songs);
         container.appendChild(section);
       });
-      wireCarousels(container);
       wireCards(container);
     });
 

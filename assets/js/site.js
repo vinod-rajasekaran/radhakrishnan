@@ -2,7 +2,7 @@
 
 const DEITY_META = {
   'Muruga':        { image: 'assets/images/thumbs/Muruga.jpg',     ta: 'முருகன்' },
-  'Ganesha':       { image: 'assets/images/thumbs/Ganesha.jpg',    ta: 'கணேசன்' },
+  'Ganesha':       { image: 'assets/images/thumbs/Ganesha.jpg',    ta: 'கணேசா' },
   'Shiva':         { image: 'assets/images/thumbs/Shiva.jpg',      ta: 'சிவன்' },
   'Vishnu':        { image: 'assets/images/thumbs/Vishnu.jpg',     ta: 'விஷ்ணு' },
   'Lakshmi':       { image: 'assets/images/thumbs/Lakshmi.jpg',    ta: 'லக்ஷ்மி' },
@@ -243,46 +243,30 @@ function buildAudioBar(singer, audioSrc) {
   if (audioSrc) {
     bar.innerHTML = `
       <p class="modal-audio-label">${musicIcon} Recording</p>
-      <div class="audio-player">
-        <button class="play-btn" id="modal-play-btn" aria-label="Play">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
-        </button>
-        <div class="progress-track"><div class="progress-fill" id="modal-progress-fill"></div></div>
-        <audio id="modal-audio-el" src="${audioSrc}" preload="none"></audio>
-      </div>`;
-    const audioEl = bar.querySelector('#modal-audio-el');
-    const fillEl  = bar.querySelector('#modal-progress-fill');
-    bar.querySelector('#modal-play-btn').addEventListener('click', () => {
-      const btn = bar.querySelector('#modal-play-btn');
-      if (audioEl.paused) {
-        audioEl.play();
-        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
-      } else {
-        audioEl.pause();
-        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>';
-      }
-    });
-    audioEl.addEventListener('timeupdate', () => {
-      if (audioEl.duration) fillEl.style.width = (audioEl.currentTime / audioEl.duration * 100) + '%';
-    });
-    audioEl.addEventListener('ended', () => {
-      bar.querySelector('#modal-play-btn').innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>';
-      fillEl.style.width = '0%';
-    });
+      <audio class="modal-plyr" src="${audioSrc}" preload="none"></audio>`;
   } else {
     bar.innerHTML = `
-      <p class="modal-audio-label">${musicIcon} Audio not yet available for streaming</p>
-      <div class="audio-player">
-        <button class="play-btn" disabled aria-label="Play (unavailable)">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
-        </button>
-        <div class="progress-track"><div class="progress-fill"></div></div>
-      </div>`;
+      <p class="modal-audio-label">${musicIcon} Audio not yet available for streaming</p>`;
   }
   return bar;
 }
 
+let _activePlayer = null;
+
+function initAudioBar(bar) {
+  const audioEl = bar && bar.querySelector('.modal-plyr');
+  if (!audioEl || !window.Plyr) return;
+  _activePlayer = new Plyr(audioEl, {
+    controls: ['play', 'progress', 'current-time', 'duration'],
+    resetOnEnd: true,
+  });
+}
+
 function closeModal(modalOverlay) {
+  if (_activePlayer) {
+    _activePlayer.pause();
+    _activePlayer = null;
+  }
   modalOverlay.classList.remove('open');
   document.body.classList.remove('modal-open');
 }
@@ -305,7 +289,7 @@ function updateModalDeityBanner(deity) {
   }
 }
 
-window.SiteShared = { renderLyrics, renderNotes, wireNotesExpand, buildAudioBar, closeModal, updateModalDeityBanner, DEITY_META };
+window.SiteShared = { renderLyrics, renderNotes, wireNotesExpand, buildAudioBar, initAudioBar, closeModal, updateModalDeityBanner, DEITY_META };
 
 /* Inject modal synchronously so lyrics.js/audio.js can query it immediately */
 injectModal();
