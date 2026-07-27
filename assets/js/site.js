@@ -16,13 +16,14 @@ const DEITY_META = {
 };
 
 const NAV_ITEMS = [
-  { key: 'lyrics',           label: 'Lyrics',           href: 'lyrics.html' },
-  { key: 'books',            label: 'Books',             href: 'books.html' },
-  { key: 'audio',            label: 'Audio',             href: 'audio.html' },
-  { key: 'about',            label: 'About',             href: 'about.html' },
-  { key: 'acknowledgements', label: 'Acknowledgements',  href: 'acknowledgements.html' },
-  { key: 'glossary',         label: 'Glossary',          href: 'glossary.html' },
-  { key: 'contact',          label: 'Contact',           href: 'contact.html' },
+  { key: 'home',             label: 'Home',             href: 'index.html' },
+  { key: 'about',            label: 'About',            href: 'about.html' },
+  { key: 'lyrics',          label: 'Lyrics',            href: 'lyrics.html' },
+  { key: 'books',            label: 'Books',            href: 'books.html' },
+  { key: 'audio',            label: 'Audio',            href: 'audio.html' },
+  { key: 'acknowledgments', label: 'Acknowledgments', href: 'acknowledgments.html' },
+  { key: 'glossary',         label: 'Glossary',         href: 'glossary.html' },
+  { key: 'contact',          label: 'Contact',          href: 'contact.html' },
 ];
 
 const BRAND_SVG = `<svg class="nav-brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
@@ -150,7 +151,14 @@ function injectModal() {
         </div>
       </div>
       <div class="modal-header">
-        <div class="modal-meta" id="modal-meta"></div>
+        <div class="modal-meta-row">
+          <div class="modal-meta" id="modal-meta"></div>
+          <button class="modal-print-btn" id="modal-print-btn" aria-label="Print song">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>
+            </svg>
+          </button>
+        </div>
         <h2 class="modal-title" id="modal-title"></h2>
         <p class="modal-en-title" id="modal-en-title"></p>
       </div>
@@ -162,9 +170,43 @@ function injectModal() {
     </div>
   </div>`;
   document.body.appendChild(tpl.firstElementChild);
+  document.getElementById('modal-print-btn').addEventListener('click', () => {
+    const enTitle = document.getElementById('modal-en-title').textContent.trim();
+    const prev = document.title;
+    if (enTitle) document.title = enTitle;
+    window.print();
+    document.title = prev;
+  });
 }
 
 /* ── Shared modal utilities (used by lyrics.js and audio.js) ── */
+
+const NOTES_LIMIT = 200;
+
+function renderNotes(text) {
+  if (!text) return '';
+  if (text.length <= NOTES_LIMIT) {
+    return `<aside class="song-notes"><strong>Notes:</strong> ${text}</aside>`;
+  }
+  const preview = text.slice(0, NOTES_LIMIT).trimEnd();
+  return `<aside class="song-notes"><strong>Notes:</strong> <span class="notes-preview">${preview}…</span><span class="notes-full" hidden>${text}</span> <button class="notes-expand-btn" type="button">Read more</button></aside>`;
+}
+
+function wireNotesExpand(container) {
+  if (!container) return;
+  container.querySelectorAll('.song-notes a').forEach(a => {
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+  });
+  const btn = container.querySelector('.notes-expand-btn');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const aside = btn.closest('.song-notes');
+    aside.querySelector('.notes-preview').hidden = true;
+    aside.querySelector('.notes-full').hidden = false;
+    btn.hidden = true;
+  });
+}
 
 function renderLyrics(song, modalBody, modalLoading) {
   modalLoading.hidden = true;
@@ -182,17 +224,15 @@ function renderLyrics(song, modalBody, modalLoading) {
     </div>
   `).join('');
 
-  const notes = song.notes
-    ? `<aside class="song-notes"><strong>Notes:</strong> ${song.notes}</aside>`
-    : '';
-
   modalBody.innerHTML = `
     <div class="modal-lyrics-grid">
       <p class="lyrics-block-label modal-left-cell">Tamil &amp; transliteration</p>
       <p class="lyrics-block-label modal-right-cell">Translation</p>
       ${sectionsHtml}
     </div>
-  ` + notes;
+  ` + renderNotes(song.notes);
+
+  wireNotesExpand(modalBody);
 }
 
 function buildAudioBar(singer, audioSrc) {
@@ -202,7 +242,7 @@ function buildAudioBar(singer, audioSrc) {
   const musicIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>`;
   if (audioSrc) {
     bar.innerHTML = `
-      <p class="modal-audio-label">${musicIcon} ${singer}</p>
+      <p class="modal-audio-label">${musicIcon} Recording</p>
       <div class="audio-player">
         <button class="play-btn" id="modal-play-btn" aria-label="Play">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
@@ -231,7 +271,7 @@ function buildAudioBar(singer, audioSrc) {
     });
   } else {
     bar.innerHTML = `
-      <p class="modal-audio-label">${musicIcon} ${singer} — audio not yet available for streaming</p>
+      <p class="modal-audio-label">${musicIcon} Audio not yet available for streaming</p>
       <div class="audio-player">
         <button class="play-btn" disabled aria-label="Play (unavailable)">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
@@ -265,7 +305,7 @@ function updateModalDeityBanner(deity) {
   }
 }
 
-window.SiteShared = { renderLyrics, buildAudioBar, closeModal, updateModalDeityBanner, DEITY_META };
+window.SiteShared = { renderLyrics, renderNotes, wireNotesExpand, buildAudioBar, closeModal, updateModalDeityBanner, DEITY_META };
 
 /* Inject modal synchronously so lyrics.js/audio.js can query it immediately */
 injectModal();

@@ -49,7 +49,7 @@
 
   function resetTimer() {
     clearInterval(timer);
-    timer = setInterval(() => goTo(current + 1), 5200);
+    timer = setInterval(() => goTo(current + 1), 15000);
   }
 
   /* Init first slide */
@@ -73,8 +73,9 @@
   });
 
   /* ── Verse teaser ─────────────────────────────────────────────── */
-  const enTitleEl  = document.getElementById('verse-en-title');
-  const chipsEl    = document.getElementById('verse-chips');
+  const enTitleEl     = document.getElementById('verse-en-title');
+  const tamilTitleEl  = document.getElementById('verse-tamil-title');
+  const chipsEl       = document.getElementById('verse-chips');
   const verseGrid  = document.getElementById('verse-grid');
   const notesBlock = document.getElementById('verse-notes-block');
   const anotherBtn = document.getElementById('verse-another');
@@ -88,31 +89,13 @@
     fetch(`data/lyrics/${meta.id}.json`)
       .then(r => r.json())
       .then(song => {
-        const sections = song.sections || [];
-        if (!sections.length) return;
-
+        if (!(song.sections || []).length) return;
         enTitleEl.textContent = song.en;
+        tamilTitleEl.textContent = song.tamil;
         chipsEl.innerHTML = `<span class="verse-deity-chip">${song.deity}</span>`;
-
-        verseGrid.innerHTML = `
-          <p class="verse-col-label verse-left-cell">Tamil &amp; transliteration</p>
-          <p class="verse-col-label peacock-label verse-right-cell">Translation</p>
-          ${sections.map(sec => `
-            <div class="verse-left-cell">
-              <p class="verse-section-label">${sec.label}</p>
-              <p class="verse-ta tamil">${sec.ta.replace(/\n/g, '<br>')}</p>
-              <p class="verse-translit">${sec.translit.replace(/\n/g, '<br>')}</p>
-            </div>
-            <div class="verse-right-cell">
-              <p class="verse-section-label">${sec.label}</p>
-              <p class="verse-en">${sec.en.replace(/\n/g, '<br>')}</p>
-            </div>
-          `).join('')}
-        `;
-
-        notesBlock.innerHTML = song.notes
-          ? `<aside class="song-notes"><strong>Notes:</strong> ${song.notes}</aside>`
-          : '';
+        notesBlock.innerHTML = '';
+        const fakeLoader = document.createElement('div');
+        SiteShared.renderLyrics(song, verseGrid, fakeLoader);
       })
       .catch(() => {});
   }
@@ -121,7 +104,7 @@
     fetch('data/songs.json')
       .then(r => r.json())
       .then(data => {
-        songs = data.songs.filter(s => s.singer);
+        songs = data.songs;
         showVerse();
       })
       .catch(() => {

@@ -1,27 +1,33 @@
 {
   "id": "003",
-  "tamil": "தென்றல்",
-  "en": "Thendral",
-  "deity": "Miscellaneous",
+  "en": "anjAdhE manamE",
+  "tamil": "அஞ்சாதே மனமே",
+  "deity": "Anchaneya",
   "themes": [
-    "Nature"
+    "Devotion"
   ],
-  "excerpt": "The southern breeze carries the temple bell…",
+  "excerpt": "அஞ்சாதே மனமே அஞ்சனை மகன்",
   "volume": 1,
-  "singer": "Bavatharini",
+  "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "தென்றல் வந்து தீண்டும் நேரம்\nமனது குளிரும் இன்பம் தரும்",
-      "translit": "thendral vandhu theeNdum nEram\nmanadhu kuLirum inbam tharum",
-      "en": "When the southern breeze comes and touches,\nthe mind cools, and joy arrives."
+      "ta": "அஞ்சாதே மனமே அஞ்சனை மகன்\nநெஞ்சிலே குடி கொண்ட பின்னாலே",
+      "translit": "anjAdhE manamE anjanai magan\nnenjilE kudi koNda pinnAlE",
+      "en": "Oh, mind, do not fear anything once Anjanai’s son has domiciled in your heart."
     },
     {
       "label": "Anupallavi",
-      "ta": "கோவில் மணியின் ஓசை கேட்டு\nஇயற்கை எல்லாம் இறைவன் ரூபம்",
-      "translit": "kOvil maNiyin Osai kEttu\niyaRkai ellAm iRaivan rUpam",
-      "en": "Hearing the sound of the temple bell,\nall of nature is the form of the divine."
+      "ta": "தஞ்சம் என்ற பின்னாலே தயங்காமல்\nவஞ்சம் இல்லாமல் வரங்களை வாரி வழங்குவான்",
+      "translit": "thanjam endRa pinnAlE thayangAmal\nvanjam illAmal varangaLai vAri vazhanguvAn",
+      "en": "Once you have surrendered unto Him, He would shower all the boons without reservation."
+    },
+    {
+      "label": "Charanam",
+      "ta": "அடிக்கும் காற்றிலே பறக்கும் தூசு போல்\nவெடிக்கும் எரிமலையிடை உருகும் மூலகம் போல்\nதுடிக்கும் நிலையில் அன்பர் வினைகள் யாவுமவர்\nவடிக்கும் கண்ணீர் கண்ட விமலன் கருணையால் மாயுமன்றோ",
+      "translit": "adikkum kAtRilE paRakkum thUsu pOl\nvedikkum erimalaiyidai urugum mUlagam pOl\nthudikkum nilaiyil anbar vinaigaL yAvumavar\nvadikkum kaNNIr kaNda vimalan karuNaiyAl mAyumandRO",
+      "en": "There is no doubt that all his dear devotees’ sins will dissolve when he sees tears in their pained eyes. Past sins of the devotees will attain the fate of floating dust in a fierce wind, or a melting element amid an erupting volcano."
     }
   ],
-  "notes": "The 'thendral' (southern breeze) is a beloved motif in Tamil poetry, associated with longing and grace."
+  "notes": null
 }

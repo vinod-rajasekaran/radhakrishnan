@@ -1,32 +1,33 @@
 {
   "id": "068",
-  "en": "karaharapriyE",
-  "tamil": "கரஹரப்ரியே",
-  "deity": "Parvathi",
+  "en": "kAyavaittha nellinai",
+  "tamil": "காயவைத்த நெல்லினை",
+  "deity": "Nature",
   "themes": [
-    "Devotion"
+    "Nature"
   ],
-  "excerpt": "கரஹரப்ரியே ஸ்ரீபுர நிலையே சிவே",
+  "excerpt": "காயவைத்த நெல்லினை சிறுகச் சிறுக",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "கரஹரப்ரியே ஸ்ரீபுர நிலையே சிவே\nவரமதை தந்து வளத்தினை நல்கும் விமலே",
-      "translit": "karaharapriyE srIpura nilaiyE sivE\nvaramadhai thandhu vaLatthinai nalgum vimalE",
-      "en": "She is a lover of Karaharapriya ragam and dwells in Sri Puram. She is the consort of Lord Siva. She is the goddess who is devoid of all blemishes, one who offers boons and boundless prosperity."
+      "ta": "காயவைத்த நெல்லினை சிறுகச் சிறுக\nகொத்தி தின்னும் குருவியைப் பார்",
+      "translit": "kAyavaittha nellinai sirugach chiruga\nkotthi thinnum kuruviyaip pAr",
+      "en": "Look at the sparrow that is intermittently pecking the paddy that is drying in the sun."
     },
     {
       "label": "Anupallavi",
-      "ta": "தரமான குணமும் திறமான நோக்கும்\nஉரமான நெஞ்சும் உன்னால் தான் சாத்யமம்மா",
-      "translit": "tharamAna guNamum thiRamAna nOkkum\nuramAna nenjum unnAl dhAn sAthyamammA",
-      "en": "All attributes such as excellent character, appropriate outlook, and strong and unperturbed heart are potential possibilities only by thy grace."
+      "ta": "கற்று கொடுத்த பாடம்போல் உன் சொல்லை\nஒற்று தொடுத்த பிஞ்சு கிளியைப் பார்",
+      "translit": "katRu koduttha pAdampOl un sollai\notRu thoduttha pinju kiLiyaip pAr",
+      "en": "Look at the young parrot that has stitched in order all the words you uttered, like a lesson taught repeatedly."
     },
     {
       "label": "Charanam",
-      "ta": "சுரம் ஏழில் நிறைந்து எதிர்வரும் இடரை\nபுறம் காட்டச் செய்து தீவினை மாய்த்து\nஅறம் என்றும் நிலைக்க அடியார்க்கு மலர்க்\nகரம் ஒன்று ஈந்து கயல் விழியாலே கடாக்ஷிக்கும்",
-      "translit": "suram Ezhil niRaindhu ethirvarum idarai\npuRam kAttach cheydhu thIvinai mAytthu\naRam endRum nilaikka adiyArkku malark\nkaram ondRu Indhu kayal vizhiyAlE katAkshikkum",
-      "en": "You reside in seven musical notes. You drive away all incoming obstacles and destroy all past bad deeds. You offer your lotus hand to establish the path of righteousness forever and bless devotees by a mere glance, with those lovely eyes shaped like a fish."
+      "ta": "மோனம் கலையாத நிலையில் வாணியின் குரலில்\nகானம் இசைக்கும் ஞானக் குயிலைப் பார்\nதானம் இதுதானென்று பகலில் நீர்த்துளி சிந்தும் நீல\nவானம் பார் இயற்கை இன்பம் பருகிட இதுவே தருணமன்றோ",
+      "translit": "mOnam kalaiyAdha nilaiyil vANiyin kuralil\ngAnam isaikkum nyAnak kuyilaip pAr\ndhAnam idhudhAnendRu pagalil nIrtthuLi sindhum nIla\nvAnam pAr iyaRkai inbam parugida idhuvE tharuNamandRO",
+      "en": "Look at the cuckoo which probably has not broken its silence since morning and starts singing like Goddess Saraswathi. Look at the blue sky that sprinkles water droplets in the daytime as if demonstrating what charity is. Is this not an appropriate time to relish nature’s bounty?"
     }
-  ]
+  ],
+  "notes": null
 }

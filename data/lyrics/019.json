@@ -1,32 +1,33 @@
 {
   "id": "019",
-  "en": "abhIshta varadha",
-  "tamil": "அபீஷ்ட வரத",
-  "deity": "Ganesha",
+  "en": "thuLLi varuvAL",
+  "tamil": "துள்ளி வருவாள்",
+  "deity": "Lakshmi",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "அபீஷ்ட வரத மஹா கணபதே",
+  "excerpt": "துள்ளி வருவாள் அள்ளி அணைக்கையிலே",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "அபீஷ்ட வரத மஹா கணபதே\nஇஷ்டமாய் சுபீட்சமும் சன்மார்க்கமும் அருள்வாய்",
-      "translit": "abhIshta varadha mahA gaNapathE\nishtamAy subhItchamum sanmArgamum aruLvAy",
-      "en": "Lord Abhishta Varadha Mahaganapathi, please confer prosperity on us, and guide us on the righteous path with your heartfelt love."
+      "ta": "துள்ளி வருவாள் அள்ளி அணைக்கையிலே\nஎள்ளி நகைப்பாள் கள்ளி ஓடி மறைவாள்",
+      "translit": "thuLLi varuvAL aLLI aNaikkaiyilE\neLLi nagaippAL kaLLi Odi maRaivAL",
+      "en": "She will come jumping toward you and when you try to give her a hug, the mischievous girl will sarcastically laugh and just run and hide."
     },
     {
       "label": "Anupallavi",
-      "ta": "கரிவரதா காங்கேயன் தமயா\nபரிபூர்ண குணசீலா பரிவுடன் எமக்கு",
-      "translit": "karivaradhA gAngEyan thamayA\nparipUrNa guNasIlA parivudan emakku",
-      "en": "Elephant-faced Varada, brother of Lord Muruga, you are an immaculate deity with absolutely no blemishes. Please bestow prosperity on us and guide us on the righteous path with sympathy."
+      "ta": "வெள்ளி எழுங்கால் விரைந்திடுவாள் பாற்கடல்\nபள்ளி கொள் பரந்தாமன் பக்கலமர் பாவை",
+      "translit": "veLLi ezhungkAl viraindhiduvAL pARkadal\npaLLi koL parandhAman pakkalamar pAvai",
+      "en": "This damsel, who sits next to the Lord who sleeps in the milky ocean, will rush at dawn."
     },
     {
       "label": "Charanam",
-      "ta": "திருவையாறுதனில் புனித காவேரி மருங்கில்\nஅருமையாய் உறைந்திடும் கருணைச் சுனையே\nஅப்பனைக் காணவென்றே உன் திருக்கோயில் வந்த\nஅப்பரும் ரிஷபாரூடரைக் காணச் செய்த",
-      "translit": "thiruvaiyARuthanil punidha kAvEri marungil\narumaiyAy uRaindhidum karuNaich chunaiyE\nappanaik kANavendRE un thirukkOyil vandha\napparum rishabhArUdaraik kANach cheidha",
-      "en": "You are a perennial waterfall of compassion, residing on the banks of the sacred river Kaveri in the town of Thiruvaiyaru. You made it possible for ailing Appar (Thirunavukkarasar) to realize his lifelong ambition and witness your father, Lord Siva seated on his vehicle, the gorgeous bullock. It was a merciful act indeed. Author’s Note The temple for Sri Abhishta Varada Mahaganapathy, who is popularly known as Kaariya Sidhi Vinayagar, is located in Tiruvaiyaru, Thanjavur. This is the temple where Appar (Thirunavukkarasar) had the darshan of Lord Siva. Prior to this Appar was heading to Kailash to attain salvation and on the way, he lost all his energy and his body almost gave up. Siva asked him to go to Thiruvaiyaru. Appar went to the Ganapathy temple and had his lifelong dream fulfilled. Appar gets Siva darshan Abhishta varada Ganapathy Temple Legends Thyagaraja’s song on Abhishta Varada Mahaganapathy in Hamsadwani ragam also alludes to those individuals like Appar who, with the help of this deity, are on a divine margam (path) to achieve moksha. Thyagaraja Kriti"
+      "ta": "“தல்லி” என்று செல்லமாய் அழைத்தாலும்\nதள்ளி நின்றிடுவாள் அஷ்டோத்திரம் ஜபித்தாலோ\nவள்ளி உவந்துன் வீட்டிருப்பாள் வாழ்விலோர் விடி\nவெள்ளி போலே வளமான வைபோகம் தருவாள்",
+      "translit": "“thalli” endRu chellamAy azhaitthAlum\nthaLLi nindRiduvAL ashtotthiram jabitthAlO\nvaLLi uvandhun vIttiruppAL vAzhvilOr vidi\nveLLi pOlE vaLamAna vaibhOgam tharuvAL",
+      "en": "Even when you address her with deep affection as “Thalli” she may stand away from you. But when you start chanting her 108 names, she will reside in your house with love. Like a sunrise in your life, she will clear all miseries and grace you with boundless joy and prosperity."
     }
-  ]
+  ],
+  "notes": "This is a song on Goddess Mahalakshmi, imagining her as a young girl. The poet has used his favorite Telugu word thalli/“தல்லி”  to describe a young girl in the charanam. The word veLLi or வெள்ளி is used with two different meanings. In one the word represents a rising sun and in another it is used as vidiveLLi to indicate the venus star, implying a future with unlimited prosperity and joy."
 }

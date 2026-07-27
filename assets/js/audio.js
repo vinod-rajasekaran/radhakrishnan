@@ -1,16 +1,85 @@
-/* audio.js — carousel scroll + lyrics modal (shared pattern via SiteShared) */
+/* audio.js — dynamic carousel + lyrics modal */
 
 (function () {
-  /* ── Carousel scroll ──────────────────────────────────────── */
-  document.querySelectorAll('.carousel-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const track = document.getElementById(btn.dataset.carousel);
-      if (!track) return;
-      const cardWidth = track.querySelector('.song-card')?.offsetWidth || 280;
-      const step = cardWidth + 18;
-      track.scrollBy({ left: btn.classList.contains('carousel-prev') ? -step : step, behavior: 'smooth' });
-    });
-  });
+  const NON_DEITY = ['Navarasa', 'Miscellaneous', 'Nature'];
+
+  const COLLECTIONS = [
+    {
+      key:      'cd',
+      label:    'The CD',
+      name:     'Thenum Thinaiyum',
+      subtitle: '',
+      btnClass: 'btn',
+    },
+    {
+      key:      'live',
+      label:    'In performance',
+      name:     'Songs from concert and recording sessions',
+      subtitle: 'Performed live and recorded informally',
+      btnClass: 'btn btn-peacock',
+    },
+  ];
+
+  /* ── Card builder ─────────────────────────────────────────── */
+  const AUDIO_ICON = `<span class="song-audio-icon" aria-label="Audio available">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+    </svg></span>`;
+
+  function buildCard(song) {
+    const isNonDeity  = NON_DEITY.includes(song.deity);
+    const themes      = [...new Set([...(song.themes || []), ...(isNonDeity ? [song.deity] : [])])];
+    const themeChips  = themes.slice(0, 2).map(t => `<span class="mini-tag theme">${t}</span>`).join('');
+    const deityTag    = isNonDeity ? '' : `<span class="mini-tag">${song.deity}</span>`;
+
+    const card = document.createElement('article');
+    card.className = 'song-card';
+    card.setAttribute('role', 'listitem');
+    card.setAttribute('tabindex', '0');
+    card.dataset.id    = song.id;
+    card.dataset.tamil = song.tamil;
+    card.dataset.deity = song.deity;
+    card.innerHTML = `
+      <div class="song-tags">
+        ${themeChips}
+        ${deityTag}
+        ${AUDIO_ICON}
+      </div>
+      <p class="song-title-tamil tamil">${song.tamil}</p>
+      <p class="song-title-en">${song.en}</p>
+      <p class="song-excerpt">${song.excerpt ? '“' + song.excerpt + '…”' : ''}</p>
+      <p class="song-open-hint">Click to read →</p>`;
+    return card;
+  }
+
+  /* ── Section builder ──────────────────────────────────────── */
+  const ARROW_PREV = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>`;
+  const ARROW_NEXT = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>`;
+
+  function buildSection(col, songs) {
+    const trackId = `${col.key}-track`;
+    const section = document.createElement('section');
+    section.className = 'audio-section';
+    section.setAttribute('aria-labelledby', `${col.key}-heading`);
+    section.innerHTML = `
+      <div class="audio-section-head">
+        <div>
+          <span class="audio-collection-label${col.key === 'live' ? ' live' : ''}">${col.label}</span>
+          <h2 class="audio-collection-name" id="${col.key}-heading">${col.name}</h2>
+          <p class="audio-collection-by">${col.subtitle}</p>
+        </div>
+        <a href="lyrics.html?audio=1" class="${col.btnClass}">Browse these songs →</a>
+      </div>
+      <div class="carousel-wrap">
+        <button class="carousel-btn carousel-prev" aria-label="Scroll left" data-carousel="${trackId}">${ARROW_PREV}</button>
+        <div class="carousel" id="${trackId}" role="list"></div>
+        <button class="carousel-btn carousel-next" aria-label="Scroll right" data-carousel="${trackId}">${ARROW_NEXT}</button>
+      </div>`;
+
+    const track = section.querySelector(`#${trackId}`);
+    songs.forEach(s => track.appendChild(buildCard(s)));
+    return section;
+  }
 
   /* ── Modal refs ───────────────────────────────────────────── */
   const modalOverlay = document.getElementById('modal-overlay');
@@ -21,30 +90,17 @@
   const modalBody    = document.getElementById('modal-body');
   const modalLoading = document.getElementById('modal-loading');
 
-  if (!modalOverlay) return;
-
-  /* ── Card clicks ──────────────────────────────────────────── */
-  document.querySelectorAll('.song-card').forEach(card => {
-    card.addEventListener('click', () => openModal(card));
-    card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card); }
-    });
-  });
-
+  /* ── Modal open ───────────────────────────────────────────── */
   function openModal(card) {
-    const id     = card.dataset.id;
-    const singer = card.dataset.singer || '';
-    const tamil  = card.dataset.tamil  || card.querySelector('.song-title-tamil')?.textContent || '';
-    const en     = card.querySelector('.song-title-en')?.textContent || '';
-    const deity  = card.dataset.deity  || card.querySelector('.mini-tag')?.textContent || '';
+    const id    = card.dataset.id;
+    const tamil = card.dataset.tamil || card.querySelector('.song-title-tamil')?.textContent || '';
+    const en    = card.querySelector('.song-title-en')?.textContent || '';
+    const deity = card.dataset.deity || '';
 
     SiteShared.updateModalDeityBanner(deity);
     modalTitle.textContent   = tamil;
     modalEnTitle.textContent = en;
-    modalMeta.innerHTML = `
-      <span class="mini-tag">${deity}</span>
-      ${singer ? `<span class="mini-tag">${singer}</span>` : ''}
-    `;
+    modalMeta.innerHTML = '';
 
     const existing = document.getElementById('modal-audio-bar');
     if (existing) existing.remove();
@@ -59,8 +115,14 @@
     fetch(`data/lyrics/${id}.json`)
       .then(r => r.json())
       .then(song => {
-        if (singer) {
-          const bar = SiteShared.buildAudioBar(singer, song.audio || null);
+        const isNonDeity  = NON_DEITY.includes(song.deity);
+        const themes      = [...new Set([...(song.themes || []), ...(isNonDeity ? [song.deity] : [])])];
+        const themeChips  = themes.slice(0, 2).map(t => `<span class="mini-tag theme">${t}</span>`).join('');
+        const deityTag    = isNonDeity ? '' : `<span class="mini-tag">${song.deity}</span>`;
+        modalMeta.innerHTML = `<span class="mini-tag">Vol ${song.volume}</span>${themeChips}${deityTag}`;
+
+        if (song.collection) {
+          const bar = SiteShared.buildAudioBar(song.singer, song.audio || null);
           modalClose.insertAdjacentElement('afterend', bar);
         }
         SiteShared.renderLyrics(song, modalBody, modalLoading);
@@ -70,6 +132,48 @@
         modalBody.innerHTML += '<p class="error-msg">Could not load lyrics.</p>';
       });
   }
+
+  /* ── Wire carousel buttons ────────────────────────────────── */
+  function wireCarousels(container) {
+    container.querySelectorAll('.carousel-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const track = document.getElementById(btn.dataset.carousel);
+        if (!track) return;
+        const cardWidth = track.querySelector('.song-card')?.offsetWidth || 280;
+        track.scrollBy({ left: btn.classList.contains('carousel-prev') ? -(cardWidth + 18) : (cardWidth + 18), behavior: 'smooth' });
+      });
+    });
+  }
+
+  /* ── Wire card clicks ─────────────────────────────────────── */
+  function wireCards(container) {
+    container.querySelectorAll('.song-card').forEach(card => {
+      card.addEventListener('click', () => openModal(card));
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card); }
+      });
+    });
+  }
+
+  /* ── Bootstrap ────────────────────────────────────────────── */
+  if (!modalOverlay) return;
+
+  const container = document.getElementById('audio-sections');
+  if (!container) return;
+
+  fetch('data/songs.json')
+    .then(r => r.json())
+    .then(data => {
+      const audioSongs = data.songs.filter(s => s.collection);
+      COLLECTIONS.forEach(col => {
+        const songs = audioSongs.filter(s => s.collection === col.key);
+        if (!songs.length) return;
+        const section = buildSection(col, songs);
+        container.appendChild(section);
+      });
+      wireCarousels(container);
+      wireCards(container);
+    });
 
   modalClose.addEventListener('click', () => SiteShared.closeModal(modalOverlay));
   modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) SiteShared.closeModal(modalOverlay); });

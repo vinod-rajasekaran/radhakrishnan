@@ -1,26 +1,33 @@
 {
   "id": "008",
-  "tamil": "பார்வதி கல்யாணம்",
-  "en": "Parvathi Kalyanam",
-  "deity": "Parvathi",
+  "en": "akshaya vinAyaganE",
+  "tamil": "அக்ஷய விநாயகனே",
+  "deity": "Ganesha",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "The mountain's daughter, and the wedding of the world…",
-  "volume": 2,
+  "excerpt": "அக்ஷய விநாயகனே ஆதரித்தாள்பவனே",
+  "volume": 1,
+  "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "மலைமகள் கல்யாணம் காண\nஉலகமே கூடி நின்றதே",
-      "translit": "malaimagaL kalyANam kANa\nulagamE kUdi nindradhE",
-      "en": "To witness the wedding of the mountain's daughter,\nthe whole world gathered together."
+      "ta": "அக்ஷய விநாயகனே ஆதரித்தாள்பவனே\nபிக்ஷா பாத்திர மூலவனே பீதாம்பரதாரனே",
+      "translit": "akshaya vinAyaganE AdharitthALbavanE\nbhikshA pAtthira mUlavanE pIthAmbaradhAranE",
+      "en": "Everlasting Vinayaka, you are the supporter and leader of your devotees. You are the originator of the limitless vessel that feeds the hungry, you who is adorned in exquisite silk."
     },
     {
       "label": "Anupallavi",
-      "ta": "சிவனுடன் இணைந்த சக்தியே\nகுடும்பத்தின் காவல் தெய்வமே",
-      "translit": "sivanudan iNaindha sakthiyE\nkudumbathin kAval dheivamE",
-      "en": "O power united with Shiva,\nguardian deity of the family."
+      "ta": "இடம் அறிந்து பொருளறிந்து ஈவதிலே\nதிடம் ஆனவன் நீயெனல் மெய்யன்றோ",
+      "translit": "idam aRindhu poruLaRindhu IvadhilE\ndhidam Anavan nIyenal meyyandRo",
+      "en": "Is it not a fact that you are an expert in judging what to give to whom, and how much?"
+    },
+    {
+      "label": "Charanam",
+      "ta": "மாதவன் வாஹனன்பால் நீதந்த பாத்திரம்\nஆதவன் ஒளிபோல் திருக்கையால் உருமாறி\nசகதி சேர் வாழ்வினில் ஆறாத்துயரொடு கானில்\nஅகதி போல் குமைந்த பாஞ்சாலிக்கு உதவியதே",
+      "translit": "mAdhavan vAhananpAl nIthandha pAtthiram\nAdhavan oLipOl thirukkaiyAl urumARi\nsagadhi sEr vAzhvinil ARAtthuyarodu kAnil\nagadhi pOl kumaindha pAnjAlikku udhaviyadhE",
+      "en": "The perpetual vessel that you handed down to Garuda, vehicle of Lord Vishnu, changed so many hands. It shone with the bright rays of sun because of your touch and ended up in the hands of Draupathi. The poor damsel who was spending time in the forest, like a despairing refugee in this muddy world, received the gift of the vessel and it helped her immensely. (Is this not amazing? Is this also preordained by you?)"
     }
   ],
-  "notes": "Parvathi (literally 'daughter of the mountain') is the divine consort of Shiva. Her wedding is celebrated in many temple traditions."
+  "notes": "This song is based on the sthalapuranam of Arasar Koil Sundara Mahalakshmi temple, located near Kancheepuram. Legend states that devi offered the Akshaya Paatra vessel via Selva Ganapathi originally to Vishnu’s Vahana Garuda. By Sri Vinayaka’s divine order Garuda carried the vessel and dropped it off with Surya, who in turn offered it to Yudhishtra to help Panchali during her stay in the forest (based on legends associated with the temple published in Dinamalar supplement which the author could not retrieve).\nHowever, the blogspot below describes the transfer of Akshaya Paatra vessel (section on akshaya tritiya para 5 and 15) from Akshaya Vinayaka to Garuda and transfer to Surya and Mahabharata's account of the transfer of the vessel from Surya to Yudhishtra. This is also confirmed in Surya puranam.*\n<a href=\"http://sankharaguru.blogspot.com/2013/09/\">Transfer of Akshaya Paatra</a>    - section: Akshaya Tritiya – A day for charity and sharing of all wealth.\n<a href=\"https://agasthiar.org/NKN-2006/08-04.htm\">Garuda receives Akshaya Paatra</a>  -  section: \"Vaidya Shakti\" Garuda\n<a href=\"https://www.apnisanskriti.com/vrat-katha/significance-of-akshaya-tritiya-5278\">Draupadi receives Akshaya Paatra</a> - section: Legend\nஶ்ரீ மஹாபாரத ஸாரம், உரை ஆசிரியர் “அண்ணா”, ஶ்ரீராமகிருஷ்ண மடம், மயிலாப்பூர், சென்னை 600004, பக்கம் 411, 421-423.\n<a href=\"https://tamilnadu-favtourism.blogspot.com/2016/12/kamala-varadharajar-temple-arasar-koil.html\">Greatness of Arasar koil</a>\n*சூரிய புராணம் எழுதியவர்:    கார்த்திகேயன் (எஸ்.ராமநாதன்), பதிப்பகத்தார் : கிரி டிரேடிங் ஏஜென்ஸி பிரைவேட் லிமிடெட், சென்னை,  2nd Reprint July 2003, புராணங்களில் காணப்படும் கதைகள் 7. ஆதித்தன் தந்த அக்ஷய பாத்திரம், பக்கம் 196-199."
 }

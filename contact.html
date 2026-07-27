@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Noto+Serif+Tamil:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=20260719u">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260727i">
 </head>
 <body data-page="contact">
   <header id="site-header"></header>
@@ -22,29 +22,35 @@
     <div class="contact-wrap">
       <p>We look forward to sharing these compositions with a global audience. If you'd like to use one of the songs, have a correction, or just want to say hello, we'd love to hear from you.</p>
 
-      <form class="contact-form" id="contact-form" novalidate>
+      <p class="form-note" data-fs-success hidden>Thank you — your message has been sent!</p>
+
+      <form class="contact-form" id="contact-form" method="POST" novalidate>
         <div class="form-group">
           <label class="form-label" for="contact-name">Name</label>
-          <input class="form-input" type="text" id="contact-name" name="name" placeholder="Your name" autocomplete="name">
+          <input class="form-input" type="text" id="contact-name" name="name" placeholder="Your name" autocomplete="name" data-fs-field>
+          <span class="error-msg" data-fs-error="name"></span>
         </div>
 
         <div class="form-group">
           <label class="form-label" for="contact-email">Email</label>
-          <input class="form-input" type="email" id="contact-email" name="email" placeholder="your@email.com" autocomplete="email">
+          <input class="form-input" type="email" id="contact-email" name="email" placeholder="your@email.com" autocomplete="email" data-fs-field>
+          <span class="error-msg" data-fs-error="email"></span>
         </div>
 
         <div class="form-group">
           <label class="form-label" for="contact-message">Message</label>
-          <textarea class="form-textarea" id="contact-message" name="message" rows="6" placeholder="Your message…"></textarea>
+          <textarea class="form-textarea" id="contact-message" name="message" rows="6" placeholder="Your message…" data-fs-field></textarea>
+          <span class="error-msg" data-fs-error="message"></span>
         </div>
 
-        <button type="submit" class="btn btn-start">Send message</button>
+        <p class="error-msg" data-fs-error hidden></p>
+        <button type="submit" class="btn btn-start" data-fs-submit-btn>Send message</button>
       </form>
     </div>
   </main>
 
   <footer id="site-footer"></footer>
-  <script src="assets/js/site.js?v=20260719u"></script>
-  <script src="assets/js/contact.js?v=20260719u"></script>
+  <script src="assets/js/site.js?v=20260727i"></script>
+  <script src="assets/js/contact.js?v=20260727i"></script>
 </body>
 </html>

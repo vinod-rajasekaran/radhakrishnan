@@ -1,33 +1,33 @@
 {
   "id": "035",
-  "en": "sarva vyApanE",
-  "tamil": "சர்வ வியாபனே",
-  "deity": "Shiva",
+  "en": "parvatha nilaiyE",
+  "tamil": "பர்வத நிலையே",
+  "deity": "Parvathi",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "சர்வ வியாபனே சதாசிவ சம்போ",
+  "excerpt": "பர்வத நிலையே பாச விமோசன தயிதே",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "சர்வ வியாபனே சதாசிவ சம்போ\nபர்வதமுறை பரமா பதம் பணிந்தேன்",
-      "translit": "sarva vyApanE sadhAsiva sambO\nparvadhamuRai paramA padham paNindhEn",
-      "en": "Oh, Omnipresent Lord Sadhasiva, self-originated deity, and one who dwells in Mount Kailash, I worship your lotus feet."
+      "ta": "பர்வத நிலையே பாச விமோசன தயிதே\nபரம க்ருபாநிதே பசுபதி ப்ரியே",
+      "translit": "parvatha nilaiyE pAsa vimOchana dhayithE\nparama krupAnidhE pasupathi priyE",
+      "en": "Oh, Goddess Parvathi, domiciled in Mount Kailash, you offer us detachment from all worldly ties. You are supreme in compassion, and the darling of Lord Pasupathi."
     },
     {
       "label": "Anupallavi",
-      "ta": "உலர்ந்த சருகும் நீ அன்றலர்ந்த மலரும் நீ\nஒலியின் வடிவும் நீ எதிரொலியின் இசையும் நீ",
-      "translit": "ularndha sarugum nI andRalarndha malarum nI\noliyin vadivum nI edhiroliyin isaiyum nI",
-      "en": "Thou art the dried leaf; thou art the blossomed flower. Thou art the shape of sound; thou art the music of an echo."
+      "ta": "பரமேஸ்வரன் பாதி நீ பாமர ஜன ரக்ஷகி நீ\nபரந்தாமன் சோதரி நீ பாப நாசினி நீ",
+      "translit": "paramEswaran pAdhi nI pAmara jana rakshaki nI\nparandhAman sOdhari nI pApa nAsini nI",
+      "en": "You reside in one half of the divine Siva, protector of the poor and destitute; sister of Mahavishnu, and destroyer of all sins of your devotees."
     },
     {
       "label": "Charanam",
-      "ta": "ஓடை நீரும் நீ பாலைவனத்தே கானல் நீ\nகோடை வெயில் நீ குளிர் மர நிழலும் நீ\nபயிரில் பசுமை நீ உயிரில் ஆத்மன் நீ\nதோடு அணியும் சிவமே தோடி ராகப்ரியனே",
-      "translit": "Odai nIrum nI pAlaivanatthE kAnal nI\nkOdai veyil nI kuLir mara nizhalum nI\npayiril pasumai nI uyiril Athman nI\nthOdu aNiyum sivamE thOdi ragapriyanE",
-      "en": "Thou art the clear water of a brook; Thou art the mirage in a desert. Thou art the warmth of summer; Thou art the cool shade of a tree. Thou art the greenness of vegetation; Thou art the soul of living things. You are the Supreme, adorning an ear stud and fascinated by the melody of Thodi ragam."
+      "ta": "பராக்ரமத்தை காட்ட பரம ஏழை தானா கிடைத்தேன்\nபரப்ரம்மம் போல் ஒன்றும் தெரியாதிருந்தேனா\nபரஞானி போல் பலவிதமாய் பாசாங்குகள் செய்தேனா\nபரிஹாசம் புரியாது பதறியழும் பிள்ளையைப் பாலி நீ",
+      "translit": "parAkramatthai kAtta parama Ezhai dhAnA kidaitthEn\nparabrahmam pOl ondRum theriyAdhirundhEnA\nparanyAni pOl palavidhamAy pAsAnggugaL seydhEnA\nparihAsam puriyAdhu padhariyazhum piLLaiyaip pAli nI",
+      "en": "Am I the only poor soul that you chose to demonstrate your godly strength? Did I look like the absolute reality,one defying all description, beyond dualities like knowledge and ignorance, action and inaction and totally unaware of my surroundings? Did I otherwise pose as someone knowing everything, was I pretentious? Please let go of your smirk and ridicule, and protect this young child crying in utter despair."
     }
   ],
-  "notes": "The anupallavi and charanam of this song are based on Siva's traits of all pervading aspects of the Lord laid in the Namakam."
+  "notes": null
 }

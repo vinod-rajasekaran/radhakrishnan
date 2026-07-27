@@ -1,32 +1,33 @@
 {
   "id": "032",
-  "en": "thiruvAnmiyUr thigazh",
-  "tamil": "திருவான்மியூர் திகழ்",
-  "deity": "Shiva",
+  "en": "OdhAdha vEdhamE",
+  "tamil": "ஓதாத வேதமே",
+  "deity": "Parvathi",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "திருவான்மியூர் திகழ் திரிபுர சுந்தரி மகிழ்",
+  "excerpt": "ஓதாத வேதமே நாதங்கள் யாவிற்கும் மூலமே உன்",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "திருவான்மியூர் திகழ் திரிபுர சுந்தரி மகிழ்\nமருந்தீசா வருந்துவோர் வினை களையும் வள்ளலே",
-      "translit": "thiruvAnmiyUr thigazh thiripura sundhari magizh\nmarundhIsA varundhuvOr vinai kaLaiyum vaLLalE",
-      "en": "Lord Marundheeswara, one who pleases the goddess Thripurasundhari residing in Thiruvanmiyur, thou art merciful, eliminating the suffering of all troubled souls."
+      "ta": "ஓதாத வேதமே நாதங்கள் யாவிற்கும் மூலமே உன்\nபாதாம்புஜ தூளியாகும் பாக்கியம் அருள்வாயம்மா",
+      "translit": "OdhAdha vEdhamE nAdhangaL yAviRkum mUlamE un\npAdhAmbuja thULiyAgum bhAgyam aruLvAyammA",
+      "en": "You are the unsung scripture; you are the source of all musical sounds. Please at least provide me with the opportunity to be the dust on your divine feet."
     },
     {
       "label": "Anupallavi",
-      "ta": "விஷமருந்தி வையத்துயர் துடைத்து நெஞ்சில்\nகறை கொண்ட இறையே காருண்ய ப்ரபோ",
-      "translit": "vishamarundhi vaiyatthuyar thudaitthu nenjil\nkaRai konda iRaiyE kAruNya prabhO",
-      "en": "You are the compassionate one who drank poison to alleviate the miseries of the universe, and in the process obtained a permanent stain on your throat owing to the toxicity of the poison."
+      "ta": "கோதாக நான் புரிந்த வினையாவும் க்ஷமித்து\nதோதாக கலியிடை துணை புரிய வேண்டுமம்மா",
+      "translit": "kOdhAga nAn purindha vinaiyAvum kshamitthu\nthOdhAga kaliyidai thuNai puriya vEndumammA",
+      "en": "Please forgive all the sins I have knowingly committed, and in this age of tormenting Kaliyuga, be supportive and lend me help."
     },
     {
       "label": "Charanam",
-      "ta": "தளர்ந்த வயதினிலே தனிமரமாய் தத்தளிப்போர்க்கும்\nகுழந்தைகள் போக்கினிலே குமுறி அழுபவர்க்கும்\nதீராத நோயுற்றார் என்றே தீர்மானம் ஆனவர்க்கும்\nதனி மருந்தான தயாபரனே தன்னேரிலா தவக்கொழுந்தே",
-      "translit": "thaLarndha vayadhinilE thanimaramAy thatthaLippOrkkum\nkuzhandhaigaL pOkkinilE kumuRi azhubavarkkum\nthIrAdha nOyutRAr endRe thIrmAnam Anavarkkum\nthani marundhAna dhayAparanE thannErilA thavakkozhundhE",
-      "en": "You are the singular medicament to aged, desolate people; people who incessantly cry due to the conduct of their children; people who have been declared as untreatable with terminal diseases. Perhaps you were birthed from our penance. You are the savior and the compassionate companion of the distraught. Author’s Note This song is in praise of Marundeeswarar/ Palvannanathar of Thiruvanmiyur Temple with Thripurasundari as Lord’s consort. Lord Siva who consumed the Haala Hala poison to save the universe from the potent toxin became blue throated Lord or Neelakantan when Devi used her hand to chock his throat and arrest the poison from entering his body. He is addressed here as provider of unique medicines. It is in this sthalam Siva taught sage Agasthiya uniqueness of various herbs and their therapeutic applications. Hence the name Marundeeswarar for the presiding deity in this shrine. Marundeeswarar temple sthalapuranam"
+      "ta": "காதோர அணியினை (சேற்றிடை) சேயொன்று மாசுறச்  செய்தாலும்\nசேதாரம் கேட்கும் சுற்றமுண்டோ பாழ் குழியிடை பதறி\nஆதாரம் நீயென்று அலறிடும் போது கரமொன்று தாராது\nகேதாரப்ரியே கேளிக்கை செய்வாயோ கேட்டுருகாயோ",
+      "translit": "kAdhOra aNiyinai (sEtRidai) sEyondRu mAsuRach cheidhAlum\nsEdhAram kEtkum sutRamundO pAzh kuzhiyidai padhaRi\nAdhAram nIyendRu alaRidum pOdhu karamondRu thArAdhu\nkEdhArapriyE kELikkai seivAyO kEtturugAyO",
+      "en": "Even if a child has tossed an expensive ear jewelry (into the mud) and made it very dirty, will there be a near and dear relative who asks for monetary damages to fix the jewelry? Oh Goddess, who relishes the raga Kedharam, would you revel in watching your child cry out for your help? Will you not listen to the child’s loud plea after falling into the ditch of this worldly life? Will you not offer a helping hand? Will you not melt, hearing the child’s pleas?"
     }
-  ]
+  ],
+  "notes": null
 }

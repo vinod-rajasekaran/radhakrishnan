@@ -21,7 +21,7 @@ Cache Busting — Asset Versioning
 
 Every <link>, <script>, and <img> in every HTML file must carry a ?v=YYYYMMDD[letter] query string (e.g. ?v=20260718a). This forces browsers to re-fetch assets after a deploy instead of serving stale cached files.
 
-Current version: 20260719i
+Current version: 20260727i
 
 When to bump: any time a static file changes — CSS, JS, JSON under data/, or images.
 
@@ -31,6 +31,29 @@ How to bump (replace OLD with the previous token, NEW with today's token):
 Letter suffix: start at 'a' each day; increment to 'b', 'c', … for subsequent changes on the same day.
 
 Rule: always bump BEFORE committing. Never skip — a stale version string means users keep running old JS/CSS after a deploy.
+
+Song Index — Rebuild Required
+
+`data/songs.json` is auto-generated from `data/lyrics/*.json` by running:
+  node scripts/build-index.js
+
+Run this command any time a lyrics JSON file is added, removed, or edited. Never edit `data/songs.json` directly — it is overwritten on every rebuild.
+
+Song Display — Three Surfaces Share Behaviour
+
+Song content is displayed in three places that must stay in sync:
+  1. Home page — "A song, at random" verse card (index.html + home.js)
+  2. Lyrics page modal (lyrics.html + lyrics.js)
+  3. Audio page modal (audio.html + audio.js)
+
+All three render lyrics, titles, chips, and notes. Shared rendering logic lives in site.js (renderLyrics, renderNotes, wireNotesExpand, buildAudioBar).
+
+Before touching any of these surfaces, ask:
+  - Does this change need to land in all three places, or only one?
+  - Is the affected logic already shared via site.js, or duplicated across files?
+  - Does adding a new field (title, tag, section) require an HTML element in index.html as well as the modal template in site.js?
+
+Always ask clarifying questions before implementing if the scope across these three surfaces is not explicit in the request.
 
 End-to-End Verification
 

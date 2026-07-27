@@ -1,26 +1,33 @@
 {
   "id": "004",
-  "tamil": "வக்ரதுண்ட",
-  "en": "Vakratunda",
-  "deity": "Ganesha",
+  "en": "sivandha sindhUratthai",
+  "tamil": "சிவந்த சிந்தூரத்தை",
+  "deity": "Anchaneya",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "Curved of trunk, remover of every obstacle…",
+  "excerpt": "சிவந்த சிந்தூரத்தை மேனி எல்லாம்",
   "volume": 1,
+  "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "வக்ரதுண்ட மகாகாயா\nவினைகள் தீர்க்கும் விநாயகா",
-      "translit": "vakratuNda mahAkAyA\nvinaigaL theerkkum vinAyakA",
-      "en": "O curved-trunked one of great form,\nGanesha who removes every obstacle."
+      "ta": "சிவந்த சிந்தூரத்தை மேனி எல்லாம்\nஉவந்து ஏற்ற உத்தமனே மாருதி",
+      "translit": "sivandha sindhUratthai mEni ellAm\nuvandhu EtRa utthamanE mAruthi",
+      "en": "Oh, gentle and righteous Anchaneya, you joyfully accepted and adorned red vermilion all over your body."
     },
     {
       "label": "Anupallavi",
-      "ta": "மோதக பிரியா முதல்வா\nமங்கல காரியம் தொடங்குமுன் வணங்குவோம்",
-      "translit": "mOdhaka priyA mudhalvA\nmangala kAriyam thodangumun vaNanguvOm",
-      "en": "First Lord, fond of the modak sweet;\nwe bow to you before any auspicious task begins."
+      "ta": "அன்னையன்ன ஜானகியின் ஒளிர்\nமின்னலன்ன நுதலிடை கண்ட பின்னே",
+      "translit": "annaiyanna jAnakiyin oLir\nminnalanna nudhalidai kaNda pinnE",
+      "en": "After you witnessed the vermilion on the lightening-like, radiant forehead of Mother Janaki or Sita, (you joyfully accepted and adorned red vermilion all over your body)."
+    },
+    {
+      "label": "Charanam",
+      "ta": "ஊண் உறக்கமின்றி எக்காலும் பஜிக்கும்\nராமன் ஆயுள் நீடிக்கும் என்று தாயும்\nசெம்மண் தரிப்பதின் பொருள் உரைக்க\nநொடியும் தாமதம் செய்யாது ஓரளவின்றி",
+      "translit": "UN uRakkamindRi ekkAlum bajikkum\nrAman AyuL nIdikkum endRu thAyum\nsemmaN dharippadhin poruL uraikka\nnodiyum thAmadham seyyAdhu OraLavindRi",
+      "en": "Mother Janaki explained to you that the vermilion on her forehead will provide longevity to the life of Srirama, who is worshipped forever without food or sleep by loved ones. Once you heard the meaning behind adorning the vermilion on one's forehead, you did not wait even a moment and did not even bother to measure the amount of vermilion to adorn yourself."
     }
   ],
-  "notes": "Ganesha, the elephant-headed son of Shiva, is worshipped at the start of every endeavour. The modak is his favourite sweet."
+  "notes": "This song is based on a lesser known story about Anchaneya. Even though it is assumed that this story originated from Ramayana, literature is lacking confirmatory details. One such write-up lists all lesser known facts about Hanuman, including this episode of Hanuman rubbing Sindhoor all over his body to demonstrate to Rama his love and affection, and his wish for Lord Rama’s immortality and longevity. See the following links:\n<a href=\"https://www.bhaktixpress.com/p/the-untold-story-why-sindoor-is-applied\">Hanuman smears Sindoor on entire body</a>\n<a href=\"https://www.linkedin.com/pulse/some-lesser-known-facts-shri-hanuman-ji-kishore-shintre\">Lesser known facts about Hanuman</a>\nThe episode of Hanuman smearing sindoor (vermilion) all over his body is found in the \"Ananda Ramayana,\" a lesser-known Sanskrit text. the authorship of this Ramayana is also uncertain. Some believe that Sage Valmiki composed it but scholars believe that it is a much later version with new elements not found in Valmiki Ramaya incorporated into it perhaps between 12th to 15th century AD. This story is part of the \"Hanumanupakhyana\" within the Ananda Ramayana, which is considered a supplementary text to the Valmiki Ramayana."
 }

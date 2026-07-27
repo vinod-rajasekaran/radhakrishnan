@@ -1,32 +1,33 @@
 {
   "id": "071",
-  "en": "thiruviLaiyAdal",
-  "tamil": "திருவிளையாடல் புரிய தருணமிதே",
-  "deity": "Parvathi",
+  "en": "engirundhO kAtRil",
+  "tamil": "எங்கிருந்தோ காற்றில்",
+  "deity": "Nature",
   "themes": [
-    "Devotion"
+    "Nature"
   ],
-  "excerpt": "திருவிளையாடல் புரிய தருணமிதே",
+  "excerpt": "எங்கிருந்தோ காற்றில் பறந்த விதையும்",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "திருவிளையாடல் புரிய தருணமிதே\nதிரிபுரசுந்தரி தாரிணி திகைத்திட",
-      "translit": "thiruviLaiyAdal puriya tharuNamidhE\nthiripurasundhari dhAriNi thigaitthida",
-      "en": "Goddess Tripurasundari, this is an ideal moment for you to perform a miracle, with the entire universe watching in amazement."
+      "ta": "எங்கிருந்தோ காற்றில் பறந்த விதையும்\nமழைத்துளியும் மண்ணும் சங்கமித்தது",
+      "translit": "engirundhO kAtRil paRandha vidhaiyum\nmazhaitthuLiyum maNNum sangamitthadhu",
+      "en": "A seed, carried by the wind, mingled with  raindrops and soil."
     },
     {
       "label": "Anupallavi",
-      "ta": "தினமெல்லாம் அழுது திண்டாடும்\nதீனர்க்கு உறுதுணையாகும் திருமால் சோதரி",
-      "translit": "dhinamellAm azhudhu thiNdAdum\ndhInarkku uRuthuNaiyAgum thirumAl sOdhari",
-      "en": "You are Lord Vishnu’s sister who helps all those poor souls who struggle and cry each day."
+      "ta": "சில நாட்கள் சென்றன கூடிய களிப்பினில்\nசிறு கொழுந்தொன்று துளிர்த்து வந்தது",
+      "translit": "sila nAtkaL sendRana kUdiya kaLippinil\nsiRu kozhundhondRu thuLirtthu vandhadhu",
+      "en": "Some days passed. From the happiness of the union, a tiny tender plant sprouted in the soil."
     },
     {
       "label": "Charanam",
-      "ta": "திக்கெட்டும் இசைபாடும் தயாபரீ\nதிக்கற்றோர்க்கு அருளிடும் தேவரக்ஷகி\nதிக்கு முக்காட வைக்கும் சோதனை யாவும்\nதிக்கிடச் செய்வாய் என்றே திருவடி அடைந்தேன்",
-      "translit": "dhikkettum isaipAdum dhayAparI\ndhikkatROrkku aruLidum dEvarakshaki\nthikku mukkAda vaikkum sOdhanai yAvum\nthikkidach cheivAy endRE thiruvadi adaindhEn",
-      "en": "You are the compassionate one, whom creations in all eight directions extoll. You are the protector of all demigods and the one who showers compassion on the desolate. I came and surrendered at your divine feet thinking that you will take care of all my troubles; those periods in life that test me and baffle me, you vanquish them."
+      "ta": "பகலவன் கதிர்பட்டு பந்நீர் மேனி  பட்டு\nசெடியாகி மரமாகி ஓங்கி நின்றது\nகாயாகி கனியாகி காசினியைக் காத்த பின்னே\nஓயாத சூறாவளியில் வித்தொன்றை தூர எறிந்தது",
+      "translit": "pagalavan kadhirpattu pannIr mEni pattu\nsediyAgi maramAgi Ongi nindRadhu\nkAyAgi kaniyAgi kAsiniyaik kAttha pinnE\nOyAdha sURavaLiyil vitthondRai dhUra eRindhadhu",
+      "en": "The small plant grew and became a large plant and later grew into a tall tree. It stood with assistance from the sun and water from dew drops, rain, and irrigation. The tree bore unripe and later juicy fruits and saved humanity. On a non-stop stormy day, the tree threw away a seed from the fruit in the wind, and the cycle continued as part of a self-sustaining natural phenomenon."
     }
-  ]
+  ],
+  "notes": "This song is about Nature’s self-sustaining cycle of events."
 }

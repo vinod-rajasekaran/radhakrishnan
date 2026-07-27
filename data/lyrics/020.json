@@ -1,32 +1,39 @@
 {
   "id": "020",
-  "en": "oyyAramAy UnjalAdum",
-  "tamil": "ஒய்யாரமாய் ஊஞ்சலாடும்",
-  "deity": "Ganesha",
+  "en": "nithyanidhiyE",
+  "tamil": "நித்யநிதியே",
+  "deity": "Lakshmi",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "ஒய்யாரமாய் ஊஞ்சலாடும் ஓங்கார கணபதே",
+  "excerpt": "நித்யநிதியே மதி சோதரியே",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "ஒய்யாரமாய் ஊஞ்சலாடும் ஓங்கார கணபதே\nமெய்யார் உரைப்பார் ஐயனே நீ இணையிலா ஈசனென்றே",
-      "translit": "oyyAramAy UnjalAdum OngkAra gaNapathE\nmeyyAr uraippAr aiyanE nI iNaiyilA IsanendRE",
-      "en": "Oh, Lord Ganapathi, moving gracefully on the swing, who will tell the truth: that you are an incomparable deity?"
+      "ta": "நித்யநிதியே மதி சோதரியே\nசத்யவதியே அதிலாவண்ய சுந்தரியே",
+      "translit": "nithyanidhiyE madhi sOdhariyE\nsathyavathiyE athilAvaNya sundhariyE",
+      "en": "You are the permanent treasure, sister of the moon god Chandra, a righteous woman, of inestimable beauty."
     },
     {
       "label": "Anupallavi",
-      "ta": "ஆடலில் பாடலில் ஆகம ஞானத்தில் அடியாரை\nநாடலில் அவர்தம் அருவினை அகற்றலில்",
-      "translit": "Adalil pAdalil Agama nyAnatthil adiyArai\nnAdalil avartham aruvinai agatRalil",
-      "en": "You are unsurpassed in dance and music, your deep knowledge of scriptures, and in seeking out your devotees and removing their sins, however difficult that may be."
+      "ta": "மாநிலம் காத்திடும் மாதவன் சதியே\nமாவெழில் தேவி உன் மலர் பதம் என் கதியே",
+      "translit": "mAnilam kAtthidum mAdhavan sathiyE\nmAvezhil dhEvi un malar padham en gathiyE",
+      "en": "You are the consort of Vishnu guarding the universe. Oh, beautiful goddess, your lotus feet are my last refuge."
     },
     {
       "label": "Charanam",
-      "ta": "தந்தை தாய் நீயே தயாநிதே ஏங்கிடுமெனை\nதந்திரமேதும் புரியாமல் வந்தாள் வெண்ணிற\nதந்தமதை தரித்த வேழமுக வேந்தே சாபம்\nதந்துமதை மறந்து பிறை சூடிய பெருமானே",
-      "translit": "thandhai thAi nIyE dhayAnithE Engidumenai\nthandhiramEdhum puriyAmal vandhAL veNNiRa\nthandhamadhai dharittha vEzhamuga vEndhE sAbam\nthandhumadhai maRandhu piRai sUdiya perumAnE",
-      "en": "Oh, compassion incarnate, elephant-faced king of all gods with a white tusk, you are both mother and father to me. Please come without any tricks and be my king; you initially cursed the moon, and then in your extreme soft heart you finally pardoned and adorned the moon despite his vile behavior. You stand out among the gods. Author’s Note This song was written after a visit to the residence of friends Shantha and Sundararaman in Los Altos, CA. There was a radiant metallic idol of Ganesha seated on a shiny swing or oonjal. Shantha insisted that the poet should write a song on the divinity in her house. The wordplay in the charanam of this song is based on a similar one in the Kannada raga kriti of Saint Thyagaraja beginning with Saketaniketana."
+      "ta": "பொன்னும் பொருளும் புகழும் புவியும்\nமகவும் மங்கல வாழ்வும் மாசில் மதியும்\nதனமும் தான்யமும் திறனும் தீர்க்கமும்\nவம்சமும் வலிவும் விஜயமும் வழங்கும்",
+      "translit": "ponnum poruLum pugazhum puviyum\nmagavum mangala vAzhvum mAsil madhiyum\ndhanamum dhAnyamum thiRanum dhIrkkamum\nvamsamum valivum vijayamum vazhangum",
+      "en": "You are the one who confers gold, all substances, reputation, land, kids, happy life, mind devoid of evil thoughts, wealth, grain, and crop. You bestow skills, longevity, lineage, strength, and victory."
+    },
+    {
+      "label": "Alternate Charanam",
+      "ta": "கொட்டும் அருவியும் பகல் கதிர் விரி\nமொட்டும் பசும் வயலும் கனிந்தே\nசொட்டும் தேனும் மின்னும் தங்கமும்\nவம்சமும் வலிவும் விஜயமும் வழங்கும்",
+      "translit": "kottum aruviyum pagal kadhir viri\nmottum pasum vayalum kanindhE\nsottum thEnum minnum thangamum\nvamsamum valivum vijayamum vazhangum",
+      "en": "You are the one who creates cascading waterfalls, the buds that fully blossom in the morning sun’s rays, green fields, dripping honey, shiny gold, lineage, strength and victory."
     }
-  ]
+  ],
+  "notes": "Sathyavathi, described in the Pallavi of this song, is a name for Goddess Lakshmi (known here as Ananthalakshmi Sathyavathi Devi), the consort of VeeraVenkata Sathyanarayana Swamy in Annavaram in Andhra Pradesh. The popular Sathyanarayana puja is based on the Lord residing in Annavaram and it is fitting that both the Lord and his consort have Sathya in their name to establish truth in the world. Annavaram in Telugu is a “boon granted for your requests or whatever you earnestly desire”. For details see:\n<a href=\"https://www.trawell.in/andhra/annavaram/sri-satyanarayana-swamy-temple\">Annavaram Temple Greatness</a>"
 }

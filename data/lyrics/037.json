@@ -1,32 +1,33 @@
 {
   "id": "037",
-  "en": "mandRAdi nindRE",
-  "tamil": "மன்றாடி நின்றே",
-  "deity": "Shiva",
+  "en": "karaharapriyE",
+  "tamil": "கரஹரப்ரியே",
+  "deity": "Parvathi",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "மன்றாடி நின்றே வழக்கமான உன்னிடம்",
+  "excerpt": "கரஹரப்ரியே ஸ்ரீபுர நிலையே சிவே",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "மன்றாடி நின்றே வழக்கமான உன்னிடம்\nமன்றாடி கேட்டால் தான் கருணை புரிவாயோ",
-      "translit": "mandRAdi nindRE vazhakkamAna unnidam\nmandRadi kEttAl dhAn karuNai purivAyO",
-      "en": "Lord Siva, since you are constantly dancing in the golden hall of Chidambaram, will you grace us only if we beg and plead?"
+      "ta": "கரஹரப்ரியே ஸ்ரீபுர நிலையே சிவே\nவரமதை தந்து வளத்தினை நல்கும் விமலே",
+      "translit": "karaharapriyE srIpura nilaiyE sivE\nvaramadhai thandhu vaLatthinai nalgum vimalE",
+      "en": "She is a lover of Karaharapriya ragam and dwells in Sri Puram. She is the consort of Lord Siva. She is the goddess who is devoid of all blemishes, one who offers boons and boundless prosperity."
     },
     {
       "label": "Anupallavi",
-      "ta": "கபாலீ என்றே கூக்குரலிட்டு கதறினாலும்\nகயிலை மகிமையைக் காசினிக்கு உரைத்தாலும்",
-      "translit": "kapAlI endRE kUkkuralittu kadhaRinAlum\nkayilai magimaiyaik kAsinikku uraitthAlum",
-      "en": "If we yell “Kapaaleesa!” and we pronounce the greatness of your residence (Mount Kailash) to the whole universe, then would you grace us….."
+      "ta": "தரமான குணமும் திறமான நோக்கும்\nஉரமான நெஞ்சும் உன்னால் தான் சாத்யமம்மா",
+      "translit": "tharamAna guNamum thiRamAna nOkkum\nuramAna nenjum unnAl dhAn sAthyamammA",
+      "en": "All attributes such as excellent character, appropriate outlook, and strong and unperturbed heart are potential possibilities only by thy grace."
     },
     {
       "label": "Charanam",
-      "ta": "உற்ற துணையாய் தருணத்தே வந்து நின்று\nபெற்ற தாயாய் பரிந்துதவிய பரமனே\nகுற்றங் குறைகளை முற்றுமாய் மன்னித்துவிடென்று\nநற்றமிழ் பாவால் நாவார இசைத்தாலும்",
-      "translit": "utRa thuNaiyAy tharuNatthE vandhu nindRu\npetRa thAyAy parindhudhaviya paramanE\nkutRang kuRaigaLai mutRumAy mannitthuvidendRu\nnatRamizh pAvAl nAvAra isaitthAlum",
-      "en": "Oh Lord, you compassionately arrived at the opportune moment in the form of a biological mother and helped the poor damsel during her delivery. I will beg you in pure Tamil poetry to totally forgive all my mistakes of the past. Will you then grace me with your presence? Author’s Note The pallavi of the song has an intended pun with the use of the word “mandRAdi”. One meaning for the word is “dancing in a famous Hall”, and the other meaning is “cry and plead or beg”. While singing the anupallavi for the second time, kayilai magimaiyai can be changed to mayilai magimaiyai as KaPAli is the presiding deity of Mylapore. The first two lines in the charanam tell a story of Lord Siva’s compassion. A young pregnant woman, Rathnavathy, was alone without support due to a severe flood in Kaveri River. Because Rathnavathy’s mother could not come to assist her with her delivery due to the flood, the Lord disguised himself as her mother and helped with the delivery in an infinite act of mercy. See below for the Thaumanaswamy temple legends published in Dinamalar listing. Hence the name of the presiding deity Thayumanavar in Tiruchi malaikottai temple. This is a pAdal petRra sthalam praised by 7th century nayanmars in thEvaram. Thayumanavar Swamy Temple Sthalapuranam"
+      "ta": "சுரம் ஏழில் நிறைந்து எதிர்வரும் இடரை\nபுறம் காட்டச் செய்து தீவினை மாய்த்து\nஅறம் என்றும் நிலைக்க அடியார்க்கு மலர்க்\nகரம் ஒன்று ஈந்து கயல் விழியாலே கடாக்ஷிக்கும்",
+      "translit": "suram Ezhil niRaindhu ethirvarum idarai\npuRam kAttach cheydhu thIvinai mAytthu\naRam endRum nilaikka adiyArkku malark\nkaram ondRu Indhu kayal vizhiyAlE katAkshikkum",
+      "en": "You reside in seven musical notes. You drive away all incoming obstacles and destroy all past bad deeds. You offer your lotus hand to establish the path of righteousness forever and bless devotees by a mere glance, with those lovely eyes shaped like a fish."
     }
-  ]
+  ],
+  "notes": null
 }

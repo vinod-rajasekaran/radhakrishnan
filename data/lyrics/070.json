@@ -1,32 +1,33 @@
 {
   "id": "070",
-  "en": "un pAdhamE gathi",
-  "tamil": "உன் பாதமே கதி",
-  "deity": "Parvathi",
+  "en": "thArvagaiyOvena viyandhidum",
+  "tamil": "தார்வகையோவென வியந்திடும்",
+  "deity": "Nature",
   "themes": [
-    "Devotion"
+    "Nature"
   ],
-  "excerpt": "உன் பாதமே கதி தயாபரீ தமிழ்ப் பா",
+  "excerpt": "தார்வகையோவென வியந்திடும் வண்ணம்",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "உன் பாதமே கதி தயாபரீ தமிழ்ப் பா\nதன் நாதமே துதி திரிபுரசுந்தரி",
-      "translit": "un pAdhamE gathi dhayAparI thamizhp pA\nthan nAdhamE thudhi thripurasundhari",
-      "en": "Salutation to Goddess Tripurasundari, one described and worshipped in all of Tamil poetry. Your feet are my site of refuge."
+      "ta": "தார்வகையோவென வியந்திடும் வண்ணம்\nதாரகைகள் கண் சிமிட்டி நிற்கின்ற நேரம்",
+      "translit": "thArvagaiyOvena viyandhidum vaNNam\nthAragaigaL kaN simitti niRkindRa nEram",
+      "en": "It is the moment when clusters of stars shine, blinking in the sky, looking to the eye like a multitude of garlands, inspiring awe."
     },
     {
       "label": "Anupallavi",
-      "ta": "முன் வினைகளோட வன் சொற்கள் மாய\nமென் நினைவு மலர என்னகமே தங்க",
-      "translit": "mun vinaigaLoda van soRkaL mAya\nmen ninaivu malara ennagamE thanga",
-      "en": "You are my savior, making all my past sins disappear, enabling all bad thoughts and words to die, and gentle thoughts to blossom and reside in my heart forever."
+      "ta": "மதியும் முகிலும் ஒன்றாகி மறைத்து விளையாட\nசதியும் பதியும் இன்ப பரிவாடும் வேளையன்றோ",
+      "translit": "madhiyum mugilum ondRAgi maRaitthu viLaiyAda\nsathiyum pathiyum inba parivAdum vELaiyandRO",
+      "en": "The clouds and moon cover each other and play a game. Is this not time for the married couple to enjoy in sharing their mutual happiness?"
     },
     {
       "label": "Charanam",
-      "ta": "தாயாகி வாஞ்சையாய் இருவரை அணத்து\nசேயாகி மாமன்னனின் மடியிடை தவழ்ந்து\nகாயாகி கனியாகி காசினியை மகிழ்வித்து\nதீயாகி சுடர் நடுவே தவமிருந்து மகேசனை நெகிழ்வித்த",
-      "translit": "thAyAgi vAnchaiyAy iruvarai aNaitthu\nsEyAgi mAmannanin madiyidai thavazhndhu\nkAyAgi kaniyAgi kAsiniyai magizhvitthu\nthIyAgi sudar naduvE thavamirundhu magEsanai negizhvittha",
-      "en": "Oh Devi, you have played multiple roles. You became a mother for two sons and embraced them with maternal affection. You became a daughter and crawled into the lap of the great king (Malayadhwajan). You transformed yourself into a tree with vegetables and fruits and pleased the entire universe (during a drought). You also became a fire and did severe penance in the middle of the flame, melting even the heart of Lord Siva. Author’s Note Reference is made in the charanam to stories of Meenakshi, born as daughter of king Malayadhwaja Pandiya, as Thadathagai (Thiruvilaiyadal puranam). Reference is also made to the incarnation as Sakambari (Devi Mahatmiyam mentions Sakambari in uttarakhanda cited in the article below) in a drought-stricken time as a tree with enough produce to save the world of hunger. She is also described as Kamakshi in Kanchipuram, performing severe penance in the midst of a glowing fire of Panchagni to attain the hands of Siva in Mangadu (Sthala puranam of Mangadu temple cited below). For details of early life of Meenakshi, see: Sakhambari Devi's Compassionate Act Also see: Kamakshi Amman Temple Legends Reasoning for penance and the ordeal"
+      "ta": "கோடி பேர் ஒரு சேர பாடினாற் போல் ஊடலில்\nமோடி செய்யும் புள்ளினங்கள் தம் புல்லரிப்பும்\nநாடி வந்த தென்றல் தழுவிடவே இளமூங்கிலின்\nநாடித் துடிப்பும் நானிலம் கிறங்கும் நாதமாச்சுதய்யா",
+      "translit": "kOdi pEr oru sEra pAdinAR pOl Udalil\nmOdi seyyum puLLinangaL tham pullarippum\nnAdi vandha thendRal thazhuvidavE iLamUngilin\nnAdith thudippum nAnilam kiRangum nAdhamAcchudhaiyA",
+      "en": "On one side, the flock of birds amid their lover’s quarrel are making sounds that are reminiscent of orchestral music of a million people singing in unison. The tender bamboo is embraced by the cool and gentle breeze, creating a sound that became the intoxicating melody of this universe."
     }
-  ]
+  ],
+  "notes": null
 }

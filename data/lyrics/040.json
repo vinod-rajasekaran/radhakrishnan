@@ -1,32 +1,33 @@
 {
   "id": "040",
-  "en": "sangum dharitthAy",
-  "tamil": "சங்கும் தரித்தாய்",
-  "deity": "Vishnu",
+  "en": "thiruviLaiyAdal",
+  "tamil": "திருவிளையாடல்",
+  "deity": "Parvathi",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "சங்கும் தரித்தாய் சாரங்கம் ஏந்தினாய்",
+  "excerpt": "திருவிளையாடல் புரிய தருணமிதே",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "சங்கும் தரித்தாய் சாரங்கம் ஏந்தினாய்\nஎங்கும் நிறைந்தாய் ஏழுமலை உறைந்தாய்",
-      "translit": "sangum dharitthAy sArangam EndhinAy\nengum niRaindhAy Ezhumalai uRaindhAy",
-      "en": "You adorn the conch, wield the bow, pervade all space, reside in the seven hills."
+      "ta": "திருவிளையாடல் புரிய தருணமிதே\nதிரிபுரசுந்தரி தாரிணி திகைத்திட",
+      "translit": "thiruviLaiyAdal puriya tharuNamidhE\nthiripurasundhari dhAriNi thigaitthida",
+      "en": "Goddess Tripurasundari, this is an ideal moment for you to perform a miracle, with the entire universe watching in amazement."
     },
     {
       "label": "Anupallavi",
-      "ta": "வங்கக் கடல் கடைந்தாய் வானை அளந்தாய்\nதங்கத்திரு இடம் கொண்ட நாராயணா",
-      "translit": "vangak kadal kadaindhAy vAnai aLandhAy\nthangatthiru idam koNda nArAyaNA",
-      "en": "Oh, Lord Narayana, you hold as your integral part the golden Mahalakshmi in the chest. You have done marvels like churning the ocean and fathoming the entire sky."
+      "ta": "தினமெல்லாம் அழுது திண்டாடும்\nதீனர்க்கு உறுதுணையாகும் திருமால் சோதரி",
+      "translit": "dhinamellAm azhudhu thiNdAdum\ndhInarkku uRuthuNaiyAgum thirumAl sOdhari",
+      "en": "You are Lord Vishnu’s sister who helps all those poor souls who struggle and cry each day."
     },
     {
       "label": "Charanam",
-      "ta": "சிங்க உருவாகி தீயனை வதைத்தாய் மான\nபங்க நடப்பினை தடுத்து மாதினை காத்தாய்\nதுங்க தூயோர் நினைவில் நின்ற பரமே தமியேன்\nசங்க தமிழ்ப் பாவில் இளகியே அருள்வாய்",
-      "translit": "singa uruvAgi thIyanai vadhaitthAy mAna\nbanga nadappinai thadutthu mAdhinai kAtthAy\nthunga thUyOr ninaivil nindRa paramE thamiyEn\nsanga thamizhp pAvil iLagiyE aruLvAy",
-      "en": "You took the form of a ferocious lion and destroyed the demon; saved the honor of a damsel and averted the loss of her modesty. Oh Lord, dwelling in the thoughts of pious individuals, please soften in my song in chaste Sangam fostered Tamil and bless me."
+      "ta": "திக்கெட்டும் இசைபாடும் தயாபரீ\nதிக்கற்றோர்க்கு அருளிடும் தேவரக்ஷகி\nதிக்கு முக்காட வைக்கும் சோதனை யாவும்\nதிக்கிடச் செய்வாய் என்றே திருவடி அடைந்தேன்",
+      "translit": "dhikkettum isaipAdum dhayAparI\ndhikkatROrkku aruLidum dEvarakshaki\nthikku mukkAda vaikkum sOdhanai yAvum\nthikkidach cheivAy endRE thiruvadi adaindhEn",
+      "en": "You are the compassionate one, whom creations in all eight directions extoll. You are the protector of all demigods and the one who showers compassion on the desolate. I came and surrendered at your divine feet thinking that you will take care of all my troubles; those periods in life that test me and baffle me, you vanquish them."
     }
-  ]
+  ],
+  "notes": null
 }

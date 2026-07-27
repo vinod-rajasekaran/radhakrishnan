@@ -1,32 +1,33 @@
 {
   "id": "065",
-  "en": "thAmarai malar mEl",
-  "tamil": "தாமரை மலர் மேல்",
-  "deity": "Parvathi",
+  "en": "rAmA dhInarakshakA enaiyALum",
+  "tamil": "ராமா தீனரக்ஷகா எனையாளும்",
+  "deity": "Vishnu",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "தாமரை மலர் மேல் தத்தளிக்கும் நீர் போல்",
+  "excerpt": "ராமா தீனரக்ஷகா எனையாளும்",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "தாமரை மலர் மேல் தத்தளிக்கும் நீர் போல்\nதடுமாறும் என் மனதிற்கு ஆறுதல் தாராயோ",
-      "translit": "thAmarai malar mEl thatthaLikkum nIr pOl\nthadumARum en manadhiRku ARudhal thArAyO",
-      "en": "Won’t you give consolation to my mind, which is wavering and vacillating like the water rolling on a lotus flower?"
+      "ta": "ராமா தீனரக்ஷகா எனையாளும்\nபரந்தாமா என்றே உன் நினைவில் வாழ்கின்றேன்",
+      "translit": "rAmA dhInarakshakA enaiyALum\nparandhAmA endRE un ninaivil vAzhgindRen",
+      "en": "I live immersed in thoughts of you, Sri Rama. You are the protector of the downtrodden and desolate, and the Supreme Lord."
     },
     {
       "label": "Anupallavi",
-      "ta": "சிந்தனை யாவும் சிதறியே சீர் கெட்டு போனாலும்\nவந்தனை புரியும் தீனரை வந்தாதரி தயாபரீ",
-      "translit": "sindhanai yAvum sidhaRiyE sIr kettu pOnAlum\nvandhanai puriyum dhInarai vandhAdhari dhayAparI",
-      "en": "Oh, compassionate Goddess, even if their minds and thoughts are distracted and reached a despicable state, please come and protect these poor praying souls."
+      "ta": "எங்கும் எதிலும் உன்னுருவே கண்டு\nஎன்னுள் உன்னையே பூஜிக்கும் அத்வைதியானேன்",
+      "translit": "engum edhilum unnuruvE kaNdu\nennuL unnaiyE pUjikkum adhvaithiyAnEn",
+      "en": "Not believing in duality, I see you in everything, everywhere, and I have started worshipping you residing in me. Thus, I worship in a monotheistic way now."
     },
     {
       "label": "Charanam",
-      "ta": "மாயோன் சோதரியே அக மதமதை நீயே\nமாய்த்து அகமதில் தெளிவும் அருள்வாயே\nசாயே நின் பதமே கதியென சரணடைந்தார்க்கு\nதாயே நித்ய சாயுஜ்யம் கடாக்ஷிப்பாயே",
-      "translit": "mAyOn sodhariyE aga madhamadhai nIyE\nmAytthu agamadhil theLivum aruLvAyE\nchayE nin padhamE gathiyena charaNadaindhArkku\nthAyE nithya sAyujyam katAkshippAyE",
-      "en": "Dear sister of Lord Vishnu, please break the wall of ego and offer clarity to their minds. Illusive goddess Parvathi, please grace these destitute souls who have surrendered at your divine feet and offer them closeness to your presence. Author’s Note In the charanam, the poet addresses the sister of mAyOn (Vishnu) as ChAyE, not to be confused with Surya’s wife ChAyA devi. As stated in several of the songs, the poet feels that Devi Parvathi is responsible for causing an illusion as Vishnu Durgai and gives clarity to those understanding her omniscience. She is the one who can appear as shadow (as in Kurukshetra war during the killing of Jayadhrata causing a sunset) and at the same time she can lift the curtain of ignorance, demolishing the fort of ego and enlightening those devotees in need."
+      "ta": "பதியின் பாதமே கதியென பணிந்திடும் சதி போலவும்\nநதியும் முடிவில் கடலிடை கலந்திடல் போலவும்\nகதியிதுவென மரத்தினை சுற்றி படரும் கொடி போலவும்\nமதியெலாம் நீயாகி உன்னுள் ஒளியும் பாக்யமருள்வாய்",
+      "translit": "pathiyin pAdhamE gathiyena paNindhidum sathi pOlavum\nnadhiyum mudivil kadalidai kalandhidal pOlavum\ngathiyidhuvena maratthinai sutRi padarum kodi pOlavum\nmadhiyelAm nIyAgi unnuL oLiyum bhAgyamaruLvAy",
+      "en": "Like the wife who has taken refuge in her husband’s feet, like a river which ultimately mingles with the ocean, like a creeper that circles around and gets its ultimate support from a tree, you have pervaded my thoughts. Please bless me and give me the ultimate boon to integrate with you or become one with you."
     }
-  ]
+  ],
+  "notes": null
 }

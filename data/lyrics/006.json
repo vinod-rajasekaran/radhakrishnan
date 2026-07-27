@@ -1,27 +1,33 @@
 {
   "id": "006",
-  "tamil": "சபரிமலை ஐயப்பா",
-  "en": "Sabarimalai Aiyappa",
-  "deity": "Aiyappan",
+  "en": "vaikuNtan padham piditthE",
+  "tamil": "வைகுண்டன் பதம் பிடித்தே",
+  "deity": "Anchaneya",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "Eighteen steps, and the hill falls quiet…",
+  "excerpt": "வைகுண்டன் பதம் பிடித்தே சிறிய திருவடியானாய்",
   "volume": 1,
-  "singer": "Asha Ramesh",
+  "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "சபரிமலை ஐயப்பா சரணம்\nபதினெட்டு படிகள் தாண்டி வந்தோம்",
-      "translit": "sabarimalai aiyappA saraNam\npadhinettu padigaL thANdi vandhOm",
-      "en": "Refuge in you, Aiyappa of Sabarimalai;\nwe have crossed the eighteen sacred steps."
+      "ta": "வைகுண்டன் பதம் பிடித்தே சிறிய திருவடியானாய்\nவையமே வாழ்த்துகின்ற வாயுகுமரா",
+      "translit": "vaikuNtan padham piditthE siRiya thiruvadiyAnAy\nvaiyamE vAzhtthugindRa vAyukumarA",
+      "en": "Oh, the son of the wind god, and one whom the entire world praises, you firmly held on to the divine feet of Lord Vishnu, residing in Vaikuntam, and became a demi god."
     },
     {
       "label": "Anupallavi",
-      "ta": "மணிகண்டா மோகினி புத்திரா\nபக்தர் துணையாய் வாழும் தெய்வமே",
-      "translit": "maNikaNtA mOhini puthrA\nbhaktar thuNaiyAy vAzhum dheivamE",
-      "en": "Manikanta, son born of Mohini,\nO deity who lives as companion to devotees."
+      "ta": "கண்கண்ட தெய்வம் நீயே கபி அரசே என்று\nமண்மிசை போற்றுகின்ற எளியனைப் பாராயோ",
+      "translit": "kaNkaNda dheivam nIyE kapi arasE endRu\nmaNmisai pOtRugindRa eLiyanaip pArAyO",
+      "en": "Won’t you look at this poor soul who is singing your glory on this earth, saying, “You are the God for anyone that can see your divine form and the mighty king of all monkeys”?"
+    },
+    {
+      "label": "Charanam",
+      "ta": "அண்ட சராசரம் யாவும் அதிசயிக்கும் வகை\nதிண்டிறன் தோள் வலியால் மலை சுமந்தாய்\nதொண்டரடிப் பொடியாகிடவே நான் துணிந்தேன்\nதண்டனிட்டு நின்றேன் தமியேனுக்கருளாயோ தயாபரா",
+      "translit": "aNda charAcharam yAvum adhisayikkum vagai\nthiNdiRan thOL valiyAL malai sumandhAy\nthoNdaradip podiyAgidavE nAn thuNindhEn\ndhaNdanittu nindRen thamiyEnukkaruLAyO dhayAparA",
+      "en": "To the astonishment of the entire universe, you carried on your shoulders an entire mountain. I am emboldened in my resolve to become a servant of your devotees, like the dust firmly attached to their feet. I prostrate before you. Oh, compassionate one, won’t you shower mercy on this destitute being?"
     }
   ],
-  "notes": "Aiyappan is worshipped at Sabarimalai, Kerala. Pilgrims climb eighteen sacred steps (pathinettu padikkal) to reach the shrine."
+  "notes": "First two lines of the Charanam of this song have references to Hanuman lifting the Dronagiri mountain containing the medicinal herb, Sanjivini, and bringing it to Rama and Lakshmana. During the war with Ravana, Lakshmana was seriously injured and needed this specific herb to be saved. For details of this episode in the Ramayana, see the following link:\n<a href=\"https://hinduism.stackexchange.com/questions/16660/why-did-lord-hanuman-bring-two-mountains-from-himalayas\">Hanuman carries mountain</a>\nThe Pallavi of this song calls out Hanuman as சிறிய திருவடி. This is a traditional way of addressing Hanuman in the Vaishnava sampradhayam. Garuda or the eagle is the constant vehicle for Lord Vishnu, and he is with him all the time. Therefore, the Vaishnavites refer to him as periya thiruvadi (பெரிய வடி) with thiru referring to the superior Lord Vishnu. The word “adi” means foot. Hanuman will be present wherever Rama’s name or glory is sung, and help the singing devotees to reach Him. Hence the name with the adjective siriya."
 }

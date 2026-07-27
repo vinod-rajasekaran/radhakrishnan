@@ -5,8 +5,10 @@
 
   let allSongs   = [];
   let allMeta    = {};
-  let activeFilters = { deity: '', theme: '', volume: '', singer: '' };
+  let activeFilters = { deity: '', theme: '', volume: '' };
   let searchTerm = '';
+  let audioOnly  = false;
+  let fuse       = null;
 
   /* ── DOM refs ─────────────────────────────────────────────── */
   const grid         = document.getElementById('song-grid');
@@ -28,6 +30,16 @@
   function initData(data) {
     allSongs = data.songs;
     allMeta  = data.meta;
+    fuse = new Fuse(allSongs, {
+      keys: [
+        { name: 'en',      weight: 2 },
+        { name: 'tamil',   weight: 2 },
+        { name: 'excerpt', weight: 1 },
+      ],
+      threshold:          0.35,
+      minMatchCharLength: 2,
+      ignoreLocation:     true,
+    });
     loading.hidden = true;
     buildThemeCarousel();
     buildFilterMenus();
@@ -45,7 +57,8 @@
   /* ── URL params ───────────────────────────────────────────── */
   function applyUrlParams() {
     const params = new URLSearchParams(window.location.search);
-    ['volume', 'deity', 'theme', 'singer'].forEach(key => {
+    if (params.get('audio') === '1') audioOnly = true;
+    ['volume', 'deity', 'theme'].forEach(key => {
       const val = params.get(key);
       if (val) {
         activeFilters[key] = val;
@@ -199,7 +212,7 @@
     const extendedThemes    = ['Devotion', ...NON_DEITY_CATS, ...(allMeta.themes || [])].filter((v, i, a) => a.indexOf(v) === i).sort();
     buildMenu('deity',  'menu-deity',  devotionalDeities, 'All deities');
     buildMenu('theme',  'menu-theme',  extendedThemes,    'All themes');
-    buildMenu('singer', 'menu-singer', allMeta.singers,   'All singers');
+
   }
 
   function buildMenu(key, menuId, values, allLabel) {
@@ -225,7 +238,7 @@
     });
   }
 
-  const BASE_LABELS = { deity: 'Deity', theme: 'Theme', volume: 'Volume', singer: 'Singer' };
+  const BASE_LABELS = { deity: 'Deity', theme: 'Theme', volume: 'Volume' };
 
   function disableFilter(key) {
     activeFilters[key] = '';
@@ -341,7 +354,12 @@
 
   /* ── Filter + render ──────────────────────────────────────── */
   function filtered() {
-    return allSongs.filter(s => {
+    const base = searchTerm && fuse
+      ? fuse.search(searchTerm).map(r => r.item)
+      : allSongs;
+
+    return base.filter(s => {
+      if (audioOnly && !s.audio) return false;
       if (activeFilters.deity && s.deity !== activeFilters.deity) return false;
       if (activeFilters.theme) {
         if (activeFilters.theme === 'Devotion') {
@@ -353,11 +371,6 @@
         }
       }
       if (activeFilters.volume && String(s.volume) !== activeFilters.volume) return false;
-      if (activeFilters.singer && s.singer !== activeFilters.singer) return false;
-      if (searchTerm) {
-        const hay = (s.en + ' ' + s.tamil + ' ' + (s.excerpt || '')).toLowerCase();
-        if (!hay.includes(searchTerm)) return false;
-      }
       return true;
     });
   }
@@ -392,7 +405,6 @@
         <div class="song-tags">
           ${themeChips}
           ${deityTag}
-          ${song.singer ? `<span class="song-audio-icon" aria-label="Audio available" title="Audio — ${song.singer}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>` : ''}
         </div>
         <p class="song-title-tamil tamil">${song.tamil}</p>
         <p class="song-title-en">${song.en}</p>
@@ -411,15 +423,19 @@
     SiteShared.updateModalDeityBanner(song.deity);
     modalTitle.textContent   = song.tamil;
     modalEnTitle.textContent = song.en;
+    const isNonDeityModal = NON_DEITY_CATS.includes(song.deity);
+    const modalThemes = [...new Set([...(song.themes || []), ...(isNonDeityModal ? [song.deity] : [])])];
+    const modalThemeChips = modalThemes.slice(0, 2).map(t => `<span class="mini-tag theme">${t}</span>`).join('');
+    const modalDeityTag   = isNonDeityModal ? '' : `<span class="mini-tag">${song.deity}</span>`;
     modalMeta.innerHTML = `
       <span class="mini-tag">Vol ${song.volume}</span>
-      <span class="mini-tag">${song.deity}</span>
-      ${song.singer ? `<span class="mini-tag">${song.singer}</span>` : ''}
+      ${modalThemeChips}
+      ${modalDeityTag}
     `;
 
     const existing = document.getElementById('modal-audio-bar');
     if (existing) existing.remove();
-    if (song.singer) {
+    if (song.collection) {
       const bar = SiteShared.buildAudioBar(song.singer, song.audio || null);
       modalClose.insertAdjacentElement('afterend', bar);
     }

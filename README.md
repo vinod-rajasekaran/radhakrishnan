@@ -11,11 +11,11 @@ Live site: [vinod-rajasekaran.github.io/radhakrishnan](https://vinod-rajasekaran
 | Page | Description |
 |---|---|
 | Home (`index.html`) | 5-slide hero carousel, random verse teaser, browse CTA |
-| Lyrics (`lyrics.html`) | Searchable grid with Theme / Deity / Volume / Singer filters and a theme carousel |
-| Audio (`audio.html`) | Songs recorded by Asha Ramesh and Bavatharini |
+| Lyrics (`lyrics.html`) | Searchable grid with Theme / Deity / Volume filters and a theme carousel |
+| Audio (`audio.html`) | Songs set to music and recorded — two collections |
 | Books (`books.html`) | The three-volume anthology |
 | About (`about.html`) | Dr. Radhakrishnan's biography and musical journey |
-| Acknowledgements | With dedication to family and collaborators |
+| Acknowledgments (`acknowledgments.html`) | With dedication to family and collaborators |
 | Glossary | Tamil and Sanskrit terms used across the songs |
 | Contact | Get in touch |
 
@@ -70,7 +70,7 @@ Each file in `data/lyrics/` is the canonical record for one song:
   "themes": ["Devotion"],
   "excerpt": "...",
   "volume": 1,
-  "singer": "Asha Ramesh",
+  "singer": "...",
   "audio": null,
   "sections": [
     { "label": "Pallavi",    "ta": "...", "translit": "...", "en": "..." },
@@ -164,4 +164,4 @@ Current version token: see `CLAUDE.md`.
 
 ## Credits
 
-Songs by **Dr. R. Radhakrishnan**. Site built by Girija Radhakrishnan, with contributions from the family. See [Acknowledgements](acknowledgements.html) for the full list.
+Songs by **Dr. R. Radhakrishnan**. Site built by Girija Radhakrishnan, with contributions from the family. See [Acknowledgments](acknowledgments.html) for the full list.

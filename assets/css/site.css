@@ -430,8 +430,8 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
 }
 .slide-year {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 12.5px;
-  letter-spacing: .14em;
+  font-size: 27px;
+  letter-spacing: .04em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 14px;
@@ -859,8 +859,14 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   font-size: 30px;
   font-weight: 600;
   color: var(--vermilion-deep);
-  margin: 0 0 10px;
+  margin: 0 0 6px;
   line-height: 1.25;
+}
+.verse-tamil-title {
+  font-size: 20px;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+  line-height: 1.4;
 }
 .verse-chips { display: flex; gap: 6px; margin-bottom: 20px; }
 .verse-deity-chip {
@@ -873,10 +879,7 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   border-radius: 12px;
 }
 .verse-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 24px;
-  align-items: start;
+  display: block;
 }
 .verse-left-cell { padding-right: 32px; }
 .verse-right-cell {
@@ -1241,11 +1244,32 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
 }
 .modal-close:hover { color: var(--vermilion); border-color: var(--vermilion); }
 .modal-close svg { width: 16px; height: 16px; }
+.modal-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.modal-print-btn {
+  flex: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.modal-print-btn:hover { color: var(--vermilion); border-color: var(--vermilion); }
+.modal-print-btn svg { width: 21px; height: 21px; }
 .modal-header {
   padding: 36px 70px 22px 40px;
   border-bottom: 1px solid var(--line);
 }
-.modal-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.modal-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 0; }
 .modal-title {
   font-family: 'Noto Serif Tamil', serif;
   font-size: 30px;
@@ -1283,6 +1307,17 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   font-size: 15px;
   color: var(--ink-soft);
   line-height: 1.65;
+}
+.notes-expand-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--vermilion);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 .modal-loading {
   display: flex;
@@ -1589,10 +1624,10 @@ body.modal-open { overflow: hidden; }
 }
 .dedication-label {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--ink);
   margin: 0 0 20px;
 }
 .dedication-text {
@@ -1606,7 +1641,7 @@ body.modal-open { overflow: hidden; }
 .dedication-rel {
   font-size: 15px;
   font-style: normal;
-  color: var(--ink-soft);
+  color: var(--ink);
 }
 .ack-p { color: var(--ink); font-size: 17px; line-height: 1.75; margin: 0 0 18px; }
 .ack-grid {
@@ -1798,7 +1833,6 @@ body.modal-open { overflow: hidden; }
 
 @media (max-width: 900px) {
   .song-grid { grid-template-columns: repeat(2, 1fr); }
-  .verse-grid { grid-template-columns: 1fr; row-gap: 8px; }
   .verse-left-cell { padding-right: 0; }
   .verse-right-cell { border-left: none; padding-left: 0; border-top: 1px dashed var(--line); padding-top: 14px; margin-bottom: 12px; }
   .verse-col-label.verse-right-cell { display: none; }
@@ -1843,4 +1877,106 @@ body.modal-open { overflow: hidden; }
   html { scroll-behavior: auto; }
   .slide { transition: none; }
   .modal-overlay { transition: none; }
+}
+
+/* ── Print — modal only ── */
+@media print {
+  header, footer, .book-banner, .slider, #theme-carousel-wrap,
+  .page-head, .search-filter-bar, .results-bar, .song-grid,
+  .verse-section, .browse-cta-section, .loading-state, .empty-state,
+  .dedication { display: none !important; }
+
+  .modal-overlay.open {
+    position: static !important;
+    background: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+  .modal {
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+  }
+  .modal-close, .modal-print-btn, .modal-audio-bar { display: none !important; }
+  .modal-deity-banner { display: none !important; }
+  .modal-meta-row { display: none !important; }
+
+  /* Modal header: title block */
+  .modal-header {
+    padding: 0 0 16px !important;
+    border-bottom: 2px solid var(--ink) !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Single-column layout — use flex order to put all Tamil first, translations after */
+  .modal-lyrics-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  /* 1. Tamil & transliteration header */
+  .lyrics-block-label.modal-left-cell  { order: 1 !important; margin-bottom: 16px !important; }
+
+  /* 2. All Tamil+translit sections */
+  .lyrics-section.modal-left-cell {
+    order: 2 !important;
+    padding-right: 0 !important;
+    margin-bottom: 24px !important;
+    page-break-inside: avoid;
+  }
+
+  /* 3. Translation header — acts as divider */
+  .lyrics-block-label.modal-right-cell {
+    order: 10 !important;
+    display: block !important;
+    margin-top: 32px !important;
+    margin-bottom: 16px !important;
+    padding-top: 20px !important;
+    border-top: 1px solid var(--ink-soft) !important;
+  }
+
+  /* 4. All translation sections */
+  .lyrics-section-en.modal-right-cell {
+    order: 11 !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 20px !important;
+    page-break-inside: avoid;
+  }
+
+  /* Tamil text: large and prominent */
+  .lyrics-ta {
+    font-size: 20px !important;
+    color: var(--ink) !important;
+  }
+
+  /* Transliteration: visibly smaller */
+  .lyrics-translit {
+    font-size: 13px !important;
+    color: var(--ink-soft) !important;
+    margin-top: 6px !important;
+  }
+
+  /* Translation: italic serif, slightly smaller than Tamil */
+  .lyrics-en {
+    font-size: 16px !important;
+    color: var(--ink) !important;
+  }
+
+  /* Notes: at the bottom, full text always shown */
+  .song-notes {
+    margin: 32px 0 0 !important;
+    padding: 16px 0 0 !important;
+    border-top: 2px solid var(--ink) !important;
+    page-break-inside: avoid;
+  }
+  .notes-preview  { display: none !important; }
+  .notes-full     { display: inline !important; }
+  .notes-expand-btn { display: none !important; }
 }

@@ -1,32 +1,33 @@
 {
   "id": "045",
-  "en": "anbum aLavOdenal",
-  "tamil": "அன்பும் அளவோடெனல்",
-  "deity": "Vishnu",
+  "en": "vINAvAdhini",
+  "tamil": "வீணாவாதினி",
+  "deity": "Saraswathi",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "அன்பும் அளவோடெனல் அறியாயோ நாராயணா",
+  "excerpt": "வீணாவாதினி சகலாகம ஸ்வரூபிணி",
   "volume": 1,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "அன்பும் அளவோடெனல் அறியாயோ நாராயணா\nநானிலம் நவிலும் உண்மையும் மறந்தாயோ*",
-      "translit": "anbum aLavOdenal aRiyAyO nArAyaNA\nnAnilam navilum uNmaiyum maRandhAyO",
-      "en": "Oh Narayana, don’t you know that even love must be within limits? Did you forget this universal truth?"
+      "ta": "வீணாவாதினி சகலாகம ஸ்வரூபிணி\nகானாம்ருத பூஷணி கந்தர்வலோக பாலினி",
+      "translit": "vINAvAdhini sakalAgama swarUpiNi\ngAnAmrutha bhUshaNi gandharvaloka pAlini",
+      "en": "Goddess Saraswati, you revel in ragam Veenavadhini (skilled musician with the veena instrument), you are personification of all scriptures and sastras, one who is the source of nectar-like music and the protector of the world of celestials."
     },
     {
       "label": "Anupallavi",
-      "ta": "இமையே அசையாது உமையே நோக்கிடும்\nதேவியை விடுத்திப் பாவியை (சற்றே) பாராயோ",
-      "translit": "imaiyE asaiyAdhu umaiyE nOkkidum\ndhEviyai vidutthip pAviyai (satRE) pArAyO",
-      "en": "Won’t you just look at this poor soul or sinner for a moment, turning away from Devi, whose eyes are transfixed on you without any movement of her eyelids?"
+      "ta": "வெண்பட்டும் வெண்தாமரையும் நோக்கிடின்\nகண்பட்டு விடுமோ என்றஞ்சுமே அடியார் உள்ளம்",
+      "translit": "veNpattum veNthAmaraiyum nOkkidin\nkaNpattu vidumO endRanjumE adiyAr uLLam",
+      "en": "The hearts of your devotees will be filled with fear just imagining what will happen, with evil eyes piercing at your grandiose appearance, as you are clad in a white silk saree seated on an exquisite white lotus."
     },
     {
       "label": "Charanam",
-      "ta": "க்ஷீரசாகர சாரங்க ப்ரபோ கதிரிடை அலரும்\nகமலம் போலுன் ஒளிர்முகமதில் மிளிரும் மந்தஹாசம் படர\nபுரிந்ததால் செவ்வந்திபோல் அன்னையின் கன்னம் மின்ன\nபரிபாஷையில் யுகமாக பரகதி நாடிடும் பராதியைப் பரிதல் எப்போதோ\nபண்பும் பாங்கும் அதுவேயென மறந்தாயோ",
-      "translit": "kshIrasAgara sAranga prabhO kadhiridai alarum\nkamalam pOlun oLirmugamadhil miLirum manthahAsam padara\npurindhadhAl sevvandhipOl annaiyin kannam minna\nparibAshaiyil yugamAga paragathi nAdidum parAdhiyaip paridhal eppOdhO\n*Second line in Pallavi can be rendered as:\npaNbum pAngum adhuvEyena maRandhAyO",
-      "en": "Oh Lord reclining on the milky ocean and wielding the bow, when a smile starts to spread on your lotus-like face and, with the understanding of that expression, Lakshmi’s cheeks shine like red chrysanthemum, several generations pass in this loving exchange. Tell me Lord, when will you have time to look at this poor soul seeking salvation, and show some sympathy? Author’s Note This song is based on Thyagaraja’s description of the mutual love between Lord Vishnu and Goddess Mahalakshmi in one of his songs. Refer to the charanam of “Oh Ranga Sai…”, Kambodhi raga kriti where Thyagaraja complains to Lord Ranganatha: “If you spend all your time in Lakshmi’s company and enjoying exclusively, who will hear my complaints?”. For details of the Saint’s song and translations and interpretations, see: Compositions of Thyagaraja, compiled and edited by T.K. Govinda Rao, Gnanamandir Publications, Indira Nagar, Madras 600020, First Edition May 1995, Page 444. Also see: The Spiritual Heritage of Thyagaraja, C. Ramanujachari, Sri Ramakrishna Math, Mylapore, Madras 600004, Published 1958, Page: Text and Translation of the Songs Section, Page 75."
+      "ta": "கரமதில் நான்மறை ஏந்தி மென்மலர்ப்\nபதமதில் எழில் நடமதின் லயம் தாங்கி\nவிழிதனில் வீரமும் அன்பர்பால் ஈரமும்\nஒருசேர நெஞ்சினில் நிறைவாய் கலைவாணி",
+      "translit": "karamadhil nAnmaRai Endhi menmalarp\npadhamadhil ezhil nadamadhin layam thAngi\nvizhidhanil vIramum anbarpAl Iramum\norusEra nenjinil niRAivAy kalaivANi",
+      "en": "Please Goddess Saraswathi, let your persona with hands holding four vedas, flower-like tender feet expressing the rhythm of dance, eyes conveying courage and bravery, and your affection toward devotees, reside eternally in my heart."
     }
-  ]
+  ],
+  "notes": null
 }
