@@ -1,0 +1,33 @@
+{
+  "id": "143",
+  "en": "veLLiyum eLLiyE",
+  "tamil": "வெள்ளியும் எள்ளியே",
+  "deity": "Nature",
+  "themes": [
+    "Nature"
+  ],
+  "excerpt": "வெள்ளியும் எள்ளியே ஒளி வீச",
+  "volume": 2,
+  "audio": null,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "வெள்ளியும் எள்ளியே ஒளி வீச\nதுள்ளியே இருளும் மாய்ந்து விடும்",
+      "translit": "veLLiyum eLLiyE oLi vIsa\nthuLLiyE iruLum mAyndhu vidum",
+      "en": "As the sun starts the day with scornful laughter and spreads light, the darkness of the night will jump and vanish."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "மிதமான குளிரும் பலவிதமான முறைகளில்\nஇதமான சூட்டின் முன்னே கூசி மறையும்",
+      "translit": "midhamAna kuLirum palavidhamAna muRaigaLil\nidhamAna sUttin munnE kUsi maRaiyum",
+      "en": "Likewise, the gentle chill in the air will disappear with shame when adequate warmth arrives due to the sun’s rays."
+    },
+    {
+      "label": "Charanam",
+      "ta": "கலகலவென இறங்கிடும் ஓடை நீரும்\nசலசலவென ஓடி வாய்க்காலை நிரப்பிடும்\nசில்லென்ற நீர் உடலில் பட்டே நெற்கதிரும்\nநில்லென்று சொல்லி காற்றிடை நர்த்தனமாடும்",
+      "translit": "kalakalavena iRangidum Odai nIrum\nsalasalavena Odi vAykkAlai nirappidum\nsillendRa nIr udalil pattE neRkadhirum\nnillendRu solli kAtRidai nartthanamAdum",
+      "en": "The falling brook’s water that makes a characteristic noise runs through the field with a gushing sound and fills the channels. The stalk of the rice plant starts shivering with the touch of cool water. The stalk asks the water to stop and starts dancing in the breeze."
+    }
+  ],
+  "notes": null
+}

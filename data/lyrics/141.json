@@ -1,0 +1,33 @@
+{
+  "id": "141",
+  "en": "Kuyil ondRu",
+  "tamil": "குயில் ஒன்று",
+  "deity": "Nature",
+  "themes": [
+    "Nature"
+  ],
+  "excerpt": "குயில் ஒன்று மழை வந்த களிப்பில் கூவ",
+  "volume": 2,
+  "audio": null,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "குயில் ஒன்று மழை வந்த களிப்பில் கூவ\nமயில் அன்று தோகை விரித்தாடியது",
+      "translit": "kuyil ondRu mazhai vandha kaLippil kUva\nmayil andRu thOgai viritthAdiyadhu",
+      "en": "A cuckoo called out in the joy of the arriving rain, A peacock that day spread its feathers and danced."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "சிறு தூக்கம் கலைந்ததால் விழித்தெழுந்த\nசிங்கமோ பார் நடுங்க உறுமியது",
+      "translit": "siRu thUkkam kalaindhadhAl vizhitthezhundha\nsingamO pAr nadunga uRumiyadhu",
+      "en": "A lion, roused from a brief sleep, roared. The whole earth trembled."
+    },
+    {
+      "label": "Charanam",
+      "ta": "முழக்கம் செவிமடுத்த புள்ளினமோ\nவழக்கம் போல் பள்ளிச் சிறுவர் குழாமென\nஅரற்றியது தனக்கெதுவும் புரியாதது போல்\nஆனைக் கூட்டம் ஒன்று நீரில் உருண்டது",
+      "translit": "muzhakkam sevimaduttha puLLinamO\nvazhakkam pOl paLLich chiruvar kuzhAmena\naratRiyadhu thanakkedhuvum puriyAdhadhu pOl\nAnaik kUttam ondRu nIril uruNdadhu",
+      "en": "The bird flock that heard the rumble, chattered away habitually like a cluster of schoolchildren. A herd of elephants rolled about in the water as though nothing made sense to it."
+    }
+  ],
+  "notes": null
+}

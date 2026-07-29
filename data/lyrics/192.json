@@ -1,0 +1,35 @@
+{
+  "id": "192",
+  "en": "bhakthiyil kanindhu",
+  "tamil": "பக்தியில் கனிந்து",
+  "deity": "Muruga",
+  "themes": [
+    "Devotion"
+  ],
+  "excerpt": "பக்தியில் கனிந்து சக்தியெல்லாம் இணைந்து",
+  "volume": 3,
+  "audio": "assets/audio/bhakthiyil_kanindhu.mp3",
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "பக்தியில் கனிந்து சக்தியெல்லாம் இணைந்து\nமுக்திபெற முனைந்து நின்றேன் முருகய்யா",
+      "translit": "bhakthiyil kanindhu sakthiyellAm iNaindhu\nmukthipeRa munaindhu nindREn murugayyA",
+      "en": "I am anxiously waiting to achieve salvation with all my energies focused in deep devotion to you, Lord Muruga."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "சித்தினை அசித்துடன் சேர்த்திட்ட சிவபாலா\nஎத்தனை முறையுனை அழைத்தேனோ தவசீலா",
+      "translit": "chitthinai achitthudan sErtthitta sivabAlA\netthanai muRaiyunai azhaitthEnO dhavasIlA",
+      "en": "You have combined the autonomous and voluntary entities so skillfully.  How many times have I entreated you Lord Muruga, beloved younger son of Lord Siva?"
+    },
+    {
+      "label": "Charanam",
+      "ta": "நித்தமும் பித்தனாய் உன் நினைவில் உறைந்திடவோ\nமெத்தவே நீலமயில் பீலியாய் நிதம் இலங்கிடவோ\nஅத்தனே நீயுறையும் குன்றதனில் ஒன்றிடவோ\nவித்தனே விரைந்தோடி வந்தெனை ஆட்கொள்வதெப்பவோ",
+      "translit": "nitthamum pitthanAy un ninaivil uRaindhidavO\nmetthavE nIlamayil pIliyAy nidham ilangidavO\natthanE nIyuRaiyum kundRadhanil ondRidavO\nvitthanE viraindhOdi vandhenai AtkoLvadheppavO",
+      "en": "Should I live like a lunatic, immersed only in thoughts of you? Should I shine like a soft blue peacock feather? Should I become a rock on one of the hills where you dwell? Skilled Skanda, when is an opportune moment for you to hurry and offer me deliverance?"
+    }
+  ],
+  "notes": null,
+  "singer": "Bhavadhaarini Anantharaman",
+  "collection": "live"
+}

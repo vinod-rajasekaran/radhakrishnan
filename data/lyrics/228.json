@@ -1,0 +1,33 @@
+{
+  "id": "228",
+  "en": "paLapaLavena minnudhu",
+  "tamil": "பளபளவென மின்னுது",
+  "deity": "Nature",
+  "themes": [
+    "Nature"
+  ],
+  "excerpt": "பளபளவென மின்னுது மதியம்",
+  "volume": 3,
+  "audio": null,
+  "sections": [
+    {
+      "label": "Pallavi",
+      "ta": "பளபளவென மின்னுது மதியம்\nதளதளவென ஜொலிக்குது தார்வகை",
+      "translit": "paLapaLavena minnudhu madhiyam\nthaLathaLavena jolikkudhu thArvagai",
+      "en": "The moon glitters as though it has been polished, while clusters of stars shine brilliantly."
+    },
+    {
+      "label": "Anupallavi",
+      "ta": "சலசலவென கொட்டுது அருவி\nகலகலவென ஓடுது சிறு ஓடை",
+      "translit": "salasalavena kottudhu aruvi\nkalakalavena Odudhu siRu Odai",
+      "en": "A waterfall cascades down with a resounding melody, and a tiny brook runs alongside it with a cheerful, babbling sound."
+    },
+    {
+      "label": "Charanam",
+      "ta": "நகைத்தாள் ஒரு நங்கை மயில்\nதோகை விரித்தாற் போன்ற குழலாள்\nஅணைத்தான் மேகமெனும் அரிவையை\nபிணைத்தே தன்னொளி இழந்த சந்திரன்",
+      "translit": "nagaitthAL oru nangai mayil\nthOgai viritthAR pOndRa kuzhalAL\naNaitthAn mEgamenum arivaiyai\npiNaitthE thannoLi izhandha chandhran",
+      "en": "A beautiful young woman, her hair spread like peacock feathers, laughs aloud. The lovely yet naive moon loses its sheen by embracing this damsel known as the clouds."
+    }
+  ],
+  "notes": null
+}

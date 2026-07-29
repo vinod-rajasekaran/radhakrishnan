@@ -1,15 +1,15 @@
 /* site.js — shared nav, footer, modal, and utilities */
 
 const DEITY_META = {
-  'Muruga':        { image: 'assets/images/thumbs/Muruga.jpg',     ta: 'முருகன்' },
+  'Muruga':        { image: 'assets/images/thumbs/Muruga.jpg',     ta: 'முருகா' },
   'Ganesha':       { image: 'assets/images/thumbs/Ganesha.jpg',    ta: 'கணேசா' },
-  'Shiva':         { image: 'assets/images/thumbs/Shiva.jpg',      ta: 'சிவன்' },
+  'Shiva':         { image: 'assets/images/thumbs/Shiva.jpg',      ta: 'சிவா' },
   'Vishnu':        { image: 'assets/images/thumbs/Vishnu.jpg',     ta: 'விஷ்ணு' },
   'Lakshmi':       { image: 'assets/images/thumbs/Lakshmi.jpg',    ta: 'லக்ஷ்மி' },
   'Saraswathi':    { image: 'assets/images/thumbs/Saraswathi.jpg', ta: 'சரஸ்வதி' },
   'Parvathi':      { image: 'assets/images/thumbs/Parvathi.jpg',   ta: 'பார்வதி' },
   'Aiyappan':      { image: 'assets/images/thumbs/Aiyappan.jpg',   ta: 'ஐயப்பன்' },
-  'Anchaneya':     { image: 'assets/images/thumbs/Anchaneya.jpg',  ta: 'ஆஞ்சநேயர்' },
+  'Anchaneya':     { image: 'assets/images/thumbs/Anchaneya.jpg',  ta: 'ஆஞ்சநேயா' },
   'Nature':        { image: 'assets/images/thumbs/Nature.jpg',     ta: 'இயற்கை' },
   'Navarasa':      { image: null,                                   ta: 'நவரசம்' },
   'Miscellaneous': { image: null,                                   ta: 'பலவகை' },
@@ -181,15 +181,16 @@ function injectModal() {
 
 /* ── Shared modal utilities (used by lyrics.js and audio.js) ── */
 
-const NOTES_LIMIT = 200;
+const NOTES_LIMIT = 500;
 
 function renderNotes(text) {
   if (!text) return '';
   if (text.length <= NOTES_LIMIT) {
-    return `<aside class="song-notes"><strong>Notes:</strong> ${text}</aside>`;
+    return `<aside class="song-notes"><strong>Notes:</strong> ${text.replace(/\n/g, '<br>')}</aside>`;
   }
-  const preview = text.slice(0, NOTES_LIMIT).trimEnd();
-  return `<aside class="song-notes"><strong>Notes:</strong> <span class="notes-preview">${preview}…</span><span class="notes-full" hidden>${text}</span> <button class="notes-expand-btn" type="button">Read more</button></aside>`;
+  const preview = text.slice(0, NOTES_LIMIT).trimEnd().replace(/\n/g, '<br>');
+  const full    = text.replace(/\n/g, '<br>');
+  return `<aside class="song-notes"><strong>Notes:</strong> <span class="notes-preview">${preview}…</span><span class="notes-full" hidden>${full}</span> <button class="notes-expand-btn" type="button">Read more</button></aside>`;
 }
 
 function wireNotesExpand(container) {
