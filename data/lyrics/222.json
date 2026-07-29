@@ -8,7 +8,7 @@
   ],
   "excerpt": "ராம நாமம் ஜபித்தே பழகு அந்திம",
   "volume": 3,
-  "audio": true,
+  "audio": "assets/audio/rama_namam_jabithe.mp3",
   "sections": [
     {
       "label": "Pallavi",
@@ -29,5 +29,7 @@
       "en": "This divine name will offer clarity of thought. Lord Rama’s name will remove all of a person’s evil deeds or karma like magic. The name, worthy of penance, will resolve issues for a troubled mind. Lord Rama’s name will accompany you and remove all obstacles in your way. Get accustomed to chanting Lord Rama’s name now."
     }
   ],
-  "notes": null
+  "notes": null,
+  "singer": "Asha Ramesh",
+  "collection": "cd"
 }

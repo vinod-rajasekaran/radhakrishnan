@@ -1962,7 +1962,9 @@
       ],
       "excerpt": "வெண்ணை வழிந்தோடக் கண்டேன் நங்கநல்லூரிலே",
       "volume": 3,
-      "audio": true
+      "singer": "Asha Ramesh",
+      "collection": "cd",
+      "audio": "assets/audio/vennai_vazinthoda.mp3"
     },
     {
       "id": "162",
@@ -2406,7 +2408,9 @@
       ],
       "excerpt": "உமையொரு பங்கன் என்று ஊரெங்கும் பேசிட",
       "volume": 3,
-      "audio": true
+      "singer": null,
+      "collection": "live",
+      "audio": "assets/audio/umai_oru_pangan.mp3"
     },
     {
       "id": "198",
@@ -2430,7 +2434,9 @@
       ],
       "excerpt": "வீடு விட்டு ஓடிப்போன வடிவேலரே நீ படும்",
       "volume": 3,
-      "audio": true
+      "singer": null,
+      "collection": "live",
+      "audio": "assets/audio/vidu_vittu_odi_pona_vadivelare.mp3"
     },
     {
       "id": "200",
@@ -2454,7 +2460,9 @@
       ],
       "excerpt": "பங்கஜ நயனீ  பர்வத குமரி",
       "volume": 3,
-      "audio": true
+      "singer": null,
+      "collection": "live",
+      "audio": "assets/audio/Pankaja_nayanI.mp3"
     },
     {
       "id": "202",
@@ -2718,7 +2726,9 @@
       ],
       "excerpt": "ராம நாமம் ஜபித்தே பழகு அந்திம",
       "volume": 3,
-      "audio": true
+      "singer": "Asha Ramesh",
+      "collection": "cd",
+      "audio": "assets/audio/rama_namam_jabithe.mp3"
     },
     {
       "id": "223",
