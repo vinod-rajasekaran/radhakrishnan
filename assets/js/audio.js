@@ -64,7 +64,6 @@
           <h2 class="audio-collection-name" id="${col.key}-heading">${col.name}</h2>
           <p class="audio-collection-by">${col.subtitle}</p>
         </div>
-        <a href="lyrics.html?audio=1" class="${col.btnClass}">Browse these songs →</a>
       </div>
       <div class="song-grid" role="list"></div>`;
 
@@ -104,7 +103,7 @@
     document.body.classList.add('modal-open');
     modalClose.focus();
 
-    fetch(`data/lyrics/${id}.json?v=20260730a`)
+    fetch(`data/lyrics/${id}.json?v=20260730b`)
       .then(r => r.json())
       .then(song => {
         const isNonDeity  = NON_DEITY.includes(song.deity);
@@ -142,7 +141,7 @@
   const container = document.getElementById('audio-sections');
   if (!container) return;
 
-  fetch('data/songs.json?v=20260730a')
+  fetch('data/songs.json?v=20260730b')
     .then(r => r.json())
     .then(data => {
       const audioSongs = data.songs.filter(s => s.collection);
