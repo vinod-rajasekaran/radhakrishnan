@@ -90,6 +90,8 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
 .btn-ghost:hover { border-color: var(--cream); background: rgba(255,246,228,.14); }
 .btn-peacock { background: var(--peacock); }
 .btn-peacock:hover { background: var(--vermilion-deep); }
+.btn-magenta { background: var(--magenta); }
+.btn-magenta:hover { background: var(--vermilion-deep); }
 .link-btn {
   background: none;
   border: none;
@@ -1497,6 +1499,7 @@ body.modal-open { overflow: hidden; }
   display: block;
 }
 .audio-collection-label.live { color: var(--peacock); }
+.audio-collection-label.dance { color: var(--magenta); }
 .audio-collection-name {
   font-family: 'Fraunces', serif;
   font-weight: 700;

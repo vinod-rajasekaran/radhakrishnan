@@ -12,6 +12,13 @@
       btnClass: 'btn',
     },
     {
+      key:      'dance',
+      label:    'Dance pieces',
+      name:     'Songs composed for dance recitals',
+      subtitle: 'Composed for Bharatanatyam recitals',
+      btnClass: 'btn btn-magenta',
+    },
+    {
       key:      'live',
       label:    'In performance',
       name:     'Songs from concert and recording sessions',
@@ -60,7 +67,7 @@
     section.innerHTML = `
       <div class="audio-section-head">
         <div>
-          <span class="audio-collection-label${col.key === 'live' ? ' live' : ''}">${col.label}</span>
+          <span class="audio-collection-label${col.key !== 'cd' ? ' ' + col.key : ''}">${col.label}</span>
           <h2 class="audio-collection-name" id="${col.key}-heading">${col.name}</h2>
           <p class="audio-collection-by">${col.subtitle}</p>
         </div>
@@ -103,7 +110,7 @@
     document.body.classList.add('modal-open');
     modalClose.focus();
 
-    fetch(`data/lyrics/${id}.json?v=20260730b`)
+    fetch(`data/lyrics/${id}.json?v=20260801b`)
       .then(r => r.json())
       .then(song => {
         const isNonDeity  = NON_DEITY.includes(song.deity);
@@ -141,7 +148,7 @@
   const container = document.getElementById('audio-sections');
   if (!container) return;
 
-  fetch('data/songs.json?v=20260730b')
+  fetch('data/songs.json?v=20260801b')
     .then(r => r.json())
     .then(data => {
       const audioSongs = data.songs.filter(s => s.collection);
