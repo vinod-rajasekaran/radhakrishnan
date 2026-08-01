@@ -21,7 +21,7 @@
     {
       key:      'live',
       label:    'Recordings',
-      name:     'Songs fron recording sessions',
+      name:     'Songs from recording sessions',
       subtitle: 'Music composed and rendered by Bhavadhaarini Anantharaman',
       btnClass: 'btn btn-peacock',
     },
@@ -110,7 +110,7 @@
     document.body.classList.add('modal-open');
     modalClose.focus();
 
-    fetch(`data/lyrics/${id}.json?v=20260801i`)
+    fetch(`data/lyrics/${id}.json?v=20260801j`)
       .then(r => r.json())
       .then(song => {
         const isNonDeity  = NON_DEITY.includes(song.deity);
@@ -148,7 +148,7 @@
   const container = document.getElementById('audio-sections');
   if (!container) return;
 
-  fetch('data/songs.json?v=20260801i')
+  fetch('data/songs.json?v=20260801j')
     .then(r => r.json())
     .then(data => {
       const audioSongs = data.songs.filter(s => s.collection);
