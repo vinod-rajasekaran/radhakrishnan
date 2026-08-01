@@ -183,14 +183,22 @@ function injectModal() {
 
 const NOTES_LIMIT = 500;
 
+function safeTruncate(text, limit) {
+  let cut = text.slice(0, limit);
+  const lastOpen  = cut.lastIndexOf('<');
+  const lastClose = cut.lastIndexOf('>');
+  if (lastOpen > lastClose) cut = cut.slice(0, lastOpen);
+  return cut.trimEnd();
+}
+
 function renderNotes(text) {
   if (!text) return '';
   if (text.length <= NOTES_LIMIT) {
-    return `<aside class="song-notes"><strong>Notes:</strong> ${text.replace(/\n/g, '<br>')}</aside>`;
+    return `<aside class="song-notes"><strong>Author's Notes:</strong> ${text.replace(/\n/g, '<br>')}</aside>`;
   }
-  const preview = text.slice(0, NOTES_LIMIT).trimEnd().replace(/\n/g, '<br>');
+  const preview = safeTruncate(text, NOTES_LIMIT).replace(/\n/g, '<br>');
   const full    = text.replace(/\n/g, '<br>');
-  return `<aside class="song-notes"><strong>Notes:</strong> <span class="notes-preview">${preview}…</span><span class="notes-full" hidden>${full}</span> <button class="notes-expand-btn" type="button">Read more</button></aside>`;
+  return `<aside class="song-notes"><strong>Author's Notes:</strong> <span class="notes-preview">${preview}…</span><span class="notes-full" hidden>${full}</span> <button class="notes-expand-btn" type="button">Read more</button></aside>`;
 }
 
 function wireNotesExpand(container) {
