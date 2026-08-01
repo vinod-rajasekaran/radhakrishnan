@@ -2580,7 +2580,9 @@
       ],
       "excerpt": "வேதிகைக்கு வேலியான முல்லைவனன் மனோகரியே",
       "volume": 3,
-      "audio": null
+      "singer": "Bhavadhaarini Anantharaman",
+      "collection": "live",
+      "audio": "assets/audio/vedhigaikku_veliyay.mp3"
     },
     {
       "id": "211",
@@ -2929,6 +2931,32 @@
         "Miscellaneous"
       ],
       "excerpt": "கண் விழித்தேன் தனிமையிலே கைவிடப்பட்டேனா",
+      "volume": 3,
+      "audio": null
+    },
+    {
+      "id": "239",
+      "tamil": "எதுகையும் மோனையும்",
+      "en": "edhugaiyum mOnaiyum",
+      "deity": "Vishnu",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "எதுகையும் மோனையும் வேண்டுவதோ எம்பெருமான்",
+      "volume": 3,
+      "singer": "Bhavadhaarini Anantharaman",
+      "collection": "live",
+      "audio": "assets/audio/edhugaiyum_monaiyum.mp3"
+    },
+    {
+      "id": "240",
+      "tamil": "ஆதியும் நீயே அந்தமும் நீயே",
+      "en": "Adhiyum nIyE anthamum nIyE",
+      "deity": "Parvathi",
+      "themes": [
+        "Devotion"
+      ],
+      "excerpt": "ஆதியும் நீயே அந்தமும் நீயே சங்கரனின் சரி",
       "volume": 3,
       "audio": null
     }
