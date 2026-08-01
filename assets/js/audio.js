@@ -7,22 +7,22 @@
     {
       key:      'cd',
       label:    'The CD',
-      name:     'Thenum Thinaiyum',
-      subtitle: '',
+      name:     'Thenum Thinaiyum ',
+      subtitle: 'Music composed and rendered by Smt. Asha Ramesh',
       btnClass: 'btn',
     },
     {
       key:      'dance',
       label:    'Dance pieces',
-      name:     'Songs composed for dance recitals',
-      subtitle: 'Composed for Bharatanatyam recitals',
+      name:     'Bharatanatyam recitals ',
+      subtitle: 'Music composed and rendered by Smt. Asha Ramesh',
       btnClass: 'btn btn-magenta',
     },
     {
       key:      'live',
-      label:    'In performance',
-      name:     'Songs from concert and recording sessions',
-      subtitle: 'Performed live and recorded informally',
+      label:    'Recordings',
+      name:     'Songs fron recording sessions',
+      subtitle: 'Music composed and rendered by Bhavadhaarini Anantharaman',
       btnClass: 'btn btn-peacock',
     },
   ];
@@ -110,7 +110,7 @@
     document.body.classList.add('modal-open');
     modalClose.focus();
 
-    fetch(`data/lyrics/${id}.json?v=20260801f`)
+    fetch(`data/lyrics/${id}.json?v=20260801i`)
       .then(r => r.json())
       .then(song => {
         const isNonDeity  = NON_DEITY.includes(song.deity);
@@ -148,7 +148,7 @@
   const container = document.getElementById('audio-sections');
   if (!container) return;
 
-  fetch('data/songs.json?v=20260801f')
+  fetch('data/songs.json?v=20260801i')
     .then(r => r.json())
     .then(data => {
       const audioSongs = data.songs.filter(s => s.collection);

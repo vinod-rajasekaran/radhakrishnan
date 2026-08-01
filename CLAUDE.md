@@ -13,6 +13,14 @@ No backends ever - snappy fast local files only
 Define once and use everywhere headers and footers for all pages.
 
 
+Development Setup — Pre-commit Hook
+
+This repo ships a tracked pre-commit hook (`.githooks/pre-commit`) that automatically rebuilds `data/songs.json` and bumps the cache-busting version (see below) whenever relevant files are staged. Git does not enable tracked hooks on its own — after cloning, run once:
+  git config core.hooksPath .githooks
+
+Without this one-time step, the hook is present in the repo but inactive, and rebuilds/bumps must be done manually as described below.
+
+
 CSS — Reuse First
 
 Before adding any CSS class, search for an existing class that covers the need. Never use inline style attributes — always create or reuse a CSS class. If a pattern appears on more than one element, promote it to a class and check with the user first. The design token variables in :root must be used for all colours — no raw hex or rgba values outside the token definitions themselves.
@@ -21,12 +29,14 @@ Cache Busting — Asset Versioning
 
 Every <link>, <script>, and <img> in every HTML file must carry a ?v=YYYYMMDD[letter] query string (e.g. ?v=20260718a). This forces browsers to re-fetch assets after a deploy instead of serving stale cached files.
 
-Current version: 20260801f
+Current version: 20260801i
 
 When to bump: any time a static file changes — CSS, JS, JSON under data/, or images.
 
-How to bump (replace OLD with the previous token, NEW with today's token):
-  sed -i '' 's|?v=OLD|?v=NEW|g' *.html
+Automatic: the pre-commit hook (see Development Setup above) runs `node scripts/bump-version.js` whenever a staged file matches `assets/{css,js,images}/**` or `data/**/*.json`, updating every `*.html` file, every `assets/js/*.js` fetch URL, and the "Current version" line below in one pass.
+
+Manual fallback (if hooks aren't enabled, replace OLD with the previous token, NEW with today's token):
+  sed -i '' 's|?v=OLD|?v=NEW|g' *.html assets/js/*.js
 
 Letter suffix: start at 'a' each day; increment to 'b', 'c', … for subsequent changes on the same day.
 
@@ -37,7 +47,9 @@ Song Index — Rebuild Required
 `data/songs.json` is auto-generated from `data/lyrics/*.json` by running:
   node scripts/build-index.js
 
-Run this command any time a lyrics JSON file is added, removed, or edited. Never edit `data/songs.json` directly — it is overwritten on every rebuild.
+Automatic: the pre-commit hook (see Development Setup above) runs this whenever a `data/lyrics/*.json` file is staged.
+
+Run this command manually any time you want to preview the rebuild before staging. Never edit `data/songs.json` directly — it is overwritten on every rebuild.
 
 Song Display — Three Surfaces Share Behaviour
 

@@ -1,0 +1,18 @@
+#!/bin/sh
+# Tracked pre-commit hook — see CLAUDE.md "Development setup" for how to enable this.
+#
+# 1. Rebuilds data/songs.json whenever a data/lyrics/*.json file is staged.
+# 2. Bumps the site-wide ?v=YYYYMMDD[letter] cache-busting token whenever a
+#    CSS, JS, data/*.json (including the songs.json rebuilt in step 1), or
+#    image file is staged.
+set -e
+
+if git diff --cached --name-only | grep -q '^data/lyrics/'; then
+  node scripts/build-index.js
+  git add data/songs.json
+fi
+
+if git diff --cached --name-only | grep -qE '^(assets/(css|js|images)/|data/).*\.(css|js|json|jpe?g|png|gif|svg|webp)$'; then
+  node scripts/bump-version.js
+  git add -- *.html assets/js/*.js CLAUDE.md
+fi
