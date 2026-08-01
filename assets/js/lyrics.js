@@ -1,7 +1,7 @@
 /* lyrics.js — song grid, search/filter, modal */
 
 (function () {
-  const SONGS_URL = 'data/songs.json?v=20260802a';
+  const SONGS_URL = 'data/songs.json?v=20260802f';
 
   let allSongs   = [];
   let allMeta    = {};
@@ -80,20 +80,20 @@
     const THEME_SLIDES = [
       { key: 'Devotion',      label: 'Devotion',      ta: 'பக்தி',    cssClass: 'theme-slide--devotion',
         count: devotionCount,
-        verse: 'வேலா யுதா முருகா வாராய்\nஅருள்தாராய் ஆறுமுக நாதா',
-        verseAttr: 'வேல் முருகா' },
+        verse: 'வேல் அவாவினால் மனம் கசிந்து நாவார\nவேலவா எனும்போது வினை நசியுமன்றோ',
+        verseAttr: 'When your mind melts with a deep desire to look at the spear, and the tongue utters the name Velava or Muruga, is it not true that all your past sins will disintegrate?' },
       { key: 'Nature',        label: 'Nature',         ta: 'இயற்கை',  cssClass: 'theme-slide--nature',
         count: allSongs.filter(s => s.deity === 'Nature').length,
-        verse: 'மலைக் காற்று வீசும் நேரம்\nமனது பழைய நினைவில் ஆழும்',
-        verseAttr: 'மலைக் காற்று' },
+        verse: 'எங்கிருந்தோ காற்றில் பறந்த விதையும்\nமழைத்துளியும் மண்ணும் சங்கமித்தது',
+        verseAttr: 'A seed, carried by the wind, mingled with raindrops and soil.' },
       { key: 'Navarasa',      label: 'Navarasa',       ta: 'நவரசம்',  cssClass: 'theme-slide--navarasa',
         count: allSongs.filter(s => s.deity === 'Navarasa').length,
-        verse: 'நவரசம் தன்னில் நான் இருந்தேன்\nஒரு குரல் தான் எல்லாம் சொன்னதே',
-        verseAttr: 'நவரச பாடல்' },
+        verse: 'ஆலஹால விஷத்தையும் அமுதாக்கிய அன்னையே\nமூல ஓல நீலகண்டனின் இடமுறை நாயகியே',
+        verseAttr: 'Oh Mother, you converted the poison, that emanated during the churning of the milky ocean, into an immortality-yielding sweet nectar just by the touch of your hand. You reside on the left side of Lord Nilakanta, the originator of the primordial sound Aum.' },
       { key: 'Miscellaneous', label: 'Miscellaneous',  ta: 'பலவகை',   cssClass: 'theme-slide--misc',
         count: allSongs.filter(s => s.deity === 'Miscellaneous').length,
-        verse: 'தென்றல் வந்து தீண்டும் நேரம்\nமனது குளிரும் இன்பம் தரும்',
-        verseAttr: 'தென்றல்' },
+        verse: 'வெண்ணிலா ஒன்று வானினின்று இறங்கி வந்தது\nமண்ணிலா என்ற கேள்வி மனதில் எழுந்தது',
+        verseAttr: 'A pure white moon descended from the sky. A question arose in my mind of whether this phenomenon is really happening on earth.' },
     ];
 
     let current        = 0;
@@ -120,7 +120,7 @@
           </div>
           <div class="theme-slide-right">
             <p class="theme-slide-verse">${theme.verse.replace(/\n/g, '<br>')}</p>
-            <span class="theme-slide-verse-attr">— ${theme.verseAttr}</span>
+            <span class="theme-slide-verse-attr">${theme.verseAttr}</span>
           </div>
         </div>
       `;
@@ -172,7 +172,7 @@
 
     function resetTimer() {
       clearInterval(timer);
-      timer = setInterval(() => goTo(current + 1), 4800);
+      timer = setInterval(() => goTo(current + 1), 15000);
     }
 
     function onThemeClick(key, label) {
@@ -454,7 +454,7 @@
     if (song.sections) {
       SiteShared.renderLyrics(song, modalBody, modalLoading);
     } else {
-      fetch(`data/lyrics/${song.id}.json?v=20260802a`)
+      fetch(`data/lyrics/${song.id}.json?v=20260802f`)
         .then(r => r.json())
         .then(full => SiteShared.renderLyrics(full, modalBody, modalLoading))
         .catch(() => {

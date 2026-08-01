@@ -620,11 +620,11 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   margin: 0 0 12px;
 }
 .theme-slide-verse-attr {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: rgba(255,246,228,.38);
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255,246,228,.65);
 }
 @media (max-width: 768px) {
   .theme-carousel { height: auto; }
