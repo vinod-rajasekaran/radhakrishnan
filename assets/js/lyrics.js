@@ -1,7 +1,7 @@
 /* lyrics.js — song grid, search/filter, modal */
 
 (function () {
-  const SONGS_URL = 'data/songs.json?v=20260802s';
+  const SONGS_URL = 'data/songs.json?v=20260802y';
 
   let allSongs   = [];
   let allMeta    = {};
@@ -133,7 +133,7 @@
           </div>
         </div>
       `;
-      slide.addEventListener('click', () => onThemeClick(theme.key, theme.label));
+      slide.querySelector('.theme-slide-left').addEventListener('click', () => onThemeClick(theme.key, theme.label));
       section.appendChild(slide);
     });
 
@@ -455,7 +455,7 @@
     if (song.sections) {
       SiteShared.renderLyrics(song, modalBody, modalLoading);
     } else {
-      fetch(`data/lyrics/${song.id}.json?v=20260802s`)
+      fetch(`data/lyrics/${song.id}.json?v=20260802y`)
         .then(r => r.json())
         .then(full => SiteShared.renderLyrics(full, modalBody, modalLoading))
         .catch(() => {
