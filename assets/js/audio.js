@@ -27,38 +27,6 @@
     },
   ];
 
-  /* ── Card builder ─────────────────────────────────────────── */
-  const AUDIO_ICON = `<span class="song-audio-icon" aria-label="Audio available">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
-    </svg></span>`;
-
-  function buildCard(song) {
-    const isNonDeity  = NON_DEITY.includes(song.deity);
-    const themes      = [...new Set([...(song.themes || []), ...(isNonDeity ? [song.deity] : [])])];
-    const themeChips  = themes.slice(0, 2).map(t => `<span class="mini-tag theme">${t}</span>`).join('');
-    const deityTag    = isNonDeity ? '' : `<span class="mini-tag">${song.deity}</span>`;
-
-    const card = document.createElement('article');
-    card.className = 'song-card';
-    card.setAttribute('role', 'listitem');
-    card.setAttribute('tabindex', '0');
-    card.dataset.id    = song.id;
-    card.dataset.tamil = song.tamil;
-    card.dataset.deity = song.deity;
-    card.innerHTML = `
-      <div class="song-tags">
-        ${themeChips}
-        ${deityTag}
-        ${AUDIO_ICON}
-      </div>
-      <p class="song-title-tamil tamil">${song.tamil}</p>
-      <p class="song-title-en">${song.en}</p>
-      <p class="song-excerpt">${song.excerpt ? '“' + song.excerpt + '…”' : ''}</p>
-      <p class="song-open-hint">Click to read →</p>`;
-    return card;
-  }
-
   /* ── Section builder ──────────────────────────────────────── */
   function buildSection(col, songs) {
     const section = document.createElement('section');
@@ -75,7 +43,7 @@
       <div class="song-grid" role="list"></div>`;
 
     const grid = section.querySelector('.song-grid');
-    songs.forEach(s => grid.appendChild(buildCard(s)));
+    songs.forEach(s => grid.appendChild(SiteShared.buildSongCard(s)));
     return section;
   }
 
@@ -106,11 +74,12 @@
     modalBody.innerHTML = '';
     modalBody.appendChild(modalLoading);
     modalLoading.hidden = false;
+    if (!modalOverlay.classList.contains('open')) SiteShared.openModalHistory();
     modalOverlay.classList.add('open');
     document.body.classList.add('modal-open');
     modalClose.focus();
 
-    fetch(`data/lyrics/${id}.json?v=20260802f`)
+    fetch(`data/lyrics/${id}.json?v=20260802s`)
       .then(r => r.json())
       .then(song => {
         const isNonDeity  = NON_DEITY.includes(song.deity);
@@ -148,7 +117,7 @@
   const container = document.getElementById('audio-sections');
   if (!container) return;
 
-  fetch('data/songs.json?v=20260802f')
+  fetch('data/songs.json?v=20260802s')
     .then(r => r.json())
     .then(data => {
       const audioSongs = data.songs.filter(s => s.collection);

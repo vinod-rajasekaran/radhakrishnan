@@ -147,7 +147,7 @@ function injectModal() {
         <div class="modal-deity-text">
           <span class="modal-deity-eyebrow">Deity</span>
           <p class="modal-deity-name" id="modal-deity-name"></p>
-          <p class="modal-deity-ta-text" id="modal-deity-ta"></p>
+          <p class="modal-deity-ta-text" id="modal-deity-ta" lang="ta"></p>
         </div>
       </div>
       <div class="modal-header">
@@ -159,7 +159,7 @@ function injectModal() {
             </svg>
           </button>
         </div>
-        <h2 class="modal-title" id="modal-title"></h2>
+        <h2 class="modal-title" id="modal-title" lang="ta"></h2>
         <p class="modal-en-title" id="modal-en-title"></p>
       </div>
       <div class="modal-body" id="modal-body">
@@ -177,6 +177,41 @@ function injectModal() {
     window.print();
     document.title = prev;
   });
+}
+
+/* ── Shared song card (used by lyrics.js and audio.js) ── */
+
+const CARD_NON_DEITY = ['Navarasa', 'Miscellaneous', 'Nature'];
+const CARD_AUDIO_ICON = `<span class="song-audio-icon" aria-label="Audio available">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+    </svg></span>`;
+
+function buildSongCard(song) {
+  const isNonDeity = CARD_NON_DEITY.includes(song.deity);
+  const themes     = [...new Set([...(song.themes || []), ...(isNonDeity ? [song.deity] : [])])];
+  const themeChips = themes.slice(0, 2).map(t => `<span class="mini-tag theme">${t}</span>`).join('');
+  const deityTag   = isNonDeity ? '' : `<span class="mini-tag">${song.deity}</span>`;
+
+  const card = document.createElement('article');
+  card.className = 'song-card';
+  card.setAttribute('role', 'listitem');
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('aria-label', `${song.tamil} — ${song.en}`);
+  card.dataset.id    = song.id;
+  card.dataset.tamil = song.tamil;
+  card.dataset.deity = song.deity;
+  card.innerHTML = `
+    <div class="song-tags">
+      ${themeChips}
+      ${deityTag}
+      ${song.audio ? CARD_AUDIO_ICON : ''}
+    </div>
+    <p class="song-title-tamil tamil" lang="ta">${song.tamil}</p>
+    <p class="song-title-en">${song.en}</p>
+    <p class="song-excerpt">${song.excerpt ? '“' + song.excerpt + '…”' : ''}</p>
+    <p class="song-open-hint">Click to read →</p>`;
+  return card;
 }
 
 /* ── Shared modal utilities (used by lyrics.js and audio.js) ── */
@@ -224,7 +259,7 @@ function renderLyrics(song, modalBody, modalLoading) {
   const sectionsHtml = sections.map(sec => `
     <div class="lyrics-section modal-left-cell">
       <h3 class="lyrics-section-label">${sec.label}</h3>
-      <p class="lyrics-ta tamil">${sec.ta.replace(/\n/g, '<br>')}</p>
+      <p class="lyrics-ta tamil" lang="ta">${sec.ta.replace(/\n/g, '<br>')}</p>
       <p class="lyrics-translit">${sec.translit.replace(/\n/g, '<br>')}</p>
     </div>
     <div class="lyrics-section-en modal-right-cell">
@@ -271,14 +306,31 @@ function initAudioBar(bar) {
   });
 }
 
-function closeModal(modalOverlay) {
+let _modalHistoryPushed = false;
+
+function openModalHistory() {
+  history.pushState({ modalOpen: true }, '');
+  _modalHistoryPushed = true;
+}
+
+function closeModal(modalOverlay, opts = {}) {
   if (_activePlayer) {
     _activePlayer.pause();
     _activePlayer = null;
   }
   modalOverlay.classList.remove('open');
   document.body.classList.remove('modal-open');
+  const shouldGoBack = _modalHistoryPushed && !opts.fromPopstate;
+  _modalHistoryPushed = false;
+  if (shouldGoBack) history.back();
 }
+
+window.addEventListener('popstate', () => {
+  const overlay = document.getElementById('modal-overlay');
+  if (overlay && overlay.classList.contains('open')) {
+    closeModal(overlay, { fromPopstate: true });
+  }
+});
 
 function updateModalDeityBanner(deity) {
   const banner = document.getElementById('modal-deity-banner');
@@ -298,7 +350,7 @@ function updateModalDeityBanner(deity) {
   }
 }
 
-window.SiteShared = { renderLyrics, renderNotes, wireNotesExpand, buildAudioBar, initAudioBar, closeModal, updateModalDeityBanner, DEITY_META };
+window.SiteShared = { renderLyrics, renderNotes, wireNotesExpand, buildAudioBar, initAudioBar, closeModal, openModalHistory, updateModalDeityBanner, DEITY_META, buildSongCard };
 
 /* Inject modal synchronously so lyrics.js/audio.js can query it immediately */
 injectModal();

@@ -6,12 +6,28 @@
   const dotsEl   = document.getElementById('slider-dots');
   const prevBtn  = document.getElementById('slider-prev');
   const nextBtn  = document.getElementById('slider-next');
+  const pauseBtn = document.getElementById('slider-pause');
 
   if (!sliderEl) return;
 
   const slides = Array.from(sliderEl.querySelectorAll('.slide'));
   let current  = 0;
   let timer;
+  let paused   = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const PAUSE_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';
+  const PLAY_ICON  = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M7 5l12 7-12 7V5z"/></svg>';
+
+  function setPaused(next) {
+    paused = next;
+    clearInterval(timer);
+    if (!paused) timer = setInterval(() => goTo(current + 1), 15000);
+    if (pauseBtn) {
+      pauseBtn.innerHTML = paused ? PLAY_ICON : PAUSE_ICON;
+      pauseBtn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
+      pauseBtn.setAttribute('aria-pressed', String(paused));
+    }
+  }
 
   function buildDots() {
     slides.forEach((_, i) => {
@@ -48,8 +64,7 @@
   }
 
   function resetTimer() {
-    clearInterval(timer);
-    timer = setInterval(() => goTo(current + 1), 15000);
+    setPaused(paused);
   }
 
   /* Init first slide */
@@ -61,7 +76,8 @@
   buildDots();
   prevBtn.addEventListener('click', () => goTo(current - 1));
   nextBtn.addEventListener('click', () => goTo(current + 1));
-  resetTimer();
+  if (pauseBtn) pauseBtn.addEventListener('click', () => setPaused(!paused));
+  setPaused(paused);
 
   sliderEl.addEventListener('mouseenter', () => clearInterval(timer));
   sliderEl.addEventListener('mouseleave', () => resetTimer());
@@ -86,7 +102,7 @@
     if (!songs.length) return;
     const meta = songs[Math.floor(Math.random() * songs.length)];
 
-    fetch(`data/lyrics/${meta.id}.json?v=20260802f`)
+    fetch(`data/lyrics/${meta.id}.json?v=20260802s`)
       .then(r => r.json())
       .then(song => {
         if (!(song.sections || []).length) return;
@@ -101,7 +117,7 @@
   }
 
   if (enTitleEl) {
-    fetch('data/songs.json?v=20260802f')
+    fetch('data/songs.json?v=20260802s')
       .then(r => r.json())
       .then(data => {
         songs = data.songs;

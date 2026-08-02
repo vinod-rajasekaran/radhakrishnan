@@ -1,7 +1,7 @@
 /* lyrics.js — song grid, search/filter, modal */
 
 (function () {
-  const SONGS_URL = 'data/songs.json?v=20260802f';
+  const SONGS_URL = 'data/songs.json?v=20260802s';
 
   let allSongs   = [];
   let allMeta    = {};
@@ -81,24 +81,32 @@
       { key: 'Devotion',      label: 'Devotion',      ta: 'பக்தி',    cssClass: 'theme-slide--devotion',
         count: devotionCount,
         verse: 'வேல் அவாவினால் மனம் கசிந்து நாவார\nவேலவா எனும்போது வினை நசியுமன்றோ',
+        translit: 'vEl avAvinAl manam kasindhu nAvAra\nvElavA enumpOdhu vinai nasiyumandRO',
         verseAttr: 'When your mind melts with a deep desire to look at the spear, and the tongue utters the name Velava or Muruga, is it not true that all your past sins will disintegrate?' },
       { key: 'Nature',        label: 'Nature',         ta: 'இயற்கை',  cssClass: 'theme-slide--nature',
         count: allSongs.filter(s => s.deity === 'Nature').length,
         verse: 'எங்கிருந்தோ காற்றில் பறந்த விதையும்\nமழைத்துளியும் மண்ணும் சங்கமித்தது',
+        translit: 'engirundhO kAtRil paRandha vidhaiyum\nmazhaitthuLiyum maNNum sangamitthadhu',
         verseAttr: 'A seed, carried by the wind, mingled with raindrops and soil.' },
       { key: 'Navarasa',      label: 'Navarasa',       ta: 'நவரசம்',  cssClass: 'theme-slide--navarasa',
         count: allSongs.filter(s => s.deity === 'Navarasa').length,
         verse: 'ஆலஹால விஷத்தையும் அமுதாக்கிய அன்னையே\nமூல ஓல நீலகண்டனின் இடமுறை நாயகியே',
+        translit: 'AlahAla vishatthaiyum amudhAkkiya annaiyE\nmUla Ola nIlakantanin idamuRai nayakiyE',
         verseAttr: 'Oh Mother, you converted the poison, that emanated during the churning of the milky ocean, into an immortality-yielding sweet nectar just by the touch of your hand. You reside on the left side of Lord Nilakanta, the originator of the primordial sound Aum.' },
       { key: 'Miscellaneous', label: 'Miscellaneous',  ta: 'பலவகை',   cssClass: 'theme-slide--misc',
         count: allSongs.filter(s => s.deity === 'Miscellaneous').length,
         verse: 'வெண்ணிலா ஒன்று வானினின்று இறங்கி வந்தது\nமண்ணிலா என்ற கேள்வி மனதில் எழுந்தது',
+        translit: 'veNNilA ondRu vAninindRu iRangi vandhadhu\nmaNNila endRa kELvi manadhil ezhundhadhu',
         verseAttr: 'A pure white moon descended from the sky. A question arose in my mind of whether this phenomenon is really happening on earth.' },
     ];
 
     let current        = 0;
     let selectedTheme  = '';
     let timer;
+    let paused         = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const PAUSE_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';
+    const PLAY_ICON  = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M7 5l12 7-12 7V5z"/></svg>';
 
     const section = document.createElement('section');
     section.className = 'theme-carousel';
@@ -115,11 +123,12 @@
           <div class="theme-slide-left">
             <span class="theme-slide-count">${theme.count} song${theme.count !== 1 ? 's' : ''}</span>
             <p class="theme-slide-name">${theme.label}</p>
-            <p class="theme-slide-ta">${theme.ta}</p>
+            <p class="theme-slide-ta" lang="ta">${theme.ta}</p>
             <span class="theme-slide-cta">Click to browse →</span>
           </div>
           <div class="theme-slide-right">
-            <p class="theme-slide-verse">${theme.verse.replace(/\n/g, '<br>')}</p>
+            <p class="theme-slide-verse" lang="ta">${theme.verse.replace(/\n/g, '<br>')}</p>
+            <p class="theme-slide-translit">${theme.translit.replace(/\n/g, '<br>')}</p>
             <span class="theme-slide-verse-attr">${theme.verseAttr}</span>
           </div>
         </div>
@@ -148,9 +157,18 @@
       dotsEl.appendChild(btn);
     });
 
+    const pauseBtn = document.createElement('button');
+    pauseBtn.className = 'slider-arrow theme-slider-pause';
+    pauseBtn.setAttribute('aria-pressed', 'false');
+
+    const controlsEl = document.createElement('div');
+    controlsEl.className = 'theme-slider-controls';
+    controlsEl.appendChild(pauseBtn);
+    controlsEl.appendChild(dotsEl);
+
     section.appendChild(prevBtn);
     section.appendChild(nextBtn);
-    section.appendChild(dotsEl);
+    section.appendChild(controlsEl);
     wrap.appendChild(section);
 
     function updateDots(idx) {
@@ -170,10 +188,19 @@
       resetTimer();
     }
 
-    function resetTimer() {
+    function setPaused(next) {
+      paused = next;
       clearInterval(timer);
-      timer = setInterval(() => goTo(current + 1), 15000);
+      if (!paused) timer = setInterval(() => goTo(current + 1), 15000);
+      pauseBtn.innerHTML = paused ? PLAY_ICON : PAUSE_ICON;
+      pauseBtn.setAttribute('aria-label', paused ? 'Play theme carousel' : 'Pause theme carousel');
+      pauseBtn.setAttribute('aria-pressed', String(paused));
     }
+
+    function resetTimer() {
+      setPaused(paused);
+    }
+    pauseBtn.addEventListener('click', e => { e.stopPropagation(); setPaused(!paused); });
 
     function onThemeClick(key, label) {
       const idx = THEME_SLIDES.findIndex(t => t.key === key);
@@ -387,34 +414,7 @@
       : `${songs.length} of ${allSongs.length} songs`;
 
     songs.forEach(song => {
-      const card = document.createElement('article');
-      card.className = 'song-card';
-      card.setAttribute('role', 'listitem');
-      card.setAttribute('tabindex', '0');
-      card.setAttribute('aria-label', `${song.tamil} — ${song.en}`);
-      card.dataset.id = song.id;
-
-      const isNonDeity = NON_DEITY_CATS.includes(song.deity);
-      const allThemes  = [...new Set([
-        ...(song.themes || []),
-        ...(isNonDeity ? [song.deity] : []),
-      ])];
-      const themeChips = allThemes.slice(0, 2).map(t =>
-        `<span class="mini-tag theme">${t}</span>`
-      ).join('');
-      const deityTag = isNonDeity ? '' : `<span class="mini-tag">${song.deity}</span>`;
-
-      card.innerHTML = `
-        <div class="song-tags">
-          ${themeChips}
-          ${deityTag}
-        </div>
-        <p class="song-title-tamil tamil">${song.tamil}</p>
-        <p class="song-title-en">${song.en}</p>
-        <p class="song-excerpt">${song.excerpt ? '"' + song.excerpt + '"' : ''}</p>
-        <p class="song-open-hint">Click to read →</p>
-      `;
-
+      const card = SiteShared.buildSongCard(song);
       card.addEventListener('click',  () => openModal(song));
       card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(song); } });
       grid.appendChild(card);
@@ -447,6 +447,7 @@
     modalBody.innerHTML = '';
     modalBody.appendChild(modalLoading);
     modalLoading.hidden = false;
+    if (!modalOverlay.classList.contains('open')) SiteShared.openModalHistory();
     modalOverlay.classList.add('open');
     document.body.classList.add('modal-open');
     modalClose.focus();
@@ -454,7 +455,7 @@
     if (song.sections) {
       SiteShared.renderLyrics(song, modalBody, modalLoading);
     } else {
-      fetch(`data/lyrics/${song.id}.json?v=20260802f`)
+      fetch(`data/lyrics/${song.id}.json?v=20260802s`)
         .then(r => r.json())
         .then(full => SiteShared.renderLyrics(full, modalBody, modalLoading))
         .catch(() => {

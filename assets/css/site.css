@@ -13,6 +13,7 @@
   --vermilion:       #E0381F;
   --vermilion-deep:  #A6220F;
   --turmeric:        #E8A317;
+  --turmeric-deep:   #825B0D;
   --peacock:         #0B7A68;
   --magenta:         #C21E6E;
   --line:            #EFDBAA;
@@ -570,11 +571,11 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   align-items: center;
 }
 .theme-slide-left {
-  flex: 0 0 40%;
+  flex: 0 0 25%;
   padding: 0 40px 0 112px;
 }
 .theme-slide-right {
-  flex: 1;
+  flex: 0 0 60%;
   padding: 0 80px 0 40px;
   border-left: 1px solid rgba(255,246,228,.12);
   display: flex;
@@ -609,15 +610,22 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   font-size: 10.5px;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: rgba(255,246,228,.5);
+  color: rgba(255,246,228,.78);
 }
 .theme-slide.is-selected .theme-slide-cta { color: var(--gold); }
 .theme-slide-verse {
   font-family: 'Noto Serif Tamil', serif;
-  font-size: 22px;
-  line-height: 1.9;
+  font-size: 19px;
+  line-height: 1.7;
   color: rgba(255,246,228,.82);
-  margin: 0 0 12px;
+  margin: 0 0 8px;
+}
+.theme-slide-translit {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: rgba(255,246,228,.82);
+  margin: 0 0 14px;
 }
 .theme-slide-verse-attr {
   font-family: 'Fraunces', serif;
@@ -656,16 +664,25 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
     border-top: 1px solid rgba(255,246,228,.14);
   }
   .theme-slide-verse { font-size: 18px; line-height: 1.8; }
-  .theme-slider-dots { position: static; justify-content: center; padding: 12px 0 4px; }
+  .theme-slider-controls { position: static; justify-content: center; padding: 12px 0 4px; }
 }
-.theme-slider-dots {
+.theme-slider-controls {
   position: absolute;
   bottom: 14px;
   right: 44px;
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 10px;
   z-index: 10;
 }
+.theme-slider-dots { display: flex; gap: 8px; }
+.slider-arrow.theme-slider-pause {
+  position: static;
+  transform: none;
+  width: 34px;
+  height: 34px;
+}
+.theme-slider-pause svg { width: 13px; height: 13px; }
 
 /* ── Modal deity banner ──────────────────────────────────── */
 .modal-deity-banner {
@@ -766,14 +783,23 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
 .slider-arrow svg { width: 20px; height: 20px; }
 .arrow-prev { left: 26px; }
 .arrow-next { right: 26px; }
-.slider-dots {
+.slider-bottom-controls {
   position: absolute;
   right: 60px;
   bottom: 64px;
   display: flex;
-  gap: 9px;
+  align-items: center;
+  gap: 14px;
   z-index: 10;
 }
+.slider-dots { display: flex; gap: 9px; }
+.slider-arrow.slider-pause {
+  position: static;
+  transform: none;
+  width: 38px;
+  height: 38px;
+}
+.slider-pause svg { width: 14px; height: 14px; }
 .dot {
   width: 8px;
   height: 8px;
@@ -894,7 +920,7 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--turmeric);
+  color: var(--turmeric-deep);
   margin: 0 0 12px;
 }
 .verse-col-label.peacock-label { color: var(--peacock); }
@@ -902,7 +928,7 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   font-family: 'Fraunces', serif;
   font-weight: 600;
   font-size: 14px;
-  color: var(--turmeric);
+  color: var(--turmeric-deep);
   margin: 0 0 6px;
 }
 .verse-ta {
@@ -1148,7 +1174,7 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   border-radius: 12px;
   display: inline-block;
 }
-.mini-tag.theme { color: var(--turmeric); border-color: var(--turmeric); }
+.mini-tag.theme { color: var(--turmeric-deep); border-color: var(--turmeric-deep); }
 .song-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 .song-title-tamil {
   font-family: 'Noto Serif Tamil', serif;
@@ -1233,6 +1259,7 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   position: absolute;
   top: 18px;
   right: 18px;
+  z-index: 5;
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -1343,7 +1370,7 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   font-family: 'Fraunces', serif;
   font-weight: 600;
   font-size: 16px;
-  color: var(--turmeric);
+  color: var(--turmeric-deep);
   margin: 0 0 8px;
 }
 .lyrics-ta {
@@ -1569,7 +1596,7 @@ body.modal-open { overflow: hidden; }
   font-size: 20px;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--turmeric);
+  color: var(--turmeric-deep);
   font-weight: 700;
   margin: 0 0 22px;
   display: block;
@@ -1844,7 +1871,7 @@ body.modal-open { overflow: hidden; }
   .slide-content { padding: 0 22px 40px; }
   .intro-name { font-size: 28px; }
   .slide-caption { font-size: 20px; }
-  .slider-dots { right: 22px; bottom: 26px; }
+  .slider-bottom-controls { right: 22px; bottom: 26px; }
   .arrow-prev { left: 10px; }
   .arrow-next { right: 10px; }
   .quote-text { font-size: 21px; }
