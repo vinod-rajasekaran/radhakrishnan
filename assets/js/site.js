@@ -37,6 +37,10 @@ const CC_SVG = `<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strok
   <text x="16" y="21" font-size="13" text-anchor="middle" fill="currentColor" stroke="none" font-family="IBM Plex Mono, monospace">cc</text>
 </svg>`;
 
+const LICENSE_TEXT = `These songs are shared under a Creative Commons Attribution-NonCommercial license.
+      Share, quote, or perform them freely with credit to Dr. R. Radhakrishnan —
+      just not for commercial use without asking first.`;
+
 function buildNavLinks(currentPage) {
   return NAV_ITEMS.map(item => {
     const active = item.key === currentPage;
@@ -121,11 +125,7 @@ function injectFooter() {
     <a href="https://creativecommons.org/licenses/by-nc/4.0/" class="cc-badge" target="_blank" rel="noopener noreferrer">
       ${CC_SVG} CC BY-NC 4.0
     </a>
-    <p class="footer-license-text">
-      These songs are shared under a Creative Commons Attribution-NonCommercial license.
-      Share, quote, or perform them freely with credit to Dr. R. Radhakrishnan —
-      just not for commercial use without asking first.
-    </p>
+    <p class="footer-license-text">${LICENSE_TEXT}</p>
   </div>
   <div class="footer-copy">© 2026 Dr. R. Radhakrishnan</div>
 </footer>`;
@@ -136,6 +136,9 @@ function injectModal() {
   const tpl = document.createElement('div');
   tpl.innerHTML = `<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal" id="modal">
+      <div class="modal-print-header">
+        ${BRAND_SVG} Radhakrishnan's Anthology
+      </div>
       <button class="modal-close" id="modal-close" aria-label="Close song">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <path d="M18 6L6 18M6 6l12 12"/>
@@ -166,6 +169,10 @@ function injectModal() {
         <div class="modal-loading" id="modal-loading" aria-live="polite">
           <span class="loading-spinner" aria-hidden="true"></span> Loading…
         </div>
+      </div>
+      <div class="modal-print-footer">
+        <p class="modal-print-cc">${CC_SVG} CC BY-NC 4.0</p>
+        <p class="modal-print-license">${LICENSE_TEXT}</p>
       </div>
     </div>
   </div>`;

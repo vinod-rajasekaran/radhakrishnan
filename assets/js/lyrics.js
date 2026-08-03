@@ -1,7 +1,7 @@
 /* lyrics.js — song grid, search/filter, modal */
 
 (function () {
-  const SONGS_URL = 'data/songs.json?v=20260802y';
+  const SONGS_URL = 'data/songs.json?v=20260803b';
 
   let allSongs   = [];
   let allMeta    = {};
@@ -455,7 +455,7 @@
     if (song.sections) {
       SiteShared.renderLyrics(song, modalBody, modalLoading);
     } else {
-      fetch(`data/lyrics/${song.id}.json?v=20260802y`)
+      fetch(`data/lyrics/${song.id}.json?v=20260803b`)
         .then(r => r.json())
         .then(full => SiteShared.renderLyrics(full, modalBody, modalLoading))
         .catch(() => {
