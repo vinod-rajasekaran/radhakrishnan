@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Noto+Serif+Tamil:wght@300;400;600&family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=20260803b">
+  <link rel="stylesheet" href="assets/css/site.css?v=20260804b">
 </head>
 <body data-page="contact">
   <header id="site-header"></header>
@@ -24,22 +24,22 @@
 
       <p class="form-note" data-fs-success hidden>Thank you - your message has been sent!</p>
 
-      <form class="contact-form" id="contact-form" method="POST" novalidate>
+      <form class="contact-form" id="contact-form" method="POST">
         <div class="form-group">
-          <label class="form-label" for="contact-name">Name</label>
-          <input class="form-input" type="text" id="contact-name" name="name" placeholder="Your name" autocomplete="name" data-fs-field>
+          <label class="form-label" for="contact-name">Name <span class="form-required">(required)</span></label>
+          <input class="form-input" type="text" id="contact-name" name="name" placeholder="Your name" autocomplete="name" data-fs-field required>
           <span class="error-msg" data-fs-error="name"></span>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="contact-email">Email</label>
-          <input class="form-input" type="email" id="contact-email" name="email" placeholder="your@email.com" autocomplete="email" data-fs-field>
+          <label class="form-label" for="contact-email">Email <span class="form-required">(required)</span></label>
+          <input class="form-input" type="email" id="contact-email" name="email" placeholder="your@email.com" autocomplete="email" data-fs-field required>
           <span class="error-msg" data-fs-error="email"></span>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="contact-message">Message</label>
-          <textarea class="form-textarea" id="contact-message" name="message" rows="6" placeholder="Your message…" data-fs-field></textarea>
+          <label class="form-label" for="contact-message">Message <span class="form-required">(required)</span></label>
+          <textarea class="form-textarea" id="contact-message" name="message" rows="6" placeholder="Your message…" data-fs-field required></textarea>
           <span class="error-msg" data-fs-error="message"></span>
         </div>
 
@@ -50,7 +50,7 @@
   </main>
 
   <footer id="site-footer"></footer>
-  <script src="assets/js/site.js?v=20260803b"></script>
-  <script src="assets/js/contact.js?v=20260803b"></script>
+  <script src="assets/js/site.js?v=20260804b"></script>
+  <script src="assets/js/contact.js?v=20260804b"></script>
 </body>
 </html>

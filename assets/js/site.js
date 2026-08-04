@@ -308,7 +308,7 @@ function initAudioBar(bar) {
   const audioEl = bar && bar.querySelector('.modal-plyr');
   if (!audioEl || !window.Plyr) return;
   _activePlayer = new Plyr(audioEl, {
-    controls: ['play', 'progress', 'current-time', 'duration'],
+    controls: ['play', 'progress', 'current-time', 'duration', 'download'],
     resetOnEnd: true,
   });
 }

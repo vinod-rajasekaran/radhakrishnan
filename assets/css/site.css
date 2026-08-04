@@ -1735,6 +1735,12 @@ body.modal-open { overflow: hidden; }
   color: var(--ink-soft);
   font-weight: 600;
 }
+.form-required {
+  color: var(--vermilion);
+  text-transform: none;
+  font-weight: 500;
+  margin-left: 4px;
+}
 .form-input,
 .form-textarea {
   font-family: 'Inter', sans-serif;
