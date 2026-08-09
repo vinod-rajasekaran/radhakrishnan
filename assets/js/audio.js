@@ -40,7 +40,7 @@
           <p class="audio-collection-by">${col.subtitle}</p>
         </div>
       </div>
-      <div class="song-grid" role="list"></div>`;
+      <div class="song-grid" role="group"></div>`;
 
     const grid = section.querySelector('.song-grid');
     songs.forEach(s => grid.appendChild(SiteShared.buildSongCard(s)));
@@ -79,7 +79,7 @@
     document.body.classList.add('modal-open');
     modalClose.focus();
 
-    fetch(`data/lyrics/${id}.json?v=20260809p`)
+    fetch(`data/lyrics/${id}.json?v=20260809r`)
       .then(r => r.json())
       .then(song => {
         const isNonDeity  = NON_DEITY.includes(song.deity);
@@ -117,7 +117,7 @@
   const container = document.getElementById('audio-sections');
   if (!container) return;
 
-  fetch('data/songs.json?v=20260809p')
+  fetch('data/songs.json?v=20260809r')
     .then(r => r.json())
     .then(data => {
       const audioSongs = data.songs.filter(s => s.collection);

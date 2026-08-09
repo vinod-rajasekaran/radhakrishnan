@@ -14,6 +14,7 @@
       el.textContent = '';
       el.hidden = true;
     });
+    form.querySelectorAll('[data-fs-field]').forEach(el => el.removeAttribute('aria-invalid'));
     if (submitBtn) submitBtn.disabled = true;
 
     try {
@@ -34,6 +35,10 @@
             ? form.querySelector(`[data-fs-error="${err.field}"]`)
             : formErrEl;
           if (el) { el.textContent = err.message; el.hidden = false; }
+          if (err.field) {
+            const fieldEl = form.querySelector(`[name="${err.field}"]`);
+            if (fieldEl) fieldEl.setAttribute('aria-invalid', 'true');
+          }
         });
         if (!errs.length && formErrEl) {
           formErrEl.textContent = 'Something went wrong. Please try again.';

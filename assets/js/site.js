@@ -14,6 +14,7 @@
   gtag('config', 'G-8VWKP6FR8X');
 })();
 
+(function () {
 const DEITY_META = {
   'Muruga':        { image: 'assets/images/thumbs/Muruga.jpg',     ta: 'முருகா' },
   'Ganesha':       { image: 'assets/images/thumbs/Ganesha.jpg',    ta: 'கணேசா' },
@@ -199,6 +200,25 @@ function injectModal() {
     window.print();
     document.title = prev;
   });
+
+  const modalOverlayEl = document.getElementById('modal-overlay');
+  const modalEl = document.getElementById('modal');
+  modalOverlayEl.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || !modalOverlayEl.classList.contains('open')) return;
+    const focusable = Array.from(modalEl.querySelectorAll(
+      'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+    )).filter(el => el.offsetParent !== null);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last  = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
 }
 
 /* ── Shared song card (used by lyrics.js and audio.js) ── */
@@ -217,7 +237,7 @@ function buildSongCard(song) {
 
   const card = document.createElement('article');
   card.className = 'song-card';
-  card.setAttribute('role', 'listitem');
+  card.setAttribute('role', 'button');
   card.setAttribute('tabindex', '0');
   card.setAttribute('aria-label', `${song.tamil} — ${song.en}`);
   card.dataset.id    = song.id;
@@ -335,8 +355,10 @@ function initAudioBar(bar) {
 }
 
 let _modalHistoryPushed = false;
+let _modalTriggerEl = null;
 
 function openModalHistory() {
+  _modalTriggerEl = document.activeElement;
   history.pushState({ modalOpen: true }, '');
   _modalHistoryPushed = true;
 }
@@ -348,6 +370,8 @@ function closeModal(modalOverlay, opts = {}) {
   }
   modalOverlay.classList.remove('open');
   document.body.classList.remove('modal-open');
+  if (_modalTriggerEl && document.body.contains(_modalTriggerEl)) _modalTriggerEl.focus();
+  _modalTriggerEl = null;
   const shouldGoBack = _modalHistoryPushed && !opts.fromPopstate;
   _modalHistoryPushed = false;
   if (shouldGoBack) history.back();
@@ -368,7 +392,7 @@ function updateModalDeityBanner(deity) {
   if (!banner) return;
   const meta = DEITY_META[deity];
   if (meta && meta.image) {
-    img.src = meta.image + '?v=20260719k';
+    img.src = meta.image + '?v=20260809r';
     img.alt = deity;
     nameEl.textContent = deity;
     taEl.textContent   = meta.ta;
@@ -378,7 +402,100 @@ function updateModalDeityBanner(deity) {
   }
 }
 
-window.SiteShared = { renderLyrics, renderNotes, wireNotesExpand, buildAudioBar, initAudioBar, closeModal, openModalHistory, updateModalDeityBanner, DEITY_META, buildSongCard };
+/* ── Shared opacity-crossfade slider (used by home.js and lyrics.js's theme carousel) ── */
+
+const SLIDER_PAUSE_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';
+const SLIDER_PLAY_ICON  = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M7 5l12 7-12 7V5z"/></svg>';
+
+function initCrossfadeSlider({
+  slides, dotsEl, prevBtn, nextBtn, pauseBtn, container,
+  intervalMs = 15000,
+  pauseLabel = 'Pause slideshow',
+  playLabel  = 'Play slideshow',
+  stopPropagationOnControls = false,
+  enableFocusPause = false,
+  enableArrowKeys  = false,
+}) {
+  let current = 0;
+  let timer;
+  let paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let dots = [];
+
+  if (dotsEl) {
+    slides.forEach((_, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'dot' + (i === 0 ? ' active' : '');
+      btn.setAttribute('role', 'tab');
+      btn.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      btn.addEventListener('click', e => { if (stopPropagationOnControls) e.stopPropagation(); goTo(i); });
+      dotsEl.appendChild(btn);
+    });
+    dots = Array.from(dotsEl.querySelectorAll('.dot'));
+  }
+
+  function updateDots(idx) {
+    dots.forEach((btn, i) => {
+      btn.classList.toggle('active', i === idx);
+      btn.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+  }
+
+  function goTo(idx) {
+    slides[current].style.opacity = '0';
+    slides[current].style.pointerEvents = 'none';
+    slides[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].style.opacity = '1';
+    slides[current].style.pointerEvents = 'auto';
+    slides[current].classList.add('active');
+    updateDots(current);
+    resetTimer();
+  }
+
+  function setPaused(next) {
+    paused = next;
+    clearInterval(timer);
+    if (!paused) timer = setInterval(() => goTo(current + 1), intervalMs);
+    if (pauseBtn) {
+      pauseBtn.innerHTML = paused ? SLIDER_PLAY_ICON : SLIDER_PAUSE_ICON;
+      pauseBtn.setAttribute('aria-label', paused ? playLabel : pauseLabel);
+      pauseBtn.setAttribute('aria-pressed', String(paused));
+    }
+  }
+
+  function resetTimer() { setPaused(paused); }
+
+  slides.forEach((s, i) => {
+    s.style.opacity = i === 0 ? '1' : '0';
+    s.style.pointerEvents = i === 0 ? 'auto' : 'none';
+  });
+
+  if (prevBtn) prevBtn.addEventListener('click', e => { if (stopPropagationOnControls) e.stopPropagation(); goTo(current - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', e => { if (stopPropagationOnControls) e.stopPropagation(); goTo(current + 1); });
+  if (pauseBtn) pauseBtn.addEventListener('click', e => { if (stopPropagationOnControls) e.stopPropagation(); setPaused(!paused); });
+
+  if (container) {
+    container.addEventListener('mouseenter', () => clearInterval(timer));
+    container.addEventListener('mouseleave', () => resetTimer());
+    if (enableFocusPause) {
+      container.addEventListener('focusin',  () => clearInterval(timer));
+      container.addEventListener('focusout', () => resetTimer());
+    }
+    if (enableArrowKeys) {
+      container.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft')  goTo(current - 1);
+        if (e.key === 'ArrowRight') goTo(current + 1);
+      });
+    }
+  }
+
+  setPaused(paused);
+
+  return { goTo, setPaused, stopTimer: () => clearInterval(timer), getCurrent: () => current };
+}
+
+window.SiteShared = { renderLyrics, renderNotes, wireNotesExpand, buildAudioBar, initAudioBar, closeModal, openModalHistory, updateModalDeityBanner, DEITY_META, buildSongCard, initCrossfadeSlider };
 
 /* Inject modal synchronously so lyrics.js/audio.js can query it immediately */
 injectModal();
@@ -387,3 +504,4 @@ document.addEventListener('DOMContentLoaded', () => {
   injectNav();
   injectFooter();
 });
+})();

@@ -1,7 +1,7 @@
 /* lyrics.js — song grid, search/filter, modal */
 
 (function () {
-  const SONGS_URL = 'data/songs.json?v=20260809p';
+  const SONGS_URL = 'data/songs.json?v=20260809r';
 
   let allSongs   = [];
   let allMeta    = {};
@@ -61,8 +61,7 @@
     ['volume', 'deity', 'theme'].forEach(key => {
       const val = params.get(key);
       if (val) {
-        activeFilters[key] = val;
-        const opt = document.querySelector(`#menu-${key} [data-value="${val}"]`);
+        const opt = document.querySelector(`#menu-${key} [data-value="${CSS.escape(val)}"]`);
         if (opt) selectOption(key, val, opt.textContent.trim());
       }
     });
@@ -100,13 +99,7 @@
         verseAttr: 'A pure white moon descended from the sky. A question arose in my mind of whether this phenomenon is really happening on earth.' },
     ];
 
-    let current        = 0;
     let selectedTheme  = '';
-    let timer;
-    let paused         = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    const PAUSE_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';
-    const PLAY_ICON  = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M7 5l12 7-12 7V5z"/></svg>';
 
     const section = document.createElement('section');
     section.className = 'theme-carousel';
@@ -133,7 +126,14 @@
           </div>
         </div>
       `;
-      slide.querySelector('.theme-slide-left').addEventListener('click', () => onThemeClick(theme.key, theme.label));
+      const slideLeft = slide.querySelector('.theme-slide-left');
+      slideLeft.setAttribute('tabindex', '0');
+      slideLeft.setAttribute('role', 'button');
+      slideLeft.setAttribute('aria-label', `Filter by ${theme.label}`);
+      slideLeft.addEventListener('click', () => onThemeClick(theme.key, theme.label));
+      slideLeft.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onThemeClick(theme.key, theme.label); }
+      });
       section.appendChild(slide);
     });
 
@@ -149,13 +149,6 @@
 
     const dotsEl = document.createElement('div');
     dotsEl.className = 'theme-slider-dots';
-    THEME_SLIDES.forEach((t, i) => {
-      const btn = document.createElement('button');
-      btn.className = 'dot' + (i === 0 ? ' active' : '');
-      btn.setAttribute('aria-label', t.label);
-      btn.addEventListener('click', e => { e.stopPropagation(); goTo(i); });
-      dotsEl.appendChild(btn);
-    });
 
     const pauseBtn = document.createElement('button');
     pauseBtn.className = 'slider-arrow theme-slider-pause';
@@ -171,45 +164,22 @@
     section.appendChild(controlsEl);
     wrap.appendChild(section);
 
-    function updateDots(idx) {
-      dotsEl.querySelectorAll('.dot').forEach((b, i) => b.classList.toggle('active', i === idx));
-    }
-
-    function goTo(idx) {
-      const allSlides = section.querySelectorAll('.theme-slide');
-      allSlides[current].style.opacity       = '0';
-      allSlides[current].style.pointerEvents = 'none';
-      allSlides[current].classList.remove('active');
-      current = (idx + THEME_SLIDES.length) % THEME_SLIDES.length;
-      allSlides[current].style.opacity       = '1';
-      allSlides[current].style.pointerEvents = 'auto';
-      allSlides[current].classList.add('active');
-      updateDots(current);
-      resetTimer();
-    }
-
-    function setPaused(next) {
-      paused = next;
-      clearInterval(timer);
-      if (!paused) timer = setInterval(() => goTo(current + 1), 15000);
-      pauseBtn.innerHTML = paused ? PLAY_ICON : PAUSE_ICON;
-      pauseBtn.setAttribute('aria-label', paused ? 'Play theme carousel' : 'Pause theme carousel');
-      pauseBtn.setAttribute('aria-pressed', String(paused));
-    }
-
-    function resetTimer() {
-      setPaused(paused);
-    }
-    pauseBtn.addEventListener('click', e => { e.stopPropagation(); setPaused(!paused); });
+    const slider = SiteShared.initCrossfadeSlider({
+      slides: Array.from(section.querySelectorAll('.theme-slide')),
+      dotsEl, prevBtn, nextBtn, pauseBtn, container: section,
+      pauseLabel: 'Pause theme carousel',
+      playLabel:  'Play theme carousel',
+      stopPropagationOnControls: true,
+    });
 
     function onThemeClick(key, label) {
       const idx = THEME_SLIDES.findIndex(t => t.key === key);
-      if (idx !== -1) goTo(idx);
+      if (idx !== -1) slider.goTo(idx);
       if (selectedTheme === key) {
         clearCarouselSelection();
         selectOption('theme', '', 'All themes');
       } else {
-        clearInterval(timer);
+        slider.stopTimer();
         selectedTheme = key;
         section.querySelectorAll('.theme-slide').forEach(s => s.classList.remove('is-selected'));
         section.querySelector(`.theme-slide[data-theme="${key}"]`).classList.add('is-selected');
@@ -224,12 +194,6 @@
       section.querySelectorAll('.theme-slide').forEach(s => s.classList.remove('is-selected'));
     }
 
-    prevBtn.addEventListener('click', e => { e.stopPropagation(); goTo(current - 1); });
-    nextBtn.addEventListener('click', e => { e.stopPropagation(); goTo(current + 1); });
-    section.addEventListener('mouseenter', () => clearInterval(timer));
-    section.addEventListener('mouseleave', resetTimer);
-    resetTimer();
-
     wrap._clearCarouselSelection = clearCarouselSelection;
   }
 
@@ -241,6 +205,7 @@
     buildMenu('theme',  'menu-theme',  extendedThemes,    'All themes');
     document.querySelectorAll('#menu-volume .filter-option').forEach(li => {
       const val = li.dataset.value;
+      li.setAttribute('tabindex', '-1');
       li.addEventListener('click', () => selectOption('volume', val, li.textContent.trim()));
     });
   }
@@ -251,6 +216,7 @@
     const allItem = document.createElement('li');
     allItem.className = 'filter-option';
     allItem.setAttribute('role', 'option');
+    allItem.setAttribute('tabindex', '-1');
     allItem.dataset.value = '';
     allItem.setAttribute('aria-selected', 'true');
     allItem.textContent = allLabel;
@@ -260,6 +226,7 @@
       const li = document.createElement('li');
       li.className = 'filter-option';
       li.setAttribute('role', 'option');
+      li.setAttribute('tabindex', '-1');
       li.dataset.value = val;
       li.setAttribute('aria-selected', 'false');
       li.textContent = val;
@@ -320,6 +287,7 @@
       if (!wasOpen) {
         dd.classList.add('dd-open');
         btn.setAttribute('aria-expanded', 'true');
+        focusMenuOption(dd);
       }
     });
   });
@@ -333,6 +301,47 @@
     });
   }
 
+  /* ── Dropdown keyboard navigation (roving tabindex) ──────────── */
+  function setRovingTabindex(options, target) {
+    options.forEach(o => o.setAttribute('tabindex', o === target ? '0' : '-1'));
+  }
+
+  function focusMenuOption(dd) {
+    const options = Array.from(dd.querySelectorAll('.filter-option'));
+    if (!options.length) return;
+    const target = options.find(o => o.getAttribute('aria-selected') === 'true') || options[0];
+    setRovingTabindex(options, target);
+    target.focus();
+  }
+
+  document.querySelectorAll('.filter-dd-menu').forEach(ul => {
+    ul.addEventListener('keydown', e => {
+      const options = Array.from(ul.querySelectorAll('.filter-option'));
+      const idx = options.indexOf(document.activeElement);
+      if (idx === -1) return;
+      const dd = ul.closest('.filter-dd');
+      const ddBtn = dd && dd.querySelector('.filter-dd-btn');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const next = options[(idx + 1) % options.length];
+        setRovingTabindex(options, next);
+        next.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prev = options[(idx - 1 + options.length) % options.length];
+        setRovingTabindex(options, prev);
+        prev.focus();
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        document.activeElement.click();
+        if (ddBtn) ddBtn.focus();
+      } else if (e.key === 'Escape') {
+        closeAllDropdowns();
+        if (ddBtn) ddBtn.focus();
+      }
+    });
+  });
+
   /* ── Active chips ─────────────────────────────────────────── */
   function updateChips() {
     chipsEl.innerHTML = '';
@@ -342,7 +351,8 @@
       hasAny = true;
       const chip = document.createElement('button');
       chip.className = 'filter-chip--active';
-      chip.innerHTML = val + ' <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 2l7 7M9 2l-7 7"/></svg>';
+      chip.textContent = val + ' ';
+      chip.insertAdjacentHTML('beforeend', '<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 2l7 7M9 2l-7 7"/></svg>');
       chip.setAttribute('aria-label', `Remove filter: ${val}`);
       chip.addEventListener('click', () => selectOption(key, '', ''));
       chipsEl.appendChild(chip);
@@ -455,7 +465,7 @@
     if (song.sections) {
       SiteShared.renderLyrics(song, modalBody, modalLoading);
     } else {
-      fetch(`data/lyrics/${song.id}.json?v=20260809p`)
+      fetch(`data/lyrics/${song.id}.json?v=20260809r`)
         .then(r => r.json())
         .then(full => SiteShared.renderLyrics(full, modalBody, modalLoading))
         .catch(() => {
