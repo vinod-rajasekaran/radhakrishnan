@@ -1,5 +1,19 @@
 /* site.js — shared nav, footer, modal, and utilities */
 
+/* Google tag (gtag.js) — loaded here so every page gets analytics from one place */
+(function () {
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8VWKP6FR8X';
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-8VWKP6FR8X');
+})();
+
 const DEITY_META = {
   'Muruga':        { image: 'assets/images/thumbs/Muruga.jpg',     ta: 'முருகா' },
   'Ganesha':       { image: 'assets/images/thumbs/Ganesha.jpg',    ta: 'கணேசா' },
@@ -181,6 +195,7 @@ function injectModal() {
     const enTitle = document.getElementById('modal-en-title').textContent.trim();
     const prev = document.title;
     if (enTitle) document.title = enTitle;
+    if (window.gtag) window.gtag('event', 'print_song', { song_title: enTitle });
     window.print();
     document.title = prev;
   });
@@ -310,6 +325,12 @@ function initAudioBar(bar) {
   _activePlayer = new Plyr(audioEl, {
     controls: ['play', 'progress', 'current-time', 'duration', 'download'],
     resetOnEnd: true,
+  });
+  bar.addEventListener('click', (e) => {
+    if (!e.target.closest('[data-plyr="download"]')) return;
+    if (!window.gtag) return;
+    const enTitle = document.getElementById('modal-en-title');
+    window.gtag('event', 'download_audio', { song_title: enTitle ? enTitle.textContent.trim() : '' });
   });
 }
 

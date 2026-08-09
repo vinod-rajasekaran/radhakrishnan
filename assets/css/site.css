@@ -437,6 +437,10 @@ main { margin-top: var(--nav-height); }
   padding: 0 60px 64px 88px;
   color: var(--cream);
 }
+.slide-content-title {
+  bottom: auto;
+  top: 35%;
+}
 .slide-year {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 27px;
@@ -1443,10 +1447,11 @@ body.modal-open { overflow: hidden; }
 /* ============================================================
    BOOKS PAGE
    ============================================================ */
+body[data-page="books"] .page-sub { margin-bottom: 8px; max-width: 700px; }
 .vol-grid {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 48px 24px 80px;
+  padding: 24px 24px 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 36px;
@@ -1463,14 +1468,15 @@ body.modal-open { overflow: hidden; }
 .book-svg { width: 100%; height: auto; display: block; }
 .book-cover-img { width: 100%; height: auto; display: block; }
 .vol-card--soon .book-svg { opacity: .45; }
+.vol-card--soon .book-cover-img { opacity: .3; }
 .vol-soon-badge {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--bg);
-  border: 2px solid var(--line);
-  color: var(--ink-soft);
+  background: var(--vermilion);
+  border: 2px solid var(--bg-card);
+  color: var(--bg-card);
   font-family: 'IBM Plex Mono', monospace;
   font-size: 13px;
   font-weight: 700;
@@ -1478,8 +1484,9 @@ body.modal-open { overflow: hidden; }
   text-transform: uppercase;
   padding: 10px 20px;
   white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(36,20,9,.3);
 }
-.vol-card-info { flex: 1; }
+.vol-card-info { flex: 1; display: flex; justify-content: center; }
 .book-vol-eyebrow {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12.5px;
@@ -1505,6 +1512,12 @@ body.modal-open { overflow: hidden; }
   line-height: 1.7;
   margin: 0 0 24px;
 }
+.vol-book-info {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px 8px;
+}
+.vol-book-info .book-desc { max-width: 720px; margin-bottom: 0; }
 
 /* ============================================================
    AUDIO PAGE
@@ -2028,7 +2041,7 @@ body.modal-open { overflow: hidden; }
 
   /* Tamil text: large and prominent */
   .lyrics-ta {
-    font-size: 20px !important;
+    font-size: 17px !important;
     color: var(--ink) !important;
   }
 
