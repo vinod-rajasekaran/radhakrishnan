@@ -878,7 +878,7 @@ main { margin-top: var(--nav-height); }
   background: var(--bg-card);
   border: 2px solid var(--line);
   padding: 44px 48px;
-  max-width: 920px;
+  max-width: 1160px;
   margin: 20px auto 0;
   box-shadow: 0 12px 32px rgba(160,40,20,.08);
   text-align: left;
