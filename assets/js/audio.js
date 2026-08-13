@@ -1,8 +1,6 @@
 /* audio.js — dynamic grid + lyrics modal */
 
 (function () {
-  const NON_DEITY = ['Navarasa', 'Miscellaneous', 'Nature'];
-
   const COLLECTIONS = [
     {
       key:      'cd',
@@ -79,14 +77,10 @@
     document.body.classList.add('modal-open');
     modalClose.focus();
 
-    fetch(`data/lyrics/${id}.json?v=20260809r`)
+    fetch(`data/lyrics/${id}.json?v=20260813a`)
       .then(r => r.json())
       .then(song => {
-        const isNonDeity  = NON_DEITY.includes(song.deity);
-        const themes      = [...new Set([...(song.themes || []), ...(isNonDeity ? [song.deity] : [])])];
-        const themeChips  = themes.slice(0, 2).map(t => `<span class="mini-tag theme">${t}</span>`).join('');
-        const deityTag    = isNonDeity ? '' : `<span class="mini-tag">${song.deity}</span>`;
-        modalMeta.innerHTML = `<span class="mini-tag">Vol ${song.volume}</span>${themeChips}${deityTag}`;
+        modalMeta.innerHTML = SiteShared.buildModalMeta(song);
 
         if (song.collection) {
           const bar = SiteShared.buildAudioBar(song.singer, song.audio || null);
@@ -117,7 +111,7 @@
   const container = document.getElementById('audio-sections');
   if (!container) return;
 
-  fetch('data/songs.json?v=20260809r')
+  fetch('data/songs.json?v=20260813a')
     .then(r => r.json())
     .then(data => {
       const audioSongs = data.songs.filter(s => s.collection);
@@ -128,6 +122,9 @@
         container.appendChild(section);
       });
       wireCards(container);
+    })
+    .catch(() => {
+      container.innerHTML = '<p class="error-msg">Could not load songs. Please try reloading the page.</p>';
     });
 
   modalClose.addEventListener('click', () => SiteShared.closeModal(modalOverlay));

@@ -74,7 +74,8 @@ function injectNav() {
   if (!el) return;
   const page = document.body.dataset.page || '';
 
-  el.outerHTML = `<header>
+  el.outerHTML = `<a href="#main-content" class="skip-link">Skip to main content</a>
+<header>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html" class="nav-brand" aria-label="Radhakrishnan's Anthology — home">
       ${BRAND_SVG}
@@ -178,7 +179,7 @@ function injectModal() {
           </button>
         </div>
         <h2 class="modal-title" id="modal-title" lang="ta"></h2>
-        <p class="modal-en-title" id="modal-en-title"></p>
+        <p class="modal-en-title" id="modal-en-title" lang="ta-Latn"></p>
       </div>
       <div class="modal-body" id="modal-body">
         <div class="modal-loading" id="modal-loading" aria-live="polite">
@@ -250,10 +251,18 @@ function buildSongCard(song) {
       ${song.audio ? CARD_AUDIO_ICON : ''}
     </div>
     <p class="song-title-tamil tamil" lang="ta">${song.tamil}</p>
-    <p class="song-title-en">${song.en}</p>
+    <p class="song-title-en" lang="ta-Latn">${song.en}</p>
     <p class="song-excerpt">${song.excerpt ? '“' + song.excerpt + '…”' : ''}</p>
     <p class="song-open-hint">Click to read →</p>`;
   return card;
+}
+
+function buildModalMeta(song) {
+  const isNonDeity = CARD_NON_DEITY.includes(song.deity);
+  const themes     = [...new Set([...(song.themes || []), ...(isNonDeity ? [song.deity] : [])])];
+  const themeChips = themes.slice(0, 2).map(t => `<span class="mini-tag theme">${t}</span>`).join('');
+  const deityTag   = isNonDeity ? '' : `<span class="mini-tag">${song.deity}</span>`;
+  return `<span class="mini-tag">Vol ${song.volume}</span>${themeChips}${deityTag}`;
 }
 
 /* ── Shared modal utilities (used by lyrics.js and audio.js) ── */
@@ -302,7 +311,7 @@ function renderLyrics(song, modalBody, modalLoading) {
     <div class="lyrics-section modal-left-cell">
       <h3 class="lyrics-section-label">${sec.label}</h3>
       <p class="lyrics-ta tamil" lang="ta">${sec.ta.replace(/\n/g, '<br>')}</p>
-      <p class="lyrics-translit">${sec.translit.replace(/\n/g, '<br>')}</p>
+      <p class="lyrics-translit" lang="ta-Latn">${sec.translit.replace(/\n/g, '<br>')}</p>
     </div>
     <div class="lyrics-section-en modal-right-cell">
       <h3 class="lyrics-section-label">${sec.label}</h3>
@@ -392,7 +401,7 @@ function updateModalDeityBanner(deity) {
   if (!banner) return;
   const meta = DEITY_META[deity];
   if (meta && meta.image) {
-    img.src = meta.image + '?v=20260809r';
+    img.src = meta.image + '?v=20260813a';
     img.alt = deity;
     nameEl.textContent = deity;
     taEl.textContent   = meta.ta;
@@ -495,7 +504,7 @@ function initCrossfadeSlider({
   return { goTo, setPaused, stopTimer: () => clearInterval(timer), getCurrent: () => current };
 }
 
-window.SiteShared = { renderLyrics, renderNotes, wireNotesExpand, buildAudioBar, initAudioBar, closeModal, openModalHistory, updateModalDeityBanner, DEITY_META, buildSongCard, initCrossfadeSlider };
+window.SiteShared = { renderLyrics, renderNotes, wireNotesExpand, buildAudioBar, initAudioBar, closeModal, openModalHistory, updateModalDeityBanner, DEITY_META, buildSongCard, buildModalMeta, initCrossfadeSlider };
 
 /* Inject modal synchronously so lyrics.js/audio.js can query it immediately */
 injectModal();

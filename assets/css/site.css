@@ -11,6 +11,7 @@
   --ink:             #241409;
   --ink-soft:        #7A5C3E;
   --vermilion:       #E0381F;
+  --vermilion-btn:   #D9361E;
   --vermilion-deep:  #A6220F;
   --turmeric:        #E8A317;
   --turmeric-deep:   #825B0D;
@@ -73,7 +74,7 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--vermilion);
+  background: var(--vermilion-btn);
   color: var(--bg-card);
   text-decoration: none;
   font-weight: 700;
@@ -104,7 +105,23 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   text-decoration: underline;
   cursor: pointer;
 }
-.error-msg { color: var(--vermilion); font-size: 14px; padding: 8px 0; }
+.error-msg { color: var(--vermilion-deep); font-size: 14px; padding: 8px 0; }
+
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  z-index: 100;
+  background: var(--vermilion-deep);
+  color: var(--bg-card);
+  padding: 10px 16px;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+}
+.skip-link:focus { top: 8px; }
 
 /* ── Navigation ── */
 header {
@@ -1749,7 +1766,7 @@ body[data-page="books"] .page-sub { margin-bottom: 8px; max-width: 700px; }
   font-weight: 600;
 }
 .form-required {
-  color: var(--vermilion);
+  color: var(--vermilion-deep);
   text-transform: none;
   font-weight: 500;
   margin-left: 4px;

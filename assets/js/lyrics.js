@@ -1,7 +1,7 @@
 /* lyrics.js — song grid, search/filter, modal */
 
 (function () {
-  const SONGS_URL = 'data/songs.json?v=20260809r';
+  const SONGS_URL = 'data/songs.json?v=20260813a';
 
   let allSongs   = [];
   let allMeta    = {};
@@ -44,6 +44,7 @@
     buildThemeCarousel();
     buildFilterMenus();
     applyUrlParams();
+    updateChips();
     render();
   }
 
@@ -58,6 +59,11 @@
   function applyUrlParams() {
     const params = new URLSearchParams(window.location.search);
     if (params.get('audio') === '1') audioOnly = true;
+    const q = params.get('q');
+    if (q && searchInput) {
+      searchInput.value = q;
+      searchTerm = q.trim().toLowerCase();
+    }
     ['volume', 'deity', 'theme'].forEach(key => {
       const val = params.get(key);
       if (val) {
@@ -65,6 +71,18 @@
         if (opt) selectOption(key, val, opt.textContent.trim());
       }
     });
+  }
+
+  /* ── Keep the URL in sync with current filters/search (bookmarkable/shareable) ── */
+  function syncUrl() {
+    const params = new URLSearchParams();
+    if (activeFilters.deity)  params.set('deity', activeFilters.deity);
+    if (activeFilters.theme)  params.set('theme', activeFilters.theme);
+    if (activeFilters.volume) params.set('volume', activeFilters.volume);
+    if (audioOnly)            params.set('audio', '1');
+    if (searchTerm)           params.set('q', searchTerm);
+    const qs = params.toString();
+    history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
   }
 
   /* ── Non-deity categories (stored as deity in data but shown as themes) ── */
@@ -121,7 +139,7 @@
           </div>
           <div class="theme-slide-right">
             <p class="theme-slide-verse" lang="ta">${theme.verse.replace(/\n/g, '<br>')}</p>
-            <p class="theme-slide-translit">${theme.translit.replace(/\n/g, '<br>')}</p>
+            <p class="theme-slide-translit" lang="ta-Latn">${theme.translit.replace(/\n/g, '<br>')}</p>
             <span class="theme-slide-verse-attr">${theme.verseAttr}</span>
           </div>
         </div>
@@ -274,6 +292,14 @@
     }
     closeAllDropdowns();
     updateChips();
+    syncUrl();
+    render();
+  }
+
+  function setAudioOnly(next) {
+    audioOnly = next;
+    updateChips();
+    syncUrl();
     render();
   }
 
@@ -343,6 +369,8 @@
   });
 
   /* ── Active chips ─────────────────────────────────────────── */
+  const CHIP_REMOVE_ICON = '<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 2l7 7M9 2l-7 7"/></svg>';
+
   function updateChips() {
     chipsEl.innerHTML = '';
     let hasAny = false;
@@ -352,11 +380,21 @@
       const chip = document.createElement('button');
       chip.className = 'filter-chip--active';
       chip.textContent = val + ' ';
-      chip.insertAdjacentHTML('beforeend', '<svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 2l7 7M9 2l-7 7"/></svg>');
+      chip.insertAdjacentHTML('beforeend', CHIP_REMOVE_ICON);
       chip.setAttribute('aria-label', `Remove filter: ${val}`);
       chip.addEventListener('click', () => selectOption(key, '', ''));
       chipsEl.appendChild(chip);
     });
+    if (audioOnly) {
+      hasAny = true;
+      const chip = document.createElement('button');
+      chip.className = 'filter-chip--active';
+      chip.textContent = 'Audio only ';
+      chip.insertAdjacentHTML('beforeend', CHIP_REMOVE_ICON);
+      chip.setAttribute('aria-label', 'Remove filter: Audio only');
+      chip.addEventListener('click', () => setAudioOnly(false));
+      chipsEl.appendChild(chip);
+    }
     clearBtn.hidden = !hasAny;
   }
 
@@ -374,8 +412,11 @@
     const wrap = document.getElementById('theme-carousel-wrap');
     if (wrap && wrap._clearCarouselSelection) wrap._clearCarouselSelection();
     if (searchInput) searchInput.value = '';
+    clearTimeout(searchDebounce);
     searchTerm = '';
+    audioOnly = false;
     updateChips();
+    syncUrl();
     render();
   }
 
@@ -385,10 +426,15 @@
   }
 
   /* ── Search ───────────────────────────────────────────────── */
+  let searchDebounce;
   if (searchInput) {
     searchInput.addEventListener('input', () => {
-      searchTerm = searchInput.value.trim().toLowerCase();
-      render();
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(() => {
+        searchTerm = searchInput.value.trim().toLowerCase();
+        syncUrl();
+        render();
+      }, 250);
     });
   }
 
@@ -436,15 +482,7 @@
     SiteShared.updateModalDeityBanner(song.deity);
     modalTitle.textContent   = song.tamil;
     modalEnTitle.textContent = song.en;
-    const isNonDeityModal = NON_DEITY_CATS.includes(song.deity);
-    const modalThemes = [...new Set([...(song.themes || []), ...(isNonDeityModal ? [song.deity] : [])])];
-    const modalThemeChips = modalThemes.slice(0, 2).map(t => `<span class="mini-tag theme">${t}</span>`).join('');
-    const modalDeityTag   = isNonDeityModal ? '' : `<span class="mini-tag">${song.deity}</span>`;
-    modalMeta.innerHTML = `
-      <span class="mini-tag">Vol ${song.volume}</span>
-      ${modalThemeChips}
-      ${modalDeityTag}
-    `;
+    modalMeta.innerHTML = SiteShared.buildModalMeta(song);
 
     const existing = document.getElementById('modal-audio-bar');
     if (existing) existing.remove();
@@ -465,7 +503,7 @@
     if (song.sections) {
       SiteShared.renderLyrics(song, modalBody, modalLoading);
     } else {
-      fetch(`data/lyrics/${song.id}.json?v=20260809r`)
+      fetch(`data/lyrics/${song.id}.json?v=20260813a`)
         .then(r => r.json())
         .then(full => SiteShared.renderLyrics(full, modalBody, modalLoading))
         .catch(() => {
