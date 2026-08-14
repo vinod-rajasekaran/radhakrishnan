@@ -330,18 +330,26 @@ function renderLyrics(song, modalBody, modalLoading) {
   wireNotesExpand(modalBody);
 }
 
-function buildAudioBar(singer, audioSrc) {
+function buildAudioBar(song) {
+  const audioSrc = (song && song.audio) || null;
   const bar = document.createElement('div');
   bar.id = 'modal-audio-bar';
   bar.className = 'modal-audio-bar';
   const musicIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>`;
+  const ragamTag = song && song.ragam ? `<span class="mini-tag raga">Ragam: ${song.ragam}</span>` : '';
+  const talamTag = song && song.talam ? `<span class="mini-tag raga">Talam: ${song.talam}</span>` : '';
+  const ragaChips = (ragamTag || talamTag)
+    ? `<div class="modal-audio-tags">${ragamTag}${talamTag}</div>`
+    : '';
   if (audioSrc) {
     bar.innerHTML = `
       <p class="modal-audio-label">${musicIcon} Recording</p>
-      <audio class="modal-plyr" src="${audioSrc}" preload="none"></audio>`;
+      <audio class="modal-plyr" src="${audioSrc}" preload="none"></audio>
+      ${ragaChips}`;
   } else {
     bar.innerHTML = `
-      <p class="modal-audio-label">${musicIcon} Audio not yet available for streaming</p>`;
+      <p class="modal-audio-label">${musicIcon} Audio not yet available for streaming</p>
+      ${ragaChips}`;
   }
   return bar;
 }
@@ -401,7 +409,7 @@ function updateModalDeityBanner(deity) {
   if (!banner) return;
   const meta = DEITY_META[deity];
   if (meta && meta.image) {
-    img.src = meta.image + '?v=20260813a';
+    img.src = meta.image + '?v=20260815b';
     img.alt = deity;
     nameEl.textContent = deity;
     taEl.textContent   = meta.ta;

@@ -77,13 +77,13 @@
     document.body.classList.add('modal-open');
     modalClose.focus();
 
-    fetch(`data/lyrics/${id}.json?v=20260813a`)
+    fetch(`data/lyrics/${id}.json?v=20260815b`)
       .then(r => r.json())
       .then(song => {
         modalMeta.innerHTML = SiteShared.buildModalMeta(song);
 
         if (song.collection) {
-          const bar = SiteShared.buildAudioBar(song.singer, song.audio || null);
+          const bar = SiteShared.buildAudioBar(song);
           modalClose.insertAdjacentElement('afterend', bar);
           SiteShared.initAudioBar(bar);
         }
@@ -111,7 +111,7 @@
   const container = document.getElementById('audio-sections');
   if (!container) return;
 
-  fetch('data/songs.json?v=20260813a')
+  fetch('data/songs.json?v=20260815b')
     .then(r => r.json())
     .then(data => {
       const audioSongs = data.songs.filter(s => s.collection);

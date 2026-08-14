@@ -1,7 +1,7 @@
 /* lyrics.js — song grid, search/filter, modal */
 
 (function () {
-  const SONGS_URL = 'data/songs.json?v=20260813a';
+  const SONGS_URL = 'data/songs.json?v=20260815b';
 
   let allSongs   = [];
   let allMeta    = {};
@@ -487,7 +487,7 @@
     const existing = document.getElementById('modal-audio-bar');
     if (existing) existing.remove();
     if (song.collection) {
-      const bar = SiteShared.buildAudioBar(song.singer, song.audio || null);
+      const bar = SiteShared.buildAudioBar(song);
       modalClose.insertAdjacentElement('afterend', bar);
       SiteShared.initAudioBar(bar);
     }
@@ -503,7 +503,7 @@
     if (song.sections) {
       SiteShared.renderLyrics(song, modalBody, modalLoading);
     } else {
-      fetch(`data/lyrics/${song.id}.json?v=20260813a`)
+      fetch(`data/lyrics/${song.id}.json?v=20260815b`)
         .then(r => r.json())
         .then(full => SiteShared.renderLyrics(full, modalBody, modalLoading))
         .catch(() => {

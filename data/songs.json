@@ -402,7 +402,9 @@
       "volume": 1,
       "singer": "Asha Ramesh",
       "collection": "dance",
-      "audio": "assets/audio/navarasa_parvathi.mp3"
+      "audio": "assets/audio/navarasa_parvathi.mp3",
+      "ragam": "Ragamalika",
+      "talam": "None"
     },
     {
       "id": "032",

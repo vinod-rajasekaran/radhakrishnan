@@ -1203,6 +1203,7 @@ main { margin-top: var(--nav-height); }
   display: inline-block;
 }
 .mini-tag.theme { color: var(--turmeric-deep); border-color: var(--turmeric-deep); }
+.mini-tag.raga  { color: var(--magenta); border-color: var(--magenta); }
 .song-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 .song-title-tamil {
   font-family: 'Noto Serif Tamil', serif;
@@ -1443,6 +1444,12 @@ body.modal-open { overflow: hidden; }
   color: var(--vermilion-deep);
   font-weight: 700;
   margin: 0 0 12px;
+}
+.modal-audio-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
 }
 .modal-audio-bar .plyr {
   --plyr-color-main: var(--turmeric);
