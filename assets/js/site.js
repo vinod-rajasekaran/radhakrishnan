@@ -79,7 +79,7 @@ function injectNav() {
   <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html" class="nav-brand" aria-label="Radhakrishnan's Anthology — home">
       ${BRAND_SVG}
-      Radhakrishnan's Anthology
+      <span class="nav-brand-text">Radhakrishnan's Anthology</span>
     </a>
     <ul class="nav-links" role="list">${buildNavLinks(page)}</ul>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
@@ -409,7 +409,7 @@ function updateModalDeityBanner(deity) {
   if (!banner) return;
   const meta = DEITY_META[deity];
   if (meta && meta.image) {
-    img.src = meta.image + '?v=20260815i';
+    img.src = meta.image + '?v=20260815j';
     img.alt = deity;
     nameEl.textContent = deity;
     taEl.textContent   = meta.ta;
