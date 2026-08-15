@@ -1,7 +1,7 @@
 {
   "id": "167",
-  "en": "chathur maRai (viruttham) — sankaran maindhanE", 
-  "tamil": "சதுர் மறை (விருத்தம்) — சங்கரன் மைந்தனே",
+  "en": "sankaran maindhanE",
+  "tamil": "சங்கரன் மைந்தனே",
   "deity": "Ganesha",
   "themes": [
     "Devotion"
@@ -9,9 +9,11 @@
   "excerpt": "சதுர் மறை நாயகன் சங்கரி பாலன்",
   "volume": 3,
   "audio": "assets/audio/chathur_marai_sankaran_maindhane.mp3",
+  "ragam": "Thilang",
+  "talam": "Adi",
   "sections": [
     {
-      "label": "",
+      "label": "Viruttam (விருத்தம்) &emsp; Ragam: Bhoopalam",
       "ta": "சதுர் மறை நாயகன் சங்கரி பாலன்\nசமரினில் வித்தகன் சதாசிவ நேயன்\nசர்வமும் சமம் என நோக்கிடும் செங்கோலன்\nசகல பாப நாசகன் சரண் எனில் அரண் அவன்",
       "translit": "chathur maRai nAyakan sankari bAlan\nsamarinil vitthagan sadhAsiva nEyan\nsarvamum samam ena nOkkidum sengkOlan\nsakala pApa nAsakan saraN enil araN avan",
       "en": "He is the ruler of four vedas or scriptures, son of Goddess Sankari. Expert in warfare; adores Lord Sadhasiva. Everything is looked at as equal in his kingdom. Destroyer of every evil deed; he becomes a fortress with just the utterance of surrender."

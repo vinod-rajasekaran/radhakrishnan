@@ -1,7 +1,7 @@
 /* lyrics.js — song grid, search/filter, modal */
 
 (function () {
-  const SONGS_URL = 'data/songs.json?v=20260815b';
+  const SONGS_URL = 'data/songs.json?v=20260815i';
 
   let allSongs   = [];
   let allMeta    = {};
@@ -101,17 +101,17 @@
         translit: 'vEl avAvinAl manam kasindhu nAvAra\nvElavA enumpOdhu vinai nasiyumandRO',
         verseAttr: 'When your mind melts with a deep desire to look at the spear, and the tongue utters the name Velava or Muruga, is it not true that all your past sins will disintegrate?' },
       { key: 'Nature',        label: 'Nature',         ta: 'இயற்கை',  cssClass: 'theme-slide--nature',
-        count: allSongs.filter(s => s.deity === 'Nature').length,
+        count: allSongs.filter(s => s.deity === 'Nature' || (s.themes || []).includes('Nature')).length,
         verse: 'எங்கிருந்தோ காற்றில் பறந்த விதையும்\nமழைத்துளியும் மண்ணும் சங்கமித்தது',
         translit: 'engirundhO kAtRil paRandha vidhaiyum\nmazhaitthuLiyum maNNum sangamitthadhu',
         verseAttr: 'A seed, carried by the wind, mingled with raindrops and soil.' },
       { key: 'Navarasa',      label: 'Navarasa',       ta: 'நவரசம்',  cssClass: 'theme-slide--navarasa',
-        count: allSongs.filter(s => s.deity === 'Navarasa').length,
+        count: allSongs.filter(s => s.deity === 'Navarasa' || (s.themes || []).includes('Navarasa')).length,
         verse: 'ஆலஹால விஷத்தையும் அமுதாக்கிய அன்னையே\nமூல ஓல நீலகண்டனின் இடமுறை நாயகியே',
         translit: 'AlahAla vishatthaiyum amudhAkkiya annaiyE\nmUla Ola nIlakantanin idamuRai nayakiyE',
         verseAttr: 'Oh Mother, you converted the poison, that emanated during the churning of the milky ocean, into an immortality-yielding sweet nectar just by the touch of your hand. You reside on the left side of Lord Nilakanta, the originator of the primordial sound Aum.' },
       { key: 'Miscellaneous', label: 'Miscellaneous',  ta: 'பலவகை',   cssClass: 'theme-slide--misc',
-        count: allSongs.filter(s => s.deity === 'Miscellaneous').length,
+        count: allSongs.filter(s => s.deity === 'Miscellaneous' || (s.themes || []).includes('Miscellaneous')).length,
         verse: 'வெண்ணிலா ஒன்று வானினின்று இறங்கி வந்தது\nமண்ணிலா என்ற கேள்வி மனதில் எழுந்தது',
         translit: 'veNNilA ondRu vAninindRu iRangi vandhadhu\nmaNNila endRa kELvi manadhil ezhundhadhu',
         verseAttr: 'A pure white moon descended from the sky. A question arose in my mind of whether this phenomenon is really happening on earth.' },
@@ -451,7 +451,8 @@
         if (activeFilters.theme === 'Devotion') {
           if (NON_DEITY_CATS.includes(s.deity)) return false;
         } else if (NON_DEITY_CATS.includes(activeFilters.theme)) {
-          if (s.deity !== activeFilters.theme) return false;
+          const inCategory = s.deity === activeFilters.theme || (s.themes || []).includes(activeFilters.theme);
+          if (!inCategory) return false;
         } else {
           if (!(s.themes || []).includes(activeFilters.theme)) return false;
         }
@@ -503,7 +504,7 @@
     if (song.sections) {
       SiteShared.renderLyrics(song, modalBody, modalLoading);
     } else {
-      fetch(`data/lyrics/${song.id}.json?v=20260815b`)
+      fetch(`data/lyrics/${song.id}.json?v=20260815i`)
         .then(r => r.json())
         .then(full => SiteShared.renderLyrics(full, modalBody, modalLoading))
         .catch(() => {

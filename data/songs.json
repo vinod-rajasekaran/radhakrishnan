@@ -17,7 +17,8 @@
     "themes": [
       "Devotion",
       "Miscellaneous",
-      "Nature"
+      "Nature",
+      "Navarasa"
     ],
     "volumes": [
       1,
@@ -394,17 +395,17 @@
       "id": "031",
       "tamil": "ஆலஹால விஷத்தையும்",
       "en": "AlahAla vishatthaiyum",
-      "deity": "Navarasa",
+      "deity": "Parvathi",
       "themes": [
-        "Devotion"
+        "Devotion",
+        "Navarasa"
       ],
       "excerpt": "ஆலஹால விஷத்தையும் அமுதாக்கிய அன்னையே",
       "volume": 1,
       "singer": "Asha Ramesh",
       "collection": "dance",
       "audio": "assets/audio/navarasa_parvathi.mp3",
-      "ragam": "Ragamalika",
-      "talam": "None"
+      "ragam": "Ragamalika"
     },
     {
       "id": "032",
@@ -1966,7 +1967,9 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "cd",
-      "audio": "assets/audio/vennai_vazinthoda.mp3"
+      "audio": "assets/audio/vennai_vazinthoda.mp3",
+      "ragam": "Behag",
+      "talam": "Adi"
     },
     {
       "id": "162",
@@ -2030,8 +2033,8 @@
     },
     {
       "id": "167",
-      "tamil": "சதுர் மறை (விருத்தம்) — சங்கரன் மைந்தனே",
-      "en": "chathur maRai (viruttham) — sankaran maindhanE",
+      "tamil": "சங்கரன் மைந்தனே",
+      "en": "sankaran maindhanE",
       "deity": "Ganesha",
       "themes": [
         "Devotion"
@@ -2040,7 +2043,9 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "cd",
-      "audio": "assets/audio/chathur_marai_sankaran_maindhane.mp3"
+      "audio": "assets/audio/chathur_marai_sankaran_maindhane.mp3",
+      "ragam": "Thilang",
+      "talam": "Adi"
     },
     {
       "id": "168",
@@ -2054,7 +2059,9 @@
       "volume": 3,
       "singer": "Bhavadhaarini Anantharaman",
       "collection": "live",
-      "audio": "assets/audio/kamalalaya.mp3"
+      "audio": "assets/audio/kamalalaya.mp3",
+      "ragam": "Nattai",
+      "talam": "Adi"
     },
     {
       "id": "169",
@@ -2188,7 +2195,9 @@
       "volume": 3,
       "singer": "Bhavadhaarini Anantharaman",
       "collection": "live",
-      "audio": "assets/audio/padhari_varuval.mp3"
+      "audio": "assets/audio/padhari_varuval.mp3",
+      "ragam": "Kalyani",
+      "talam": "Adi"
     },
     {
       "id": "180",
@@ -2274,7 +2283,9 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "cd",
-      "audio": "assets/audio/thenum_thinaiyum.mp3"
+      "audio": "assets/audio/thenum_thinaiyum.mp3",
+      "ragam": "Surya",
+      "talam": "Adi"
     },
     {
       "id": "187",
@@ -2288,7 +2299,9 @@
       "volume": 3,
       "singer": "Bhavadhaarini Anantharaman",
       "collection": "live",
-      "audio": "assets/audio/kurudai_velum.mp3"
+      "audio": "assets/audio/kurudai_velum.mp3",
+      "ragam": "Shanmugapriya",
+      "talam": "Sandha"
     },
     {
       "id": "188",
@@ -2350,7 +2363,8 @@
       "volume": 3,
       "singer": "Bhavadhaarini Anantharaman",
       "collection": "live",
-      "audio": "assets/audio/bhakthiyil_kanindhu.mp3"
+      "audio": "assets/audio/bhakthiyil_kanindhu.mp3",
+      "ragam": "Jaunpuri"
     },
     {
       "id": "193",
@@ -2412,7 +2426,9 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "dance",
-      "audio": "assets/audio/umai_oru_pangan.mp3"
+      "audio": "assets/audio/umai_oru_pangan.mp3",
+      "ragam": "Bhairavi",
+      "talam": "Adi"
     },
     {
       "id": "198",
@@ -2438,21 +2454,25 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "dance",
-      "audio": "assets/audio/vidu_vittu_odi_pona_vadivelare.mp3"
+      "audio": "assets/audio/vidu_vittu_odi_pona_vadivelare.mp3",
+      "ragam": "Kuntalavarali",
+      "talam": "Adi"
     },
     {
       "id": "200",
-      "tamil": "நவரச லக்ஷ்மி (விருத்தம்)",
-      "en": "navarasa lakshmi",
-      "deity": "Navarasa",
+      "tamil": "தாமரை மலர் வீற்றே",
+      "en": "thAmarai malar vItRE",
+      "deity": "Lakshmi",
       "themes": [
-        "Devotion"
+        "Devotion",
+        "Navarasa"
       ],
       "excerpt": "தாமரை மலர் வீற்றே தாரிணி காத்திடும் திருமகளே",
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "dance",
-      "audio": "assets/audio/navarasa_lakshmi.mp3"
+      "audio": "assets/audio/navarasa_lakshmi.mp3",
+      "ragam": "Ragamalika"
     },
     {
       "id": "201",
@@ -2466,7 +2486,9 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "cd",
-      "audio": "assets/audio/pankaja_nayani.mp3"
+      "audio": "assets/audio/pankaja_nayani.mp3",
+      "ragam": "Revathi",
+      "talam": "Adi"
     },
     {
       "id": "202",
@@ -2480,7 +2502,9 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "cd",
-      "audio": "assets/audio/sakambari_saranga.mp3"
+      "audio": "assets/audio/sakambari_saranga.mp3",
+      "ragam": "Saranga",
+      "talam": "Roopakam"
     },
     {
       "id": "203",
@@ -2506,7 +2530,9 @@
       "volume": 3,
       "singer": "Bhavadhaarini Anantharaman",
       "collection": "live",
-      "audio": "assets/audio/madhi_mayangidum.mp3"
+      "audio": "assets/audio/madhi_mayangidum.mp3",
+      "ragam": "Arabhi",
+      "talam": "Misra Chapu"
     },
     {
       "id": "205",
@@ -2532,7 +2558,9 @@
       "volume": 3,
       "singer": "Bhavadhaarini Anantharaman",
       "collection": "live",
-      "audio": "assets/audio/ondre_dheivam.mp3"
+      "audio": "assets/audio/ondre_dheivam.mp3",
+      "ragam": "Revathi",
+      "talam": "Adi"
     },
     {
       "id": "207",
@@ -2570,7 +2598,9 @@
       "volume": 3,
       "singer": "Bhavadhaarini Anantharaman",
       "collection": "live",
-      "audio": "assets/audio/mukundhan_mutthavale.mp3"
+      "audio": "assets/audio/mukundhan_mutthavale.mp3",
+      "ragam": "Mukari",
+      "talam": "Adi"
     },
     {
       "id": "210",
@@ -2584,7 +2614,9 @@
       "volume": 3,
       "singer": "Bhavadhaarini Anantharaman",
       "collection": "live",
-      "audio": "assets/audio/vedhigaikku_veliyay.mp3"
+      "audio": "assets/audio/vedhigaikku_veliyay.mp3",
+      "ragam": "Naadanamakriya",
+      "talam": "Adi"
     },
     {
       "id": "211",
@@ -2646,7 +2678,9 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "cd",
-      "audio": "assets/audio/nir_vidutthu.mp3"
+      "audio": "assets/audio/nir_vidutthu.mp3",
+      "ragam": "Shivaranjani",
+      "talam": "Adi"
     },
     {
       "id": "216",
@@ -2660,7 +2694,9 @@
       "volume": 3,
       "singer": "Bhavadhaarini Anantharaman",
       "collection": "live",
-      "audio": "assets/audio/andiye_anbu.mp3"
+      "audio": "assets/audio/andiye_anbu.mp3",
+      "ragam": "Poorvi Kalyani",
+      "talam": "Adi"
     },
     {
       "id": "217",
@@ -2734,7 +2770,9 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "cd",
-      "audio": "assets/audio/rama_namam_jabitthe.mp3"
+      "audio": "assets/audio/rama_namam_jabitthe.mp3",
+      "ragam": "Hamsanandi",
+      "talam": "Adi"
     },
     {
       "id": "223",
@@ -2748,7 +2786,9 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "cd",
-      "audio": "assets/audio/ezhumalai_erivandhen.mp3"
+      "audio": "assets/audio/ezhumalai_erivandhen.mp3",
+      "ragam": "Senjurutti",
+      "talam": "Eka Tisra Gati"
     },
     {
       "id": "224",
@@ -2762,7 +2802,9 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "cd",
-      "audio": "assets/audio/sindhaiyellam_niraindha.mp3"
+      "audio": "assets/audio/sindhaiyellam_niraindha.mp3",
+      "ragam": "Valachi",
+      "talam": "Adi"
     },
     {
       "id": "225",
@@ -2802,7 +2844,8 @@
       "volume": 3,
       "singer": "Asha Ramesh",
       "collection": "cd",
-      "audio": "assets/audio/andhi_vanatthile.mp3"
+      "audio": "assets/audio/andhi_vanatthile.mp3",
+      "ragam": "Vaasanthy"
     },
     {
       "id": "228",
@@ -2948,7 +2991,9 @@
       "volume": 3,
       "singer": "Bhavadhaarini Anantharaman",
       "collection": "live",
-      "audio": "assets/audio/edhugaiyum_monaiyum.mp3"
+      "audio": "assets/audio/edhugaiyum_monaiyum.mp3",
+      "ragam": "Atana",
+      "talam": "Adi"
     },
     {
       "id": "240",
