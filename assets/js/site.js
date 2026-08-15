@@ -409,7 +409,7 @@ function updateModalDeityBanner(deity) {
   if (!banner) return;
   const meta = DEITY_META[deity];
   if (meta && meta.image) {
-    img.src = meta.image + '?v=20260815j';
+    img.src = meta.image + '?v=20260815m';
     img.alt = deity;
     nameEl.textContent = deity;
     taEl.textContent   = meta.ta;
