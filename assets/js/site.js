@@ -274,6 +274,14 @@ function safeTruncate(text, limit) {
   const lastOpen  = cut.lastIndexOf('<');
   const lastClose = cut.lastIndexOf('>');
   if (lastOpen > lastClose) cut = cut.slice(0, lastOpen);
+  // Also catch a cut that lands inside an anchor's link text — the opening
+  // <a ...> tag made it in but its closing </a> didn't, which otherwise
+  // leaves a dangling, unclosed link that the browser then extends across
+  // everything rendered after it (e.g. the "Read more" button).
+  const lastAnchorOpen = cut.lastIndexOf('<a ');
+  if (lastAnchorOpen !== -1 && cut.indexOf('</a>', lastAnchorOpen) === -1) {
+    cut = cut.slice(0, lastAnchorOpen);
+  }
   return cut.trimEnd();
 }
 
@@ -409,7 +417,7 @@ function updateModalDeityBanner(deity) {
   if (!banner) return;
   const meta = DEITY_META[deity];
   if (meta && meta.image) {
-    img.src = meta.image + '?v=20260819c';
+    img.src = meta.image + '?v=20260820b';
     img.alt = deity;
     nameEl.textContent = deity;
     taEl.textContent   = meta.ta;
