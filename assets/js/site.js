@@ -280,11 +280,11 @@ function safeTruncate(text, limit) {
 function renderNotes(text) {
   if (!text) return '';
   if (text.length <= NOTES_LIMIT) {
-    return `<aside class="song-notes"><strong>Author's Notes:</strong> ${text.replace(/\n/g, '<br>')}</aside>`;
+    return `<aside class="song-notes"><strong>Author's Note:</strong> ${text.replace(/\n/g, '<br>')}</aside>`;
   }
   const preview = safeTruncate(text, NOTES_LIMIT).replace(/\n/g, '<br>');
   const full    = text.replace(/\n/g, '<br>');
-  return `<aside class="song-notes"><strong>Author's Notes:</strong> <span class="notes-preview">${preview}…</span><span class="notes-full" hidden>${full}</span> <button class="notes-expand-btn" type="button">Read more</button></aside>`;
+  return `<aside class="song-notes"><strong>Author's Note:</strong> <span class="notes-preview">${preview}…</span><span class="notes-full" hidden>${full}</span> <button class="notes-expand-btn" type="button">Read more</button></aside>`;
 }
 
 function wireNotesExpand(container) {
@@ -409,7 +409,7 @@ function updateModalDeityBanner(deity) {
   if (!banner) return;
   const meta = DEITY_META[deity];
   if (meta && meta.image) {
-    img.src = meta.image + '?v=20260816a';
+    img.src = meta.image + '?v=20260819a';
     img.alt = deity;
     nameEl.textContent = deity;
     taEl.textContent   = meta.ta;
