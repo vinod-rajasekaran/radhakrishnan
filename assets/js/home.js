@@ -32,7 +32,7 @@
     if (!songs.length) return;
     const meta = songs[Math.floor(Math.random() * songs.length)];
 
-    fetch(`data/lyrics/${meta.id}.json?v=20260819a`)
+    fetch(`data/lyrics/${meta.id}.json?v=20260819c`)
       .then(r => r.json())
       .then(song => {
         if (!(song.sections || []).length) return;
@@ -47,7 +47,7 @@
   }
 
   if (enTitleEl) {
-    fetch('data/songs.json?v=20260819a')
+    fetch('data/songs.json?v=20260819c')
       .then(r => r.json())
       .then(data => {
         songs = data.songs;
