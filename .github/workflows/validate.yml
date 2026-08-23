@@ -1,0 +1,18 @@
+name: Validate lyric files
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/lyrics/**']
+  pull_request:
+    paths: ['data/lyrics/**']
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/validate-lyrics.js

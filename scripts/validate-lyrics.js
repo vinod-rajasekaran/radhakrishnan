@@ -8,7 +8,10 @@ const fs   = require('fs');
 const path = require('path');
 
 const LYRICS_DIR = path.join(__dirname, '../data/lyrics');
-const REQUIRED_SECTION_FIELDS = ['label', 'ta', 'translit', 'en'];
+// label may legitimately be empty (continuation stanzas of one viruttam) — only
+// fields renderLyrics() calls .replace() on are required, since a missing one
+// throws and breaks the whole modal.
+const REQUIRED_SECTION_FIELDS = ['ta', 'translit', 'en'];
 
 const files = fs.readdirSync(LYRICS_DIR).filter(f => f.endsWith('.json')).sort();
 const errors = [];
@@ -32,6 +35,7 @@ for (const file of files) {
   }
 
   song.sections.forEach((sec, i) => {
+    if (typeof sec.label !== 'string') errors.push(`${file}: sections[${i}] missing "label" key`);
     REQUIRED_SECTION_FIELDS.forEach(field => {
       if (typeof sec[field] !== 'string' || !sec[field].trim()) {
         errors.push(`${file}: sections[${i}] missing "${field}"`);

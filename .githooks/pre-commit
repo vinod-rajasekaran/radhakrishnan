@@ -15,6 +15,7 @@ if ! command -v node >/dev/null 2>&1; then
 fi
 
 if git diff --cached --name-only | grep -q '^data/lyrics/'; then
+  node scripts/validate-lyrics.js
   node scripts/build-index.js
   git add data/songs.json
 fi
