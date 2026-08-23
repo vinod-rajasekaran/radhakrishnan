@@ -7,6 +7,13 @@
 #    image file is staged.
 set -e
 
+# git hooks run in a non-interactive shell, so nvm's PATH setup from .zshrc/.bashrc
+# never runs and `node` is not found even though it works in a normal terminal.
+if ! command -v node >/dev/null 2>&1; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+fi
+
 if git diff --cached --name-only | grep -q '^data/lyrics/'; then
   node scripts/build-index.js
   git add data/songs.json
