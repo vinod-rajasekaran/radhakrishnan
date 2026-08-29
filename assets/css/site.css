@@ -480,6 +480,7 @@ main { margin-top: var(--nav-height); }
   margin: 0;
   color: var(--cream);
 }
+.slide-caption + .btn { margin-top: 22px; }
 
 
 /* Intro slide */
@@ -1752,6 +1753,37 @@ body[data-page="books"] .page-sub { margin-bottom: 8px; max-width: 700px; }
   color: var(--ink-soft);
   font-size: 16px;
   line-height: 1.65;
+}
+
+/* ============================================================
+   FOREWORD PAGES
+   ============================================================ */
+.foreword-avatar-photo {
+  width: 160px;
+  height: 160px;
+  border: 2px solid var(--line);
+}
+.foreword-byline {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.foreword-byline .credit-name { font-size: 19px; margin-bottom: 6px; }
+.foreword-byline .credit-role { font-size: 13px; line-height: 1.6; }
+.foreword-list {
+  margin: 0 0 18px;
+  padding-left: 22px;
+}
+.foreword-list li {
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+.foreword-signature {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 19px;
+  margin-top: 32px;
 }
 
 /* ============================================================
