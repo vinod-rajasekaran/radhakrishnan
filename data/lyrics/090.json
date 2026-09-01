@@ -1,19 +1,19 @@
 {
   "id": "090",
-  "en": "mezhugu kanalidai pattu",
-  "tamil": "மெழுகு கனலிடை பட்டு",
+  "en": "mezhugu kanalidaippattu",
+  "tamil": "மெழுகு கனலிடைப்பட்டு",
   "deity": "Muruga",
   "themes": [
     "Devotion"
   ],
-  "excerpt": "மெழுகு கனலிடை பட்டு அழிந்து",
+  "excerpt": "மெழுகு கனலிடைப்பட்டு அழிந்து",
   "volume": 2,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "மெழுகு கனலிடை பட்டு அழிந்து\nஒழுகுதல் போல் உருகி நின்றேன்",
-      "translit": "mezhugu kanalidai pattu azhindhu\nozhugudhal pOl urugi nindREn",
+      "ta": "மெழுகு கனலிடைப்பட்டு அழிந்து\nஒழுகுதல் போல் உருகி நின்றேன்",
+      "translit": "mezhugu kanalidaippattu azhindhu\nozhugudhal pOl urugi nindREn",
       "en": "I stood wilting thinking of you, just like a lighted candle that melts and oozes in self-destruction."
     },
     {
@@ -24,8 +24,8 @@
     },
     {
       "label": "Charanam",
-      "ta": "இடிந்து விழும் இல்லங்களும் சுழலினிலே\nமடிந்து விடும் உயிரினமும் கோரக் கொடுமையாய்\nஒடிந்து விழும் அன்பரும் கண்டுன் நினைவினிலே\nவிடிந்து விடும் என்னும் ஓர் எண்ணமுடன்",
-      "translit": "idindhu vizhum illangaLum suzhalinilE\nmadindhu vidum uyirinamum kOrak kodumaiyAy\nodindhu vizhum anbarum kaNdun ninaivinilE\nvidindhu vidum ennum Or eNNamudan",
+      "ta": "இடிந்து விழும் இல்லங்களும் சுழலினிலே\nமடிந்துவிடும் உயிரினமும் கோரக் கொடுமையாய்\nஒடிந்து விழும் அன்பரும் கண்டுன் நினைவினிலே\nவிடிந்து விடும் என்னுமோர் எண்ணமுடன்",
+      "translit": "idindhu vizhum illangaLum suzhalinilE\nmadindhuvidum uyirinamum kOrak kodumaiyAy\nodindhu vizhum anbarum kaNdun ninaivinilE\nvidindhu vidum ennumOr eNNamudan",
       "en": "I witnessed all the houses falling and crumbling into powder; all the creatures dead in the whirlwind; all the devotees who felt lacking in support and strength. I hoped that soon there would be a new dawn, that only you could make happen. I stood absorbed thinking of you."
     }
   ],
