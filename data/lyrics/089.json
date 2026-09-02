@@ -6,13 +6,13 @@
   "themes": [
     "Devotion"
   ],
-  "excerpt": "மதி ஓங்குது அருள்நதி பாயுது நற்",
+  "excerpt": "மதி ஓங்குது அருள்நதி பாயுது",
   "volume": 2,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "மதி ஓங்குது அருள்நதி பாயுது நற்\nகதி ஒளிருது வேல் கண்டதாலே",
+      "ta": "மதி ஓங்குது அருள்நதி பாயுது\nநற்கதி ஒளிருது வேல் கண்டதாலே",
       "translit": "madhi Ongudhu aruLnadhi pAyudhu naR\ngathi oLirudhu vEl kaNdadhAlE",
       "en": "Intellect is becoming premier, rivers of compassion start flowing, righteousness is shining and all of this happens by the mere sight of the spear."
     },
@@ -24,8 +24,8 @@
     },
     {
       "label": "Charanam",
-      "ta": "வினை மறுகுது அன்பெனும் சீதச்\nசுனை பெருகுது காமம் கருகுது\nமனை வாழ்வில் மங்களம் பொங்குது\nஉனை தேடி உமைசுதன் ஓடி வரலாலே",
-      "translit": "vinai maRugudhu anbenum sIdhach\nchunai perugudhu kAmam karugudhu\nmanai vAzhvil mangaLam pongudhu\nunai thEdi umaisuthan Odi varalAlE",
+      "ta": "வினை மறுகுது அன்பெனும் சீதச்\nசுனை பெருகுது காமம் கருகுது\nமனை வாழ்வில் மங்களம் பொங்குது\nஉனைத் தேடி உமைசுதன் ஓடி வரலாலே",
+      "translit": "vinai maRugudhu anbenum sIdhach\nchunai perugudhu kAmam karugudhu\nmanai vAzhvil mangaLam pongudhu\nunaith thEdi umaisuthan Odi varalAlE",
       "en": "Glancing at Goddess Uma’s son running here and looking out for you, all sins and bad deeds wither away, love flourishes, lust is incinerated, and happiness and prosperity abound in family life."
     }
   ],
