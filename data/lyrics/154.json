@@ -6,26 +6,26 @@
   "themes": [
     "Miscellaneous"
   ],
-  "excerpt": "தென்னை மர நிழலும் தெம்மாங்கு பாட்டும்",
+  "excerpt": "தென்னை மர நிழலும் தெம்மாங்குப் பாட்டும்",
   "volume": 2,
   "audio": null,
   "sections": [
     {
       "label": "Pallavi",
-      "ta": "தென்னை மர நிழலும் தெம்மாங்கு பாட்டும்\nஎன்னை வியக்க வைக்குது மயக்க வைக்குது",
-      "translit": "thennai mara nizhalum themmAngu pAttum\nennai viyakka vaikkudhu mayakka vaikkudhu",
+      "ta": "தென்னை மர நிழலும் தெம்மாங்குப் பாட்டும்\nஎன்னை வியக்க வைக்குது மயக்க வைக்குது",
+      "translit": "thennai mara nizhalum themmAngup pAttum\nennai viyakka vaikkudhu mayakka vaikkudhu",
       "en": "The cool shade from the coconut tree and the folk song floating in the air fills me with wonder and mesmerizes me."
     },
     {
       "label": "Anupallavi",
-      "ta": "ஓடை ஒலி இசையும் பாவை ஓரக்கண் பண்ணும்\nசாடை குறியும் சித்தம் கிறங்க வைக்குது",
-      "translit": "Odai oli isaiyum pAvai OrakkaN paNNum\nsAdai kuRiyum sittham kiRanga vaikkudhu",
+      "ta": "ஓடை ஒலி இசையும் பாவை ஓரக்கண் பண்ணும்\nசாடைக்க் குறியும் சித்தம் கிறங்க வைக்குது",
+      "translit": "Odai oli isaiyum pAvai OrakkaN paNNum\nsAdaik kuRiyum sittham kiRanga vaikkudhu",
       "en": "The music from the waterfall, the poem I interpret from the damsel’s fluttering eyelashes, and the signals she gives me through her facial expressions, all make me intoxicated."
     },
     {
       "label": "Charanam",
-      "ta": "கோடைப் போடும் கால் விரல் நயனமும்\nவாடை அள்ளி வீசும் அவிழ்ந்த கூந்தலும்\nஆடை திருத்தி நின்ற அவள் நிலை கண்டு\nசாடை மாடையாய் நாடும் பேசிடும் நகைத்திடும்",
-      "translit": "kOdaip pOdum kAl viral nayanamum\nvAdai aLLi vIsum avizhndha kUndhalum\nAdai thirutthi nindRa avaL nilai kaNdu\nsAdai mAdaiyAy nAdum pEsidum nagaitthidum",
+      "ta": "கோடைப் போடும் கால் விரல் நயனமும்\nவாடை அள்ளி வீசும் அவிழ்ந்த கூந்தலும்\nஆடை திருத்தி நின்ற அவள் நிலை கண்டு\nசாடைமாடையாய் நாடும் பேசிடும் நகைத்திடும்",
+      "translit": "kOdaip pOdum kAl viral nayanamum\nvAdai aLLi vIsum avizhndha kUndhalum\nAdai thirutthi nindRa avaL nilai kaNdu\nsAdaimAdaiyAy nAdum pEsidum nagaitthidum",
       "en": "The gentle movement of her toes drawing lines in the sand, her fragrant and cascading hair, and how she fixed her clothes. All of this makes the whole town start gossiping, dropping hints, and laughing."
     }
   ],
