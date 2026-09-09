@@ -80,7 +80,7 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   font-weight: 700;
   font-size: 16px;
   padding: 13px 24px;
-  border-radius: 3px;
+  border-radius: 999px;
   border: none;
   cursor: pointer;
 }
@@ -91,6 +91,15 @@ p { margin: 0 0 16px; line-height: 1.75; font-size: 17px; }
   color: var(--cream);
 }
 .btn-ghost:hover { border-color: var(--cream); background: rgba(255,246,228,.14); }
+.btn-outline {
+  background: none;
+  border: 1.5px solid var(--line);
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 10px 20px;
+}
+.btn-outline:hover { border-color: var(--peacock); color: var(--peacock); background: var(--peacock-tint); }
 .btn-peacock { background: var(--peacock); }
 .btn-peacock:hover { background: var(--vermilion-deep); }
 .btn-magenta { background: var(--magenta); }
@@ -1515,6 +1524,7 @@ body[data-page="books"] .page-sub { margin-bottom: 8px; max-width: 700px; }
   text-transform: uppercase;
   padding: 10px 20px;
   white-space: nowrap;
+  border-radius: 999px;
   box-shadow: 0 6px 16px rgba(36,20,9,.3);
 }
 .vol-card-info { flex: 1; display: flex; justify-content: center; }
@@ -1548,7 +1558,8 @@ body[data-page="books"] .page-sub { margin-bottom: 8px; max-width: 700px; }
   margin: 0 auto;
   padding: 0 24px 8px;
 }
-.vol-book-info .book-desc { max-width: 720px; margin-bottom: 0; }
+.vol-book-info .book-desc { max-width: 720px; margin-bottom: 24px; }
+.book-foreword-links { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* ============================================================
    AUDIO PAGE
